@@ -153,205 +153,322 @@
   <main class="flex-grow pt-32 pb-20 px-4 md:px-8 max-w-[1280px] mx-auto w-full animate-tactical-fade-in">
     
     <!-- Header -->
-    <header class="mb-20 text-center relative tactical-reveal">
-      <div class="inline-flex items-center gap-2 text-primary text-xs uppercase font-bold tracking-widest mb-3">
-        <span class="w-2 h-2 rounded-full bg-primary-container"></span>
-        TAKIM KADROSU
+    <header class="mb-16 text-center relative tactical-reveal">
+      <div class="inline-flex items-center gap-2 text-primary text-xs uppercase font-bold tracking-widest mb-3 font-mono">
+        <span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+        TEKNOFEST 2026 // MÜHENDİSLİK KADROSU
       </div>
       <h1 class="text-4xl sm:text-5xl font-bold text-on-surface mb-4 tracking-tight">
         Gökyüzüne <span class="text-primary">İmza Atanlar</span>
       </h1>
-      <p class="text-base sm:text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-        ALTEK Teknoloji Takımı ekibi, havacılık ve uzay teknolojileri tutkusuyla birleşmiş mühendislerden oluşur. Yazılımdan kompozit mekaniğe, her detayda mükemmelliği hedefliyoruz.
+      <p class="text-base sm:text-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
+        ALTEK Teknoloji Takımı; 2024 yılında <strong>ODTÜ, Bilkent, Hacettepe ve TOBB ETÜ</strong> mühendislik öğrencileri tarafından kurulmuştur. Otonom sistemler, yapay zeka, gömülü yazılım ve aerodinamik alanlarında disiplinler arası bir güç birliğiyle çalışıyoruz.
       </p>
     </header>
 
-    <!-- Team Leads Zig-Zag Showcase -->
-    <div class="space-y-20 mb-28">
-      
-      <!-- Lead 1: Caner Yıldırım (Software Lead) -->
-      <section class="flex flex-col md:flex-row items-center gap-10 lg:gap-14 group has-scanline tactical-reveal-left">
-        <div class="w-full md:w-5/12 relative">
-          <div class="absolute -inset-2 bg-primary-container/10 rounded-2xl -rotate-2 group-hover:rotate-0 transition-transform duration-300"></div>
-          <div class="relative overflow-hidden rounded-xl shadow-xl aspect-video md:aspect-[4/3] bg-surface-container-high border border-outline-variant/40 group-hover:border-primary/50 transition-colors">
-            <div class="scan-line"></div>
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Caner Yıldırım" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYs0oSGFb1B4maKfiIX4SOTQtvpNrmU9IBv2TkdbBh6SrFhXKIiAeL1X3q2-1h7Hh_VFl65ZAHZbZMCjhpUvJevLboVrjhhR5QaRKH_YgrqPpGHYMj9aaDZAe_-v-BntjULo29bETrUq4t8VJ5ab1PKzUhXnJwo8DRFAARMy4dtcqcRFfHJANa4i0l8Hvx62ypdtMoAmUfuJZabvqoc5ebT1ujTJO3jGpQxdinb2E2TENlFjjxjzg7"/>
-          </div>
-        </div>
-        <div class="w-full md:w-7/12 space-y-4">
+    <!-- Team Overview Card with Group Photo -->
+    <section class="mb-20 glass-card p-6 sm:p-10 rounded-2xl border border-outline-variant/40 relative overflow-hidden shadow-2xl tactical-reveal">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
           <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/20 border border-primary-container/40 text-primary rounded-md text-xs font-bold uppercase tracking-wider">
-            <span class="material-symbols-outlined text-sm">code</span>
-            Yazılım & Yapay Zeka Kaptanı
+            <span class="material-symbols-outlined text-sm">hub</span>
+            Üniversiteler Arası Konsorsiyum
           </div>
-          <h2 class="text-3xl font-bold text-on-surface group-hover:text-primary transition-colors">Caner Yıldırım</h2>
+          <h2 class="text-2xl sm:text-3xl font-bold text-on-surface">Milli Teknoloji Hamlesi İçin Bir Aradayız</h2>
           <p class="text-sm sm:text-base text-on-surface-variant leading-relaxed">
-            Otonom uçuş algoritmaları ve gerçek zamanlı görüntü işleme sistemleri üzerine uzmanlaşmış kıdemli yazılım mühendisi. ALTEK'in Yer Kontrol İstasyonu (GCS) ve gömülü uçuş bilgisayarı yazılımlarının mimarıdır. YOLO tabanlı hedef tespiti konularında çalışmalar yürütmektedir.
+            ODTÜ bünyesinde faaliyetlerini sürdüren takımımız, Türkiye'nin önde gelen mühendislik okullarından 11 yetenekli genci tek bir hedef altında birleştiriyor: <strong>TEKNOFEST Savaşan İHA</strong> yarışmasında tam otonom kabiliyetlerle zirvede yer almak.
           </p>
-          <div class="flex items-center gap-3 pt-2">
-            <a class="p-2.5 bg-surface-container-high text-on-surface rounded-lg hover:text-primary hover:bg-surface-container-highest transition-colors" href="#" title="E-Posta">
-              <span class="material-symbols-outlined text-base">alternate_email</span>
-            </a>
-            <a class="p-2.5 bg-surface-container-high text-on-surface rounded-lg hover:text-primary hover:bg-surface-container-highest transition-colors" href="#" title="GitHub / Terminal">
-              <span class="material-symbols-outlined text-base">terminal</span>
-            </a>
-            <a class="p-2.5 bg-surface-container-high text-on-surface rounded-lg hover:text-primary hover:bg-surface-container-highest transition-colors" href="#" title="LinkedIn">
-              <span class="material-symbols-outlined text-base">person</span>
-            </a>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3 bg-surface-container-high rounded-lg border border-outline-variant/30 text-center">
+              <div class="font-bold text-primary text-sm">ODTÜ</div>
+              <div class="text-[10px] text-on-surface-variant uppercase font-semibold">4 Mühendis</div>
+            </div>
+            <div class="p-3 bg-surface-container-high rounded-lg border border-outline-variant/30 text-center">
+              <div class="font-bold text-primary text-sm">BİLKENT</div>
+              <div class="text-[10px] text-on-surface-variant uppercase font-semibold">3 Mühendis</div>
+            </div>
+            <div class="p-3 bg-surface-container-high rounded-lg border border-outline-variant/30 text-center">
+              <div class="font-bold text-primary text-sm">TOBB ETÜ</div>
+              <div class="text-[10px] text-on-surface-variant uppercase font-semibold">2 Mühendis</div>
+            </div>
+            <div class="p-3 bg-surface-container-high rounded-lg border border-outline-variant/30 text-center">
+              <div class="font-bold text-primary text-sm">HACETTEPE</div>
+              <div class="text-[10px] text-on-surface-variant uppercase font-semibold">2 Mühendis</div>
+            </div>
           </div>
         </div>
-      </section>
+        <div class="lg:col-span-5 relative">
+          <div class="rounded-xl overflow-hidden border border-outline-variant/50 shadow-lg bg-surface-container-highest group">
+            <img src="assets/img/team/team_group.png" alt="ALTEK Takım Görseli" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"/>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <!-- Lead 2: Zeynep Özdemir (Mechanical Lead) -->
-      <section class="flex flex-col md:flex-row-reverse items-center gap-10 lg:gap-14 group has-scanline tactical-reveal-right">
-        <div class="w-full md:w-5/12 relative">
-          <div class="absolute -inset-2 bg-primary-container/10 rounded-2xl rotate-2 group-hover:rotate-0 transition-transform duration-300"></div>
-          <div class="relative overflow-hidden rounded-xl shadow-xl aspect-video md:aspect-[4/3] bg-surface-container-high border border-outline-variant/40 group-hover:border-primary/50 transition-colors">
-            <div class="scan-line"></div>
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Zeynep Özdemir" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG8DY6J66OPpWHJ42v65sFjNEFKYfeEQmxhEnX1emchBzyrrDXr-0hsd9SnDEpEpkITXw3bgf_TDb3N8JUoZzgVRtXxl6m30Eq6X81Z_ZaBSkVyS8yq98xT6S7CMpU63NRh2tVSczjSowBuFj6TWBnskiEBeMrx_cPx5P2SowtDGaPpP6RUnYnWZRNl2Z4dtGlyomKX1z3Pabf4wOIbYLhS2L92dFIGcNALDg9InSe2Q6PvwC2B6kf"/>
-          </div>
-        </div>
-        <div class="w-full md:w-7/12 space-y-4 md:text-right flex flex-col md:items-end">
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/60 border border-secondary/30 text-on-surface rounded-md text-xs font-bold uppercase tracking-wider">
-            <span class="material-symbols-outlined text-sm">precision_manufacturing</span>
-            Mekanik & Aerodinamik Kaptanı
-          </div>
-          <h2 class="text-3xl font-bold text-on-surface group-hover:text-primary transition-colors">Zeynep Özdemir</h2>
-          <p class="text-sm sm:text-base text-on-surface-variant leading-relaxed">
-            Aerodinamik CFD yapı analizleri ve karbon fiber kompozit malzeme teknolojilerinde uzmanlaşmıştır. İHA platformlarımızın hafif, rijit ve aerodinamik gövde tasarımlarını koordine etmektedir. 3D prototipleme ve vakum infüzyon üretim süreçlerini yönetir.
-          </p>
-          <div class="flex items-center gap-3 pt-2">
-            <a class="p-2.5 bg-surface-container-high text-on-surface rounded-lg hover:text-primary hover:bg-surface-container-highest transition-colors" href="#">
-              <span class="material-symbols-outlined text-base">settings</span>
-            </a>
-            <a class="p-2.5 bg-surface-container-high text-on-surface rounded-lg hover:text-primary hover:bg-surface-container-highest transition-colors" href="#">
-              <span class="material-symbols-outlined text-base">description</span>
-            </a>
-            <a class="p-2.5 bg-surface-container-high text-on-surface rounded-lg hover:text-primary hover:bg-surface-container-highest transition-colors" href="#">
-              <span class="material-symbols-outlined text-base">link</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Lead 3: Mert Aksoy (Avionics Lead) -->
-      <section class="flex flex-col md:flex-row items-center gap-10 lg:gap-14 group has-scanline tactical-reveal-left">
-        <div class="w-full md:w-5/12 relative">
-          <div class="absolute -inset-2 bg-primary-container/10 rounded-2xl -rotate-2 group-hover:rotate-0 transition-transform duration-300"></div>
-          <div class="relative overflow-hidden rounded-xl shadow-xl aspect-video md:aspect-[4/3] bg-surface-container-high border border-outline-variant/40 group-hover:border-primary/50 transition-colors">
-            <div class="scan-line"></div>
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Mert Aksoy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv9kbAfWvrHCy0sIJ7m0nB9KucgF9R-FRKClDLWowwsMAJ-CofhfAKHMGFVfInCLRAQDDHfFSbD6EZ085skCg2X6qaK8rolmxLEhsXnpZ2JJBrGFIQQRrc8uzrhqv0G_3BLfII0jX439_lotCGWCa5imW3SdFBwc3FEGUIKzjDd-AyKDs-zCFSPMvLWVb_dNZNrxWEQY6sLKebAYfT7xJ3PvymayolUJ2Pu8Fiqj-kLlBFFCK9Uw4w"/>
-          </div>
-        </div>
-        <div class="w-full md:w-7/12 space-y-4">
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-tertiary/15 border border-tertiary/30 text-tertiary rounded-md text-xs font-bold uppercase tracking-wider">
-            <span class="material-symbols-outlined text-sm">memory</span>
-            Aviyonik & Kontrol Sistemleri Kaptanı
-          </div>
-          <h2 class="text-3xl font-bold text-on-surface group-hover:text-primary transition-colors">Mert Aksoy</h2>
-          <p class="text-sm sm:text-base text-on-surface-variant leading-relaxed">
-            Özel PCB tasarımı, telemetri haberleşme modülleri ve sensör füzyonu alanlarında deneyimli elektronik mühendisi. Düşük gecikmeli video aktarım protokolleri, güç dağıtım kartları ve batarya yönetim mimarisinden sorumludur.
-          </p>
-          <div class="flex items-center gap-3 pt-2">
-            <a class="p-2.5 bg-surface-container-high text-on-surface rounded-lg hover:text-primary hover:bg-surface-container-highest transition-colors" href="#">
-              <span class="material-symbols-outlined text-base">electric_bolt</span>
-            </a>
-            <a class="p-2.5 bg-surface-container-high text-on-surface rounded-lg hover:text-primary hover:bg-surface-container-highest transition-colors" href="#">
-              <span class="material-symbols-outlined text-base">share</span>
-            </a>
-            <a class="p-2.5 bg-surface-container-high text-on-surface rounded-lg hover:text-primary hover:bg-surface-container-highest transition-colors" href="#">
-              <span class="material-symbols-outlined text-base">public</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-    </div>
-
-    <!-- Department Members Grid -->
-    <div class="space-y-16">
+    <!-- 4 Main Units Showcase -->
+    <div class="space-y-20">
       
-      <!-- Department 1: Yazılım & AI -->
+      <!-- Unit 1: Görüntü İşleme ve Yapay Zeka Birimi -->
       <section class="tactical-reveal">
-        <div class="flex items-center gap-3 mb-8 pb-3 border-b border-outline-variant/30">
-          <span class="material-symbols-outlined text-primary text-2xl">code</span>
-          <h3 class="text-2xl font-bold text-on-surface">Yazılım & Yapay Zeka Ekibi</h3>
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-4 border-b border-outline-variant/40">
+          <div class="flex items-center gap-3">
+            <div class="p-3 rounded-xl bg-primary-container/20 border border-primary-container/40 text-primary">
+              <span class="material-symbols-outlined text-2xl">visibility</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-on-surface">Görüntü İşleme & Yapay Zeka Birimi</h3>
+              <p class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">HAVA HEDEF TESPİTİ // OTONOM KİLİTLENME // DERİN ÖĞRENME</p>
+            </div>
+          </div>
+          <div class="text-xs text-on-surface-variant bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant/30">
+            <strong>Görevler:</strong> Kamera donanımları, YOLO model eğitimi, gerçek zamanlı hedef takip & yapay zeka algoritmaları
+          </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="hud-card tactical-corners p-6 rounded-xl text-center tactical-reveal delay-100">
-            <div class="w-24 h-24 mx-auto rounded-full mb-4 overflow-hidden border-2 border-outline-variant/40">
-              <img alt="Arda Yılmaz" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA12ax9NPREaBbGhN_nyl54K4vYNbSv7pSGAEW34l7iyXkgjlfas_32zmfZKehh7gNgCZC9mFIIFGc0sxNhJMQD5vcBg_KN8F2unNuO_gR54s9ZRxfXDohF3UqGQDqUFoa7fM5mqDrkNG1cE4VlOFWZll92SJYFsSIq-0KcPBRQvE0-aF8nWrfgMTjwUsNWdCYTP7AKUfFWVMYiZJITxKcnAJRI6nUw-X6WIrfinuexEX1zOJilG0JD"/>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Member 1: Hüseyin Şevket AKAR (Kaptan) -->
+          <div class="hud-card tactical-corners p-6 sm:p-8 rounded-xl border border-primary/50 relative overflow-hidden group">
+            <div class="scan-line"></div>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              <div class="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border-2 border-primary shadow-md bg-surface-container-high">
+                <img src="assets/img/team/huseyin_sevket_akar.jpeg" alt="Hüseyin Şevket Akar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+              </div>
+              <div class="space-y-2 text-center sm:text-left flex-grow">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary-container text-on-primary-container rounded-md text-[11px] font-bold uppercase tracking-wider shadow-sm">
+                  <span class="material-symbols-outlined text-sm">stars</span>
+                  <span>Takım Kaptanı & İletişim Sorumlusu</span>
+                </div>
+                <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Hüseyin Şevket AKAR</h4>
+                <div class="text-xs font-mono text-primary font-semibold">ODTÜ // Elektrik-Elektronik Mühendisliği (2. Sınıf)</div>
+                <p class="text-xs text-on-surface-variant leading-relaxed pt-1">
+                  YOLO tabanlı derin öğrenme modellerinin eğitimi, gerçek zamanlı hava hedef tespiti, otonom hava-hava kilitlenme algoritmaları ve takım liderliği.
+                </p>
+                <div class="flex items-center justify-center sm:justify-start gap-3 pt-2 text-xs font-mono text-on-surface-variant">
+                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-primary">mail</span> huseyinsevketakar@gmail.com</span>
+                </div>
+              </div>
             </div>
-            <h4 class="font-bold text-base text-on-surface">Arda Yılmaz</h4>
-            <p class="text-xs font-mono text-primary mt-1 uppercase">Görüntü İşleme & YOLO</p>
           </div>
-          <div class="hud-card tactical-corners p-6 rounded-xl text-center tactical-reveal delay-200">
-            <div class="w-24 h-24 mx-auto rounded-full mb-4 overflow-hidden border-2 border-outline-variant/40">
-              <img alt="Elif Kaya" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0HOYXC63gvDFFybrONhLc9iY5jMR7jHkjsJTVV8WSM946iVl1ks7ooo5BTW7NcCl1VhZ_TDoDxrQ2N7QoP-Jl9SIK81-qqR6R4akIjnqJbCFUBU3tw7FJfRryF7jpRYgFUTHnOq_ohn95NkZw5jg2NDzdzWbYGd1WfO6vo9U5zF4fx7JX0NEraiT7bIHc8uhFP8D0ndF_lYLnwbIOXYwWU0NC5rRCiSpxo4Il6M5k4xea_N1OMvWA"/>
+
+          <!-- Member 2: Furkan MUTLU -->
+          <div class="hud-card tactical-corners p-6 sm:p-8 rounded-xl border border-outline-variant/40 relative overflow-hidden group">
+            <div class="scan-line"></div>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              <div class="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+                <img src="assets/img/team/furkan_mutlu.jpeg" alt="Furkan Mutlu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+              </div>
+              <div class="space-y-2 text-center sm:text-left flex-grow">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high border border-outline-variant/40 text-on-surface rounded-md text-[11px] font-bold uppercase tracking-wider">
+                  <span class="material-symbols-outlined text-sm">psychology</span>
+                  <span>Görüntü İşleme & AI Uzmanı</span>
+                </div>
+                <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Furkan MUTLU</h4>
+                <div class="text-xs font-mono text-primary font-semibold">ODTÜ // Bilgisayar Mühendisliği (2. Sınıf)</div>
+                <p class="text-xs text-on-surface-variant leading-relaxed pt-1">
+                  Gömülü yapay zeka model çıkarımı hızlandırma (TensorRT/CUDA), görüntü donanımlarının seçimi ve hedef takip algoritmaları.
+                </p>
+              </div>
             </div>
-            <h4 class="font-bold text-base text-on-surface">Elif Kaya</h4>
-            <p class="text-xs font-mono text-primary mt-1 uppercase">Yer Kontrol İstasyonu (GCS)</p>
-          </div>
-          <div class="hud-card tactical-corners p-6 rounded-xl text-center tactical-reveal delay-300">
-            <div class="w-24 h-24 mx-auto rounded-full mb-4 overflow-hidden border-2 border-outline-variant/40">
-              <img alt="Selin Demir" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByYhOUzaaIk-Em9s6xnX6inYmFJx50JOQcaV_QNc1CZMAn1GmRCjgOB60YgjzpaYLqBhS7WtA33-4XxaN2y-eA62nMxw2T3-bH3o4HY-LJp3-IwJrHES85aXS5jge4mQbASMFKnVLm048ZtgAu3PgYHZMHo0ZXJrNTgt7JrDob3xQVHIBaG7iIYJzCZ4NkrM_-4gQtqkWZcxurX86fF0VrRDnaGs2Ybhqh02hR7WWCmQVC3qFKrsLF"/>
-            </div>
-            <h4 class="font-bold text-base text-on-surface">Selin Demir</h4>
-            <p class="text-xs font-mono text-primary mt-1 uppercase">Gömülü Yazılım & ROS</p>
           </div>
         </div>
       </section>
 
-      <!-- Department 2: Mekanik Tasarım -->
+      <!-- Unit 2: Yazılım Birimi -->
       <section class="tactical-reveal">
-        <div class="flex items-center gap-3 mb-8 pb-3 border-b border-outline-variant/30">
-          <span class="material-symbols-outlined text-primary text-2xl">precision_manufacturing</span>
-          <h3 class="text-2xl font-bold text-on-surface">Mekanik & Kompozit Üretim Ekibi</h3>
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-4 border-b border-outline-variant/40">
+          <div class="flex items-center gap-3">
+            <div class="p-3 rounded-xl bg-primary-container/20 border border-primary-container/40 text-primary">
+              <span class="material-symbols-outlined text-2xl">terminal</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-on-surface">Yazılım Birimi</h3>
+              <p class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">GÖREV KONTROL // YER KONTROL İSTASYONU (GCS) // OTOPİLOT ENTEGRASYONU</p>
+            </div>
+          </div>
+          <div class="text-xs text-on-surface-variant bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant/30">
+            <strong>Görevler:</strong> Görev kontrol yazılımları, YKİ arayüzü geliştirme, otopilot telemetri sağlığı
+          </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="hud-card tactical-corners p-6 rounded-xl text-center tactical-reveal delay-100">
-            <div class="w-24 h-24 mx-auto rounded-full mb-4 overflow-hidden border-2 border-outline-variant/40">
-              <img alt="Burak Çelik" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjqNjxc0DSOpTO-sw3ByT6iPz8XCIJZboj92db9WWviYmfQHcW6aoBzllDVfdOoHBA6DhVM24CAlfD7IunwnRgOKgTTkuD-XaaHIKwEMK793tQqpvHRw9d_fv0cnOP-Bpgn6kGWrsL_FrjLli1HlgngDDY1vSpx0AFAyFmV1tlOnHXnvhx_CMfURGSWDs4Cdjs78ebdyK2mbaK560wffBJ69b8isoeQ2l8amtbqlxTDxnrxh7CoKzn"/>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Member 3: Mesut Ensar YAZAR -->
+          <div class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group">
+            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img src="assets/img/team/mesut_ensar_yazar.jpeg" alt="Mesut Ensar Yazar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
             </div>
-            <h4 class="font-bold text-base text-on-surface">Burak Çelik</h4>
-            <p class="text-xs font-mono text-primary mt-1 uppercase">CFD Analizi & Aerodinamik</p>
+            <div class="text-center space-y-2">
+              <h4 class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors">Mesut Ensar YAZAR</h4>
+              <div class="text-xs font-mono text-primary font-semibold">ODTÜ // EE (2. Sınıf)</div>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                Görev kontrol yazılımları, uçuş bilgisayarı haberleşme mimarisi ve görev durum makineleri (State Machine).
+              </p>
+            </div>
           </div>
-          <div class="hud-card tactical-corners p-6 rounded-xl text-center tactical-reveal delay-200">
-            <div class="w-24 h-24 mx-auto rounded-full mb-4 overflow-hidden border-2 border-outline-variant/40">
-              <img alt="Deniz Aydın" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXX0pImUM-KdhmbO9LIcD7Fgkqz6cWeVkCjNqUnkL4YgvjCTw5zFhoVh_7xbi3G6tLYn6My8wVtjpFN7cSTZhVWbiyGzUP9ZIvL9kjVnmVMcTQ7nDLV_3pSKry65zRR3EDKyLQWINx20kXss28_RdBNdzztYOVqmllVooxg8fEIq369NDwmNuzFLrO2oLTBm-EsJ07CtlgCFwDQTXtMRWlImbMmNT2tSP2cPJdmGt_96cVTTwLHaEO"/>
+
+          <!-- Member 4: Muzaffer Emre BAŞKAN -->
+          <div class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group">
+            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img src="assets/img/team/muzaffer_emre_baskan.jpeg" alt="Muzaffer Emre Başkan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
             </div>
-            <h4 class="font-bold text-base text-on-surface">Deniz Aydın</h4>
-            <p class="text-xs font-mono text-primary mt-1 uppercase">3D CAD Modelleme</p>
+            <div class="text-center space-y-2">
+              <h4 class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors">Muzaffer Emre BAŞKAN</h4>
+              <div class="text-xs font-mono text-primary font-semibold">BİLKENT // CTIS (2. Sınıf)</div>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                Yer Kontrol İstasyonu (GCS) arayüz tasarımı, telemetri dashboard, gerçek zamanlı harita ve veri görselleştirme.
+              </p>
+            </div>
           </div>
-          <div class="hud-card tactical-corners p-6 rounded-xl text-center tactical-reveal delay-300">
-            <div class="w-24 h-24 mx-auto rounded-full mb-4 overflow-hidden border-2 border-outline-variant/40">
-              <img alt="Yiğit Koç" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF1HgQcOvit9DT16xggbK4tAaBS4AaTY1JWhnWQo7k5jdCbik19uH37WvSuJuT8ZbBYjceOXj6DPl9YkyNasBhey1-wfYPonkDjD6sMGVB0QZN4eZKmL49E_VWP4b7PfNSvUjEsTXcMik2EnEXh_sp0gkFirXoyzw2O1_huSZ5zVW33s0S4uI-qPYScuBNlaePD7N8ceJDMM5ENpmnwpAvJwjywbmk2ukapHFQV0zjt8PaxCrPVsVp"/>
+
+          <!-- Member 5: Mehmet Salih TAŞTAN -->
+          <div class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group">
+            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img src="assets/img/team/mehmet_salih_tastan.jpeg" alt="Mehmet Salih Taştan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
             </div>
-            <h4 class="font-bold text-base text-on-surface">Yiğit Koç</h4>
-            <p class="text-xs font-mono text-primary mt-1 uppercase">Kompozit & Kalıp Üretimi</p>
+            <div class="text-center space-y-2">
+              <h4 class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors">Mehmet Salih TAŞTAN</h4>
+              <div class="text-xs font-mono text-primary font-semibold">TOBB ETÜ // EE (2. Sınıf)</div>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                Otopilot haberleşme protokolleri (MAVLink), acil durum senaryoları ve otonom rota planlama yazılımı.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Department 3: Elektronik & Aviyonik -->
+      <!-- Unit 3: Elektronik & Aviyonik Birimi -->
       <section class="tactical-reveal">
-        <div class="flex items-center gap-3 mb-8 pb-3 border-b border-outline-variant/30">
-          <span class="material-symbols-outlined text-primary text-2xl">memory</span>
-          <h3 class="text-2xl font-bold text-on-surface">Elektronik & Aviyonik Ekibi</h3>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="hud-card tactical-corners p-6 rounded-xl text-center tactical-reveal delay-100">
-            <div class="w-24 h-24 mx-auto rounded-full mb-4 overflow-hidden border-2 border-outline-variant/40">
-              <img alt="Kerem Yıldız" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo-uttgszjAJSMLkquMa0ewzVrSAfiXcuBNLQ7Mq0AlNaNaTb2G1jfljGHLpTPabHPG7hImD7jjGx2Sxm23RxLWKJXHxENSYh0HKfq2BEwHodPC8nGTKctmmBlVN7Igchd9wRCqChyTL7jSyLZ664T3YNowBRnuJdnBPVsi_7-ijUuatgWTvG0mE-8VIMUDhayu9Mn3ALXyBaSb2gRBrwLSDqNGEf9A46wgJgb5bRWksPQAAimKTd8"/>
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-4 border-b border-outline-variant/40">
+          <div class="flex items-center gap-3">
+            <div class="p-3 rounded-xl bg-tertiary/20 border border-tertiary/40 text-tertiary">
+              <span class="material-symbols-outlined text-2xl">memory</span>
             </div>
-            <h4 class="font-bold text-base text-on-surface">Kerem Yıldız</h4>
-            <p class="text-xs font-mono text-primary mt-1 uppercase">PCB Tasarım & EMI Koruma</p>
+            <div>
+              <h3 class="text-2xl font-bold text-on-surface">Elektronik & Aviyonik Birimi</h3>
+              <p class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">UÇUŞ KONTROLCÜ // GÜÇ DAĞITIMI // TELEMETRİ // RF HABERLEŞME</p>
+            </div>
           </div>
-          <div class="hud-card tactical-corners p-6 rounded-xl text-center tactical-reveal delay-200">
-            <div class="w-24 h-24 mx-auto rounded-full mb-4 overflow-hidden border-2 border-outline-variant/40">
-              <img alt="Umut Can" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgx4PtU-lX6ia7hLN7-hNgUAIzMDk0ZRRr885I8LAsl_J9jcu7XvFXuVRXnPiGXmy9N3fVVauK1bbHN9HdWMZbtdY93oEbQ4LMYpb2i2Rhquq_73HJ8VdVnRcxjFwpAZHDAilwq4mQHb73KTCfl4MiJnviT2ngal-FkAqFJhQPsQekC7sVq3yoHGzJKFMFPWa4Y75UdylWjw2xlzZLYGNjR8wSgxmi7u2jujAR93tL_xce3OaanKMf"/>
+          <div class="text-xs text-on-surface-variant bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant/30">
+            <strong>Görevler:</strong> Aviyonik seçimi, kablolama & bağlantılar, güç dağıtımı, Wi-Fi & RF telemetri sistemleri
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Member 6: Emir YILMAZ -->
+          <div class="hud-card tactical-corners p-6 sm:p-8 rounded-xl border border-outline-variant/40 relative overflow-hidden group">
+            <div class="scan-line"></div>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              <div class="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+                <img src="assets/img/team/emir_yilmaz.jpeg" alt="Emir Yılmaz" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+              </div>
+              <div class="space-y-2 text-center sm:text-left flex-grow">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-tertiary/15 border border-tertiary/30 text-tertiary rounded-md text-[11px] font-bold uppercase tracking-wider">
+                  <span class="material-symbols-outlined text-sm">cable</span>
+                  <span>Aviyonik & Güç Sistemleri</span>
+                </div>
+                <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Emir YILMAZ</h4>
+                <div class="text-xs font-mono text-primary font-semibold">ODTÜ // Elektrik-Elektronik Mühendisliği (2. Sınıf)</div>
+                <p class="text-xs text-on-surface-variant leading-relaxed pt-1">
+                  Uçuş kontrol kartı entegrasyonu, güç dağıtım mimarisi (PDB), sensör kalibrasyonu ve donanım arıza teşhisi.
+                </p>
+              </div>
             </div>
-            <h4 class="font-bold text-base text-on-surface">Umut Can</h4>
-            <p class="text-xs font-mono text-primary mt-1 uppercase">Güç Dağıtımı & Batarya Yönetimi</p>
+          </div>
+
+          <!-- Member 7: Yahya AYDEMİR -->
+          <div class="hud-card tactical-corners p-6 sm:p-8 rounded-xl border border-outline-variant/40 relative overflow-hidden group">
+            <div class="scan-line"></div>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              <div class="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+                <img src="assets/img/team/yahya_aydemir.jpeg" alt="Yahya Aydemir" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+              </div>
+              <div class="space-y-2 text-center sm:text-left flex-grow">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-tertiary/15 border border-tertiary/30 text-tertiary rounded-md text-[11px] font-bold uppercase tracking-wider">
+                  <span class="material-symbols-outlined text-sm">sensors</span>
+                  <span>RF & Telemetri Haberleşme</span>
+                </div>
+                <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Yahya AYDEMİR</h4>
+                <div class="text-xs font-mono text-primary font-semibold">BİLKENT // Elektrik-Elektronik Mühendisliği (2. Sınıf)</div>
+                <p class="text-xs text-on-surface-variant leading-relaxed pt-1">
+                  Uzun menzilli RF telemetri bağlantıları, Wi-Fi link stabilitesi, video aktarım hatları ve EMI/EMC gürültü izolasyonu.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unit 4: Mekanik Birimi -->
+      <section class="tactical-reveal">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-4 border-b border-outline-variant/40">
+          <div class="flex items-center gap-3">
+            <div class="p-3 rounded-xl bg-secondary-container text-on-secondary-container">
+              <span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-on-surface">Mekanik Birimi</h3>
+              <p class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">AERODİNAMİK CFD // GÖVDE TASARIMI // İTKİ SİSTEMLERİ // İMALAT</p>
+            </div>
+          </div>
+          <div class="text-xs text-on-surface-variant bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant/30">
+            <strong>Görevler:</strong> Uçak gövdesi tasarımı, CFD analizleri, itki & motor seçimi, kompozit/balsa üretim
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Member 8: Ahmet Enes YAZAR -->
+          <div class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group text-center">
+            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img src="assets/img/team/ahmet_enes_yazar.jpeg" alt="Ahmet Enes Yazar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+            </div>
+            <div class="space-y-1.5">
+              <h4 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Ahmet Enes YAZAR</h4>
+              <div class="text-xs font-mono text-primary font-semibold">BİLKENT // Makine (1. Sınıf)</div>
+              <p class="text-[11px] text-on-surface-variant leading-relaxed">
+                3D CAD gövde modelleme, mekanik montaj ve kontrol yüzeyleri kinematik tasarımı.
+              </p>
+            </div>
+          </div>
+
+          <!-- Member 9: Sefa GÖKÇE -->
+          <div class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group text-center">
+            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img src="assets/img/team/sefa_gokce.jpeg" alt="Sefa Gökçe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+            </div>
+            <div class="space-y-1.5">
+              <h4 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Sefa GÖKÇE</h4>
+              <div class="text-xs font-mono text-primary font-semibold">HACETTEPE // Makine (1. Sınıf)</div>
+              <p class="text-[11px] text-on-surface-variant leading-relaxed">
+                İtki sistemleri, motor & pervane eşleşme testleri ve dinamik yük testleri.
+              </p>
+            </div>
+          </div>
+
+          <!-- Member 10: Hüseyin Emir MERT -->
+          <div class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group text-center">
+            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img src="assets/img/team/huseyin_emir_mert.jpeg" alt="Hüseyin Emir Mert" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+            </div>
+            <div class="space-y-1.5">
+              <h4 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Hüseyin Emir MERT</h4>
+              <div class="text-xs font-mono text-primary font-semibold">TOBB ETÜ // Makine (1. Sınıf)</div>
+              <p class="text-[11px] text-on-surface-variant leading-relaxed">
+                Kompozit gövde laminasyonu, vakum infüzyon ve hafifletme optimizasyonları.
+              </p>
+            </div>
+          </div>
+
+          <!-- Member 11: Ramazan BOZKURT -->
+          <div class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group text-center">
+            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img src="assets/img/team/ramazan_bozkurt.jpeg" alt="Ramazan Bozkurt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+            </div>
+            <div class="space-y-1.5">
+              <h4 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Ramazan BOZKURT</h4>
+              <div class="text-xs font-mono text-primary font-semibold">ODTÜ // Makine (2. Sınıf)</div>
+              <p class="text-[11px] text-on-surface-variant leading-relaxed">
+                Aerodinamik CFD simülasyonları, sürükleme katsayısı analizi ve hava kanalı tasarımı.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -363,12 +480,12 @@
       <div class="absolute top-0 right-0 p-8 opacity-5">
         <span class="material-symbols-outlined text-[140px]">flight_takeoff</span>
       </div>
-      <h3 class="text-3xl font-bold text-on-surface mb-4">Ekibimizin Bir Parçası Olun</h3>
+      <h3 class="text-3xl font-bold text-on-surface mb-4">Geleceğin Mühendislik Ekibine Katılın</h3>
       <p class="text-base text-on-surface-variant max-w-xl mx-auto mb-8 leading-relaxed">
-        Geleceğin havacılık ve yapay zeka teknolojilerini inşa etmek için tutkulu mühendis adayları arıyoruz.
+        ALTEK Teknoloji Takımı bünyesinde otonom sistemler, yapay zeka ve havacılık teknolojileri geliştirmek için bizimle iletişime geçin.
       </p>
       <a href="iletisim.html" class="inline-flex items-center gap-2 bg-primary-container text-on-primary-container px-8 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-primary transition-all shadow-md shadow-primary-container/20">
-        <span>Ekibe Başvur</span>
+        <span>Merkez Komuta ile İletişime Geç</span>
         <span class="material-symbols-outlined text-base">arrow_forward</span>
       </a>
     </section>
@@ -404,8 +521,8 @@
       </div>
       <div>
         <div class="text-xs font-bold uppercase tracking-widest text-on-surface mb-4">Merkez Komuta</div>
-        <p class="text-sm mb-2">Teknopark İstanbul,<br/>Pendik / İstanbul</p>
-        <p class="text-sm font-mono text-primary">info@altekuav.com</p>
+        <p class="text-sm mb-2">ODTÜ Kampüsü,<br/>Çankaya / Ankara</p>
+        <p class="text-sm font-mono text-primary">huseyinsevketakar@gmail.com</p>
       </div>
     </div>
     <div class="max-w-[1280px] mx-auto px-4 md:px-8 pt-6 border-t border-outline-variant/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">

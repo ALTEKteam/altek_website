@@ -1,5 +1,5 @@
 /**
- * ALTEK UAV - Gallery Filtering and Lightbox Modal
+ * ALTEK UAV - Gallery Filtering and Enhanced Media/Video Lightbox Modal
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -44,6 +44,8 @@ function initGalleryLightbox() {
   if (!lightbox) return;
 
   const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxVideo = document.getElementById('lightbox-video');
+  const lightboxVideoSource = document.getElementById('lightbox-video-source');
   const lightboxTitle = document.getElementById('lightbox-title');
   const lightboxCategory = document.getElementById('lightbox-category');
   const closeBtn = document.getElementById('lightbox-close');
@@ -61,14 +63,33 @@ function initGalleryLightbox() {
 
     currentIndex = index;
     const currentItem = visibleItems[currentIndex];
-    const imgEl = currentItem.querySelector('img') || currentItem.querySelector('[data-bg-src]');
-    const imgSrc = imgEl ? (imgEl.src || imgEl.getAttribute('data-bg-src')) : '';
-    const title = currentItem.getAttribute('data-title') || 'ALTEK Teknoloji Takımı Görseli';
+    const mediaType = currentItem.getAttribute('data-type') || 'image';
+    const mediaSrc = currentItem.getAttribute('data-src') || (currentItem.querySelector('img') ? currentItem.querySelector('img').src : '');
+    const title = currentItem.getAttribute('data-title') || 'ALTEK Teknoloji Takımı Medyası';
     const category = currentItem.getAttribute('data-category-name') || 'Genel';
 
-    if (lightboxImg) lightboxImg.src = imgSrc;
     if (lightboxTitle) lightboxTitle.textContent = title;
     if (lightboxCategory) lightboxCategory.textContent = category;
+
+    if (mediaType === 'video') {
+      if (lightboxImg) lightboxImg.classList.add('hidden');
+      if (lightboxVideo) {
+        lightboxVideo.classList.remove('hidden');
+        if (lightboxVideoSource) lightboxVideoSource.src = mediaSrc;
+        else lightboxVideo.src = mediaSrc;
+        lightboxVideo.load();
+        lightboxVideo.play().catch(() => {});
+      }
+    } else {
+      if (lightboxVideo) {
+        lightboxVideo.pause();
+        lightboxVideo.classList.add('hidden');
+      }
+      if (lightboxImg) {
+        lightboxImg.classList.remove('hidden');
+        lightboxImg.src = mediaSrc;
+      }
+    }
 
     lightbox.classList.remove('hidden');
     setTimeout(() => {
@@ -78,21 +99,28 @@ function initGalleryLightbox() {
   };
 
   const closeLightbox = () => {
+    if (lightboxVideo) {
+      lightboxVideo.pause();
+    }
     lightbox.classList.add('opacity-0');
     setTimeout(() => {
       lightbox.classList.add('hidden');
+      if (lightboxVideo) lightboxVideo.classList.add('hidden');
+      if (lightboxImg) lightboxImg.classList.remove('hidden');
       document.body.style.overflow = '';
     }, 200);
   };
 
-  const nextImage = () => {
+  const nextMedia = () => {
     const visibleItems = getVisibleItems();
+    if (!visibleItems.length) return;
     currentIndex = (currentIndex + 1) % visibleItems.length;
     openLightbox(currentIndex);
   };
 
-  const prevImage = () => {
+  const prevMedia = () => {
     const visibleItems = getVisibleItems();
+    if (!visibleItems.length) return;
     currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
     openLightbox(currentIndex);
   };
@@ -108,8 +136,8 @@ function initGalleryLightbox() {
   });
 
   if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
-  if (nextBtn) nextBtn.addEventListener('click', nextImage);
-  if (prevBtn) prevBtn.addEventListener('click', prevImage);
+  if (nextBtn) nextBtn.addEventListener('click', nextMedia);
+  if (prevBtn) prevBtn.addEventListener('click', prevMedia);
 
   // Background click to close
   lightbox.addEventListener('click', (e) => {
@@ -122,7 +150,7 @@ function initGalleryLightbox() {
   document.addEventListener('keydown', (e) => {
     if (lightbox.classList.contains('hidden')) return;
     if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowRight') nextImage();
-    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'ArrowRight') nextMedia();
+    if (e.key === 'ArrowLeft') prevMedia();
   });
 }
