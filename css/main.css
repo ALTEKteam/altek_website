@@ -1,0 +1,349 @@
+/* ==========================================================================
+   ALTEK Teknoloji Takımı - TACTICAL COMMAND DESIGN SYSTEM
+   Base Styles, Theme Variables, and Utility Classes
+   ========================================================================== */
+
+:root,
+html.dark,
+html[data-theme="dark"] {
+  color-scheme: dark;
+  /* Surface & Background (RGB channels for Tailwind opacity support) */
+  --color-surface: 18 20 20;
+  --color-surface-dim: 14 16 16;
+  --color-surface-bright: 56 57 57;
+  --color-surface-container-lowest: 13 14 15;
+  --color-surface-container-low: 26 28 28;
+  --color-surface-container: 30 32 32;
+  --color-surface-container-high: 41 42 42;
+  --color-surface-container-highest: 52 53 53;
+  --color-surface-variant: 52 53 53;
+  --color-background: 18 20 20;
+
+  /* On-Surface & Text */
+  --color-on-surface: 227 226 226;
+  --color-on-surface-variant: 197 199 198;
+  --color-on-background: 227 226 226;
+  --color-inverse-surface: 227 226 226;
+  --color-inverse-on-surface: 47 49 49;
+
+  /* Primary (Tactical Orange) */
+  --color-primary: 255 157 66;
+  --color-primary-container: 255 138 0;
+  --color-on-primary: 78 38 0;
+  --color-on-primary-container: 255 255 255;
+  --color-primary-fixed: 255 220 196;
+  --color-primary-fixed-dim: 255 183 127;
+
+  /* Secondary & Neutral */
+  --color-secondary: 201 198 197;
+  --color-on-secondary: 49 48 48;
+  --color-secondary-container: 72 70 70;
+  --color-on-secondary-container: 184 180 180;
+
+  /* Tertiary / Telemetry Cyan */
+  --color-tertiary: 136 206 255;
+  --color-on-tertiary: 0 52 77;
+  --color-tertiary-container: 0 179 252;
+
+  /* Borders & Grids */
+  --color-outline: 143 145 144;
+  --color-outline-variant: 68 71 71;
+  --color-border-dark: #262828;
+  --color-grid-dot: rgba(227, 226, 226, 0.12);
+  --color-glass-bg: rgba(18, 20, 20, 0.85);
+  --color-glass-card-bg: rgba(26, 28, 28, 0.75);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --color-card-border: #262828;
+}
+
+html.light,
+html[data-theme="light"] {
+  color-scheme: light;
+  /* Surface & Background */
+  --color-surface: 255 255 255;
+  --color-surface-dim: 240 242 245;
+  --color-surface-bright: 255 255 255;
+  --color-surface-container-lowest: 255 255 255;
+  --color-surface-container-low: 255 255 255;
+  --color-surface-container: 244 246 248;
+  --color-surface-container-high: 233 236 239;
+  --color-surface-container-highest: 222 226 230;
+  --color-surface-variant: 233 236 239;
+  --color-background: 248 249 250;
+
+  /* On-Surface & Text */
+  --color-on-surface: 17 24 39;
+  --color-on-surface-variant: 75 85 99;
+  --color-on-background: 17 24 39;
+  --color-inverse-surface: 31 41 55;
+  --color-inverse-on-surface: 249 250 251;
+
+  /* Primary (Tactical Orange) */
+  --color-primary: 234 88 12;
+  --color-primary-container: 255 138 0;
+  --color-on-primary: 255 255 255;
+  --color-on-primary-container: 255 255 255;
+  --color-primary-fixed: 255 237 213;
+  --color-primary-fixed-dim: 253 186 116;
+
+  /* Secondary & Neutral */
+  --color-secondary: 75 85 99;
+  --color-on-secondary: 255 255 255;
+  --color-secondary-container: 243 244 246;
+  --color-on-secondary-container: 31 41 55;
+
+  /* Tertiary / Telemetry Cyan */
+  --color-tertiary: 2 132 199;
+  --color-on-tertiary: 255 255 255;
+  --color-tertiary-container: 3 105 161;
+
+  /* Borders & Grids */
+  --color-outline: 203 213 225;
+  --color-outline-variant: 226 232 240;
+  --color-border-dark: #e2e8f0;
+  --color-grid-dot: rgba(17, 24, 39, 0.12);
+  --color-glass-bg: rgba(255, 255, 255, 0.88);
+  --color-glass-card-bg: rgba(255, 255, 255, 0.92);
+  --color-glass-border: rgba(0, 0, 0, 0.08);
+  --color-card-border: #e5e7eb;
+}
+
+/* Bulletproof Theme Logo Display */
+.logo-dark {
+  display: none !important;
+}
+.logo-white {
+  display: block !important;
+}
+
+html.light .logo-dark,
+html[data-theme="light"] .logo-dark {
+  display: block !important;
+}
+html.light .logo-white,
+html[data-theme="light"] .logo-white {
+  display: none !important;
+}
+
+html.dark .logo-dark,
+html[data-theme="dark"] .logo-dark {
+  display: none !important;
+}
+html.dark .logo-white,
+html[data-theme="dark"] .logo-white {
+  display: block !important;
+}
+
+/* Typography Variables */
+:root {
+  --font-space-grotesk: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-plus-jakarta: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-background);
+  font-family: var(--font-space-grotesk);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--color-background);
+  background-image: 
+    radial-gradient(var(--color-grid-dot) 1.2px, transparent 1.2px), 
+    radial-gradient(var(--color-grid-dot) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+  background-attachment: fixed;
+  color: var(--color-on-surface);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mobile Scrollbar Hide Utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Responsive Touch Target Optimization */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* Smoother scrolling on mobile GPUs */
+  }
+  .tactical-input, input, select, textarea {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
+  }
+}
+
+/* Tactical Background Utility Classes */
+.tactical-bg-pattern {
+  background-image: 
+    radial-gradient(var(--color-grid-dot) 1.2px, transparent 1.2px), 
+    radial-gradient(var(--color-grid-dot) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+  background-attachment: fixed;
+}
+
+/* Instant CSS-level Logo Theme Switching */
+html.light img[data-logo] {
+  content: url('../assets/img/logo-dark.png') !important;
+}
+html.dark img[data-logo] {
+  content: url('../assets/img/logo-white.png') !important;
+}
+
+/* Glassmorphism & Tactical HUD Cards */
+.glass-card {
+  background: var(--color-glass-card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+}
+
+.glass-nav {
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-glass-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.hud-card {
+  position: relative;
+  background-color: rgb(var(--color-surface-container-low));
+  border: 1px solid var(--color-card-border);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hud-card:hover {
+  border-color: rgb(var(--color-primary));
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 0 15px rgba(255, 138, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Corner Reticle Indicators (Tactical Corners) */
+.tactical-corners {
+  position: relative;
+}
+.tactical-corners::before,
+.tactical-corners::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+.tactical-corners::before {
+  top: 6px;
+  left: 6px;
+  border-top-color: rgb(var(--color-primary-container));
+  border-left-color: rgb(var(--color-primary-container));
+}
+.tactical-corners::after {
+  bottom: 6px;
+  right: 6px;
+  border-bottom-color: rgb(var(--color-primary-container));
+  border-right-color: rgb(var(--color-primary-container));
+}
+.tactical-corners:hover::before,
+.tactical-corners:hover::after {
+  opacity: 1;
+  width: 18px;
+  height: 18px;
+}
+
+/* Status Chips */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.status-badge-active {
+  background: rgba(255, 138, 0, 0.15);
+  color: rgb(var(--color-primary));
+  border: 1px solid rgba(255, 138, 0, 0.4);
+}
+
+.status-badge-success {
+  background: rgba(76, 175, 80, 0.15);
+  color: #81c784;
+  border: 1px solid rgba(76, 175, 80, 0.4);
+}
+
+.status-badge-cyan {
+  background: rgba(0, 179, 252, 0.15);
+  color: rgb(var(--color-tertiary));
+  border: 1px solid rgba(0, 179, 252, 0.4);
+}
+
+/* Custom Tactical Inputs */
+.tactical-input {
+  background-color: rgb(var(--color-surface-container));
+  border: 1px solid rgb(var(--color-outline-variant));
+  color: rgb(var(--color-on-surface));
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+.tactical-input:focus {
+  outline: none;
+  border-color: rgb(var(--color-primary-container));
+  box-shadow: 0 0 0 2px rgba(255, 138, 0, 0.2);
+  background-color: rgb(var(--color-surface));
+}
+
+/* Navigation active indicator */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+.nav-link.active {
+  color: rgb(var(--color-primary));
+  font-weight: 700;
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(var(--color-primary-container));
+  border-radius: 1px;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.lightbox-modal.active {
+  opacity: 1;
+  visibility: visible;
+}

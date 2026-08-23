@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>ALTEK Teknoloji Takımı | İnsansız Hava Aracı Projelerimiz</title>
+  <meta name="description" content="ALTEK Teknoloji Takımı Savaşan İHA, VTOL, Çok Rotorlu ve Taktik İHA platformlarımız. Aerodinamik tasarım, otonom seyrüsefer ve gömülü sistemler."/>
+  
+  <script>
+    (function() {
+      try {
+        var match = document.cookie.match(new RegExp('(^| )altek_theme=([^;]+)'));
+        var theme = (match && match[2]) || localStorage.getItem('altek_theme') || 'dark';
+        document.documentElement.classList.remove('light', 'dark');
+        document.documentElement.classList.add(theme);
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch(e) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'surface': 'rgb(var(--color-surface) / <alpha-value>)',
+            'surface-dim': 'rgb(var(--color-surface-dim) / <alpha-value>)',
+            'surface-bright': 'rgb(var(--color-surface-bright) / <alpha-value>)',
+            'surface-container-lowest': 'rgb(var(--color-surface-container-lowest) / <alpha-value>)',
+            'surface-container-low': 'rgb(var(--color-surface-container-low) / <alpha-value>)',
+            'surface-container': 'rgb(var(--color-surface-container) / <alpha-value>)',
+            'surface-container-high': 'rgb(var(--color-surface-container-high) / <alpha-value>)',
+            'surface-container-highest': 'rgb(var(--color-surface-container-highest) / <alpha-value>)',
+            'surface-variant': 'rgb(var(--color-surface-variant) / <alpha-value>)',
+            'on-surface': 'rgb(var(--color-on-surface) / <alpha-value>)',
+            'on-surface-variant': 'rgb(var(--color-on-surface-variant) / <alpha-value>)',
+            'background': 'rgb(var(--color-background) / <alpha-value>)',
+            'on-background': 'rgb(var(--color-on-background) / <alpha-value>)',
+            'primary': 'rgb(var(--color-primary) / <alpha-value>)',
+            'primary-container': 'rgb(var(--color-primary-container) / <alpha-value>)',
+            'on-primary': 'rgb(var(--color-on-primary) / <alpha-value>)',
+            'on-primary-container': 'rgb(var(--color-on-primary-container) / <alpha-value>)',
+            'secondary': 'rgb(var(--color-secondary) / <alpha-value>)',
+            'on-secondary': 'rgb(var(--color-on-secondary) / <alpha-value>)',
+            'secondary-container': 'rgb(var(--color-secondary-container) / <alpha-value>)',
+            'outline': 'rgb(var(--color-outline) / <alpha-value>)',
+            'outline-variant': 'rgb(var(--color-outline-variant) / <alpha-value>)'
+          },
+          fontFamily: {
+            sans: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+</head>
+<body class="bg-background text-on-surface flex flex-col min-h-screen">
+
+  <!-- Tactical Top Navigation Bar -->
+  <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
+    <div class="flex justify-between items-center h-24 sm:h-28 px-4 md:px-8 max-w-[1280px] mx-auto">
+      <!-- Brand Logo & Name -->
+      <a class="flex items-center gap-4 group" href="index.html">
+        <img alt="ALTEK Teknoloji Takımı Logo" class="h-16 sm:h-20 md:h-24 w-auto max-h-[88px] object-contain group-hover:scale-105 transition-transform drop-shadow-md logo-white" src="assets/img/logo-white.png"/>
+        <img alt="ALTEK Teknoloji Takımı Logo" class="h-16 sm:h-20 md:h-24 w-auto max-h-[88px] object-contain group-hover:scale-105 transition-transform drop-shadow-md logo-dark" src="assets/img/logo-dark.png"/>
+        <div class="flex flex-col">
+          <span class="font-bold text-xl sm:text-2xl md:text-3xl tracking-tight text-on-surface uppercase leading-tight">
+            ALTEK <span class="text-primary font-bold">Teknoloji Takımı</span>
+          </span>
+          <span class="text-[11px] sm:text-xs text-on-surface-variant font-mono tracking-widest uppercase font-semibold">TEKNOFEST İHA EKİBİ</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden lg:flex items-center gap-8 font-bold text-xs uppercase tracking-widest">
+        <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="index.html">Ana Sayfa</a>
+        <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="projeler.html">Projeler</a>
+        <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="takim.html">Takım</a>
+        <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="galeri.html">Galeri</a>
+        <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="iletisim.html">İletişim</a>
+      </div>
+
+      <!-- Action Buttons & Theme Switcher -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="p-2.5 rounded-xl border border-outline-variant/60 text-on-surface hover:text-primary hover:border-primary/50 transition-all flex items-center justify-center bg-surface-container/60 backdrop-blur-md shadow-sm active:scale-95" title="Temayı Değiştir" aria-label="Aydınlık / Karanlık Mod Değiştir">
+          <span class="material-symbols-outlined text-xl light-icon hidden">light_mode</span>
+          <span class="material-symbols-outlined text-xl dark-icon">dark_mode</span>
+        </button>
+
+        <button class="btn-sponsor-modal bg-primary-container text-on-primary-container font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all duration-200 active:scale-95 shadow-md shadow-primary-container/20 hidden sm:block">
+          Sponsorluk Dosyası
+        </button>
+
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 text-on-surface hover:text-primary transition-colors" aria-label="Menüyü Aç">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+  <aside id="mobile-menu" class="fixed top-0 right-0 h-full w-72 bg-surface-container border-l border-outline-variant/40 z-50 transform translate-x-full transition-transform duration-300 flex flex-col p-6 lg:hidden">
+    <div class="flex items-center justify-between pb-6 border-b border-outline-variant/30 mb-6">
+      <div class="flex items-center gap-3">
+        <img alt="ALTEK Logo" class="h-12 w-auto object-contain logo-white" src="assets/img/logo-white.png"/>
+        <img alt="ALTEK Logo" class="h-12 w-auto object-contain logo-dark" src="assets/img/logo-dark.png"/>
+        <span class="font-bold text-base text-on-surface">ALTEK <span class="text-primary">Takımı</span></span>
+      </div>imary">Takımı</span></span>
+      </div>
+      <button id="mobile-menu-close" class="p-1 text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+    </div>
+    <div class="flex flex-col gap-4 text-sm font-bold uppercase tracking-wider flex-grow">
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="index.html">Ana Sayfa</a>
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="projeler.html">Projeler</a>
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="takim.html">Takım</a>
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="galeri.html">Galeri</a>
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="iletisim.html">İletişim</a>
+    </div>
+    <div class="pt-6 border-t border-outline-variant/30 space-y-3">
+      <!-- Mobile Theme Toggle -->
+      <button class="btn-theme-toggle w-full flex items-center justify-center gap-2 border border-outline-variant/60 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-on-surface hover:text-primary transition-all">
+        <span class="material-symbols-outlined text-lg light-icon hidden">light_mode</span>
+        <span class="material-symbols-outlined text-lg dark-icon">dark_mode</span>
+        <span class="theme-label">Aydınlık Mod</span>
+      </button>
+      <button class="btn-sponsor-modal w-full bg-primary-container text-on-primary-container font-bold py-3 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all">
+        Sponsorluk Dosyası
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Projects Content -->
+  <main class="flex-grow pt-32 pb-20 px-4 md:px-8 max-w-[1280px] mx-auto w-full animate-tactical-fade-in">
+    
+    <!-- Page Header -->
+    <header class="mb-16 tactical-reveal">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="h-[2px] w-12 bg-primary"></div>
+        <span class="text-xs font-bold uppercase tracking-widest text-primary">HAVACILIK VE UZAY MÜHENDİSLİĞİ</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-bold text-on-surface mb-6 tracking-tight">
+        Mühendislik Harikası <span class="text-primary">İHA Projelerimiz</span>
+      </h1>
+      <p class="text-base sm:text-lg text-on-surface-variant max-w-3xl leading-relaxed">
+        ALTEK Teknoloji Takımı ekibi olarak; her yıl aerodinamik sınırları zorlayan, otonom yetenekleri gelişmiş ve yüksek görev başarımı sunan insansız hava araçları tasarlıyoruz. İşte yarışmalarda bizi temsil eden mühendislik platformlarımız.
+      </p>
+    </header>
+
+    <!-- Projects List -->
+    <div class="flex flex-col gap-12">
+      
+      <!-- Project 1: ALTEK-X1 "Falcon" -->
+      <div class="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/40 hover:border-primary/60 transition-all duration-300 shadow-xl group tactical-reveal-left">
+        <div class="flex flex-col lg:flex-row">
+          <!-- Image block -->
+          <div class="relative w-full lg:w-1/2 min-h-[320px] overflow-hidden">
+            <div class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-700 absolute inset-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDti2a-nCJl9RSN5zaGwiLRjXftfnhgCGN1VVAqlUmY-MUXMvvjTDVOd7eIFxlvdrM9rPiLaNagzhiYV4bREsQ1OZe7buKCYW10tMdVlclgbUK8_0Cf-NsdvP0Ao8sqAhZ-J7tYuC8hqsH0kFFwyz8_zkPJA5rvzCFpZr5YnMhNRj_gRhn7t_J9gxeLsTvOo2a8xedh58kC_GG8oJNQuuIDJ_B45vX-NYpJ7BKk5K5vz3A_QHPivivK');"></div>
+            <div class="absolute top-4 left-4 bg-primary-container text-on-primary-container px-3.5 py-1 rounded-md font-mono text-xs font-bold shadow-md">
+              2024 PLATFORMU
+            </div>
+            <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded text-xs text-primary font-mono font-medium">
+              SAVAŞAN İHA KATEGORİSİ
+            </div>
+          </div>
+          <!-- Details block -->
+          <div class="p-6 sm:p-10 w-full lg:w-1/2 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <h2 class="text-2xl sm:text-3xl font-bold text-on-surface group-hover:text-primary transition-colors">ALTEK-X1 "Falcon"</h2>
+                <span class="status-badge status-badge-success">GÖREVE HAZIR</span>
+              </div>
+              <p class="text-sm sm:text-base text-on-surface-variant mb-6 leading-relaxed">
+                Yüksek irtifada görev yapabilen, tam otonom sabit kanatlı İHA sistemimiz. Gelişmiş aerodinamik yapısı, uzun menzilli uçuş süresi ve entegre yapay zeka destekli hedef kilitlenme modülü ile stratejik hava muharebesi için tasarlanmıştır.
+              </p>
+              
+              <!-- Specs Table -->
+              <div class="space-y-3 mb-8 text-sm">
+                <div class="flex justify-between items-center py-2 border-b border-outline-variant/30">
+                  <div class="flex items-center gap-2 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-base">straighten</span>
+                    <span>Kanat Açıklığı</span>
+                  </div>
+                  <span class="font-mono font-bold text-on-surface">1.80 m</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-outline-variant/30">
+                  <div class="flex items-center gap-2 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-base">package_2</span>
+                    <span>Faydalı Yük Kapasitesi</span>
+                  </div>
+                  <span class="font-mono font-bold text-on-surface">2.5 kg</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-outline-variant/30">
+                  <div class="flex items-center gap-2 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-base">memory</span>
+                    <span>Otonom Seyrüsefer</span>
+                  </div>
+                  <span class="font-mono font-bold text-primary">Tam Otonom (AI Vision)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <button onclick="document.getElementById('system-map-falcon').classList.toggle('hidden')" class="inline-flex items-center gap-2 bg-surface-container-high hover:bg-surface-container-highest text-primary border border-primary/30 px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all">
+                <span class="material-symbols-outlined text-base">schema</span>
+                <span>Sistem Mimarisini Göster</span>
+              </button>
+              <a href="iletisim.html" class="inline-flex items-center gap-1 text-on-surface-variant hover:text-primary text-xs font-bold uppercase tracking-wider transition-colors ml-auto">
+                <span>Teknik Döküman İste</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Expandable System Architecture Map -->
+        <div id="system-map-falcon" class="hidden border-t border-outline-variant/40 bg-surface-container-highest p-6 sm:p-8 animate-tactical-fade-in">
+          <div class="flex justify-between items-center mb-4">
+            <h4 class="text-base font-bold text-on-surface flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary">hub</span>
+              ALTEK-X1 Sistem Mimarisi & Donanım Blok Diyagramı
+            </h4>
+            <button onclick="document.getElementById('system-map-falcon').classList.add('hidden')" class="text-xs text-on-surface-variant hover:text-primary uppercase font-bold">Kapat</button>
+          </div>
+          <div class="rounded-lg overflow-hidden bg-background p-4 border border-outline-variant/20">
+            <img alt="ALTEK Savaşan İHA System Map" class="w-full rounded object-contain max-h-[500px] mx-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNJtjU-S3rmNNog269cxPi5yYoL_zPS_EpyiG7dHyB7U9nZ-mYcrOs5bsQE8s7fikC1xGAzzrPF6zqzJsOWHN1yfFOotwdAuXBQS3bdzjwJmZ86jW7wtff584zUZo0JfUnubXM170v1qdCaH4XfF29wPSxZ_teZ-A1IcVuj5AgY2ThqdDZ9ZDw9N1-657NSyl1l4bnIyohy7BSMZLqGkrZ61BoXaAcPsAIwclg0Dc-jKzLHEw4AAq44cBx33_e5neTXw"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: ALTEK-M2 "Atlas" (Multirotor) -->
+      <div class="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/40 hover:border-primary/60 transition-all duration-300 shadow-xl group tactical-reveal-right">
+        <div class="flex flex-col lg:flex-row-reverse">
+          <div class="relative w-full lg:w-1/2 min-h-[320px] overflow-hidden">
+            <div class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-700 absolute inset-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBCBSPCe4AfMIVwZ8LdprPfNci9PH1VJ1AeGHcJGSFhge8pTLYKaV93ClsWyse-GBXFFgCCHf0FthA0aFe0z1TfyrMtxFLVJKa55AGsr9isZ34ohltvrJEsoSOUkXLuf9hjqg3cWmJuUiJRZRTJ0LTC1fH1p0N8pRJV_hC-Rq8MaiPXE3WKxYVNuaj1hXFkQ-uKTwEOz67NGMbAlMqv-eAte1ASDI16K-SvDPAWx00_TZrUvwBex7E');"></div>
+            <div class="absolute top-4 left-4 lg:left-auto lg:right-4 bg-primary-container text-on-primary-container px-3.5 py-1 rounded-md font-mono text-xs font-bold shadow-md">
+              2023 PLATFORMU
+            </div>
+            <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded text-xs text-primary font-mono font-medium">
+              SERBEST GÖREV / ARAMA KURTARMA
+            </div>
+          </div>
+          <div class="p-6 sm:p-10 w-full lg:w-1/2 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <h2 class="text-2xl sm:text-3xl font-bold text-on-surface group-hover:text-primary transition-colors">ALTEK-M2 "Atlas"</h2>
+                <span class="status-badge status-badge-cyan">TAMAMLANDI</span>
+              </div>
+              <p class="text-sm sm:text-base text-on-surface-variant mb-6 leading-relaxed">
+                Zorlu hava koşullarında üstün stabilite sağlayan, yüksek faydalı yük kapasitesine sahip 6 rotorlu (hexacopter) endüstriyel platform. Görev bazlı modüler yapısı sayesinde kurtarma, faydalı yük bırakma ve haritalama görevlerinde yüksek güvenilirlik sunar.
+              </p>
+              
+              <div class="space-y-3 mb-8 text-sm">
+                <div class="flex justify-between items-center py-2 border-b border-outline-variant/30">
+                  <div class="flex items-center gap-2 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-base">straighten</span>
+                    <span>Gövde Çapı</span>
+                  </div>
+                  <span class="font-mono font-bold text-on-surface">950 mm</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-outline-variant/30">
+                  <div class="flex items-center gap-2 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-base">package_2</span>
+                    <span>Faydalı Yük Kapasitesi</span>
+                  </div>
+                  <span class="font-mono font-bold text-on-surface">4.0 kg</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-outline-variant/30">
+                  <div class="flex items-center gap-2 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-base">alt_route</span>
+                    <span>Otonom Kabiliyet</span>
+                  </div>
+                  <span class="font-mono font-bold text-on-surface">GPS Hassas Konumlandırma & Yük Bırakma</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="galeri.html" class="inline-flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-wider hover:underline">
+                <span>Test Uçuşu Görüntülerini İzle</span>
+                <span class="material-symbols-outlined text-sm">play_circle</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: ALTEK-S4 "Swift" (Delta Wing) -->
+      <div class="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/40 hover:border-primary/60 transition-all duration-300 shadow-xl group tactical-reveal-left">
+        <div class="flex flex-col lg:flex-row">
+          <div class="relative w-full lg:w-1/2 min-h-[320px] overflow-hidden">
+            <div class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-700 absolute inset-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-qpn-9CTI9f80TV3bxWKYjyD83xZ8RzG1OkYErYW0p7QJuTKIhAfbomE_-faJueSle2zvNjFDg7V0nFfZ2M27n5W58vHM_2MhLCjbWp-FC_d46260WimdoJ-j-etdD_wA63bczRCFFouuQBjA2rcFPDGWFrw32oTddhLTKdyhzcUZN0AKkdNY7bTtGGDnnwPIZnLC_9UtUrBfoKy_0gdvteMRa3rvFHxg5W1BlLy-_d7fgWLYI7C3');"></div>
+            <div class="absolute top-4 left-4 bg-primary-container text-on-primary-container px-3.5 py-1 rounded-md font-mono text-xs font-bold shadow-md">
+              2022 PLATFORMU
+            </div>
+          </div>
+          <div class="p-6 sm:p-10 w-full lg:w-1/2 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <h2 class="text-2xl sm:text-3xl font-bold text-on-surface group-hover:text-primary transition-colors">ALTEK-S4 "Swift"</h2>
+                <span class="status-badge status-badge-cyan">TAMAMLANDI</span>
+              </div>
+              <p class="text-sm sm:text-base text-on-surface-variant mb-6 leading-relaxed">
+                Hızlı intikal ve anlık keşif görevleri için optimize edilmiş, yüksek manevra kabiliyetine sahip taktik delta kanat sistemi. Kompakt yapısı sayesinde dar alanlarda fırlatma ve operasyonel kolaylık sağlar.
+              </p>
+              
+              <div class="space-y-3 mb-8 text-sm">
+                <div class="flex justify-between items-center py-2 border-b border-outline-variant/30">
+                  <div class="flex items-center gap-2 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-base">straighten</span>
+                    <span>Kanat Açıklığı</span>
+                  </div>
+                  <span class="font-mono font-bold text-on-surface">1.20 m</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-outline-variant/30">
+                  <div class="flex items-center gap-2 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-base">speed</span>
+                    <span>Maksimum Hız</span>
+                  </div>
+                  <span class="font-mono font-bold text-on-surface">120 km/s</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-outline-variant/30">
+                  <div class="flex items-center gap-2 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-base">weight</span>
+                    <span>Kalkış Ağırlığı</span>
+                  </div>
+                  <span class="font-mono font-bold text-on-surface">1.8 kg</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="galeri.html" class="inline-flex items-center gap-1 text-primary text-xs font-bold uppercase tracking-wider hover:underline">
+                <span>Fotoğraf Galerisi</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: VTOL-Z (AR-GE Platformu) -->
+      <div class="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/40 hover:border-primary/60 transition-all duration-300 shadow-xl group tactical-reveal-scale">
+        <div class="flex flex-col lg:flex-row-reverse">
+          <div class="relative w-full lg:w-1/2 min-h-[280px] bg-surface-container-high/80 flex flex-col items-center justify-center p-8 overflow-hidden">
+            <span class="material-symbols-outlined text-primary text-7xl mb-4 group-hover:scale-110 transition-transform duration-500">rocket_launch</span>
+            <div class="font-mono text-xs text-primary font-bold tracking-widest uppercase">KAVRAMSAL TASARIM // VTOL</div>
+            <div class="absolute top-4 left-4 lg:left-auto lg:right-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded text-xs font-mono font-bold">
+              AR-GE AŞAMASINDA
+            </div>
+          </div>
+          <div class="p-6 sm:p-10 w-full lg:w-1/2 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <h2 class="text-2xl sm:text-3xl font-bold text-on-surface group-hover:text-primary transition-colors">Proje: VTOL-Z (Hibrit İHA)</h2>
+                <span class="status-badge status-badge-active">AKTİF GELİŞTİRME</span>
+              </div>
+              <p class="text-sm sm:text-base text-on-surface-variant mb-6 leading-relaxed">
+                Piste ihtiyaç duymadan dikey iniş-kalkış yapabilen ve ardından yatay uçuş moduna geçerek uzun menzil katedebilen yeni nesil hibrit tilt-rotor platformumuz. Geleceğin taktik lojistik ve kesintisiz gözlem ihtiyaçları için geliştirilmektedir.
+              </p>
+              
+              <!-- Progress Bar -->
+              <div class="space-y-2 mb-6">
+                <div class="flex justify-between items-center text-xs font-mono">
+                  <span class="text-on-surface-variant uppercase">Tasarım & Simülasyon İlerlemesi</span>
+                  <span class="text-primary font-bold">75%</span>
+                </div>
+                <div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+                  <div class="bg-primary-container h-full rounded-full transition-all duration-1000" style="width: 75%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <button class="btn-sponsor-modal inline-flex items-center gap-2 bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-primary transition-all">
+                <span class="material-symbols-outlined text-base">handshake</span>
+                <span>Bu Projeye Sponsor Ol</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Tactical Footer -->
+  <footer class="bg-surface-container-lowest border-t border-outline-variant/30 py-12 text-on-surface-variant">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <img alt="ALTEK Logo" class="h-14 sm:h-16 w-auto object-contain logo-white" src="assets/img/logo-white.png"/>
+          <img alt="ALTEK Logo" class="h-14 sm:h-16 w-auto object-contain logo-dark" src="assets/img/logo-dark.png"/>
+          <span class="font-bold text-lg text-on-surface">ALTEK <span class="text-primary">Teknoloji Takımı</span></span>
+        </div>
+        <p class="text-sm text-on-surface-variant/80 max-w-sm mb-4">
+          Havacılık tutkusu, otonomi ve ileri mühendislik ile TEKNOFEST yarışmalarında üniversitemizi ve ülkemizi temsil ediyoruz.
+        </p>
+        <div class="flex items-center gap-3 text-xs font-mono text-primary">
+          <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+          <span>SİSTEM DURUMU: AKTİF // GÖREV HAZIR</span>
+        </div>
+      </div>
+      <div>
+        <div class="text-xs font-bold uppercase tracking-widest text-on-surface mb-4">Sayfalar</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-primary transition-colors">Ana Sayfa</a></li>
+          <li><a href="projeler.html" class="hover:text-primary transition-colors">İHA Projeleri</a></li>
+          <li><a href="takim.html" class="hover:text-primary transition-colors">Mühendislik Ekibi</a></li>
+          <li><a href="galeri.html" class="hover:text-primary transition-colors">Medya & Galeri</a></li>
+          <li><a href="iletisim.html" class="hover:text-primary transition-colors">İletişim & Konum</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-xs font-bold uppercase tracking-widest text-on-surface mb-4">Merkez Komuta</div>
+        <p class="text-sm mb-2">Teknopark İstanbul,<br/>Pendik / İstanbul</p>
+        <p class="text-sm font-mono text-primary">info@altekuav.com</p>
+      </div>
+    </div>
+    <div class="max-w-[1280px] mx-auto px-4 md:px-8 pt-6 border-t border-outline-variant/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+      <div>&copy; 2026 ALTEK Teknoloji Takımı. Tüm hakları saklıdır.</div>
+      <div class="text-on-surface-variant/60 font-mono">TACTICAL COMMAND v2.4 // TEKNOFEST</div>
+    </div>
+  </footer>
+
+  <!-- Global Sponsor Modal -->
+  <div id="sponsor-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+    <div class="modal-backdrop fixed inset-0 bg-black/80 backdrop-blur-md"></div>
+    <div class="modal-card relative z-10 bg-surface-container border border-primary-container/40 p-6 sm:p-8 rounded-2xl max-w-lg w-full shadow-2xl scale-95 transition-transform duration-300">
+      <div class="flex justify-between items-center mb-6 pb-3 border-b border-outline-variant/30">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary">handshake</span>
+          <h3 class="text-xl font-bold text-on-surface">Sponsorluk Protokolü</h3>
+        </div>
+        <button id="close-sponsor-modal" class="text-on-surface-variant hover:text-primary p-1">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+        ALTEK Teknoloji Takımımıza maddi veya ayni (kompozit malzeme, aviyonik donanım, test ekipmanı) destek sağlayarak geleceğin mühendislerine güç verin.
+      </p>
+      <form id="sponsor-modal-form" class="space-y-4 text-sm">
+        <div>
+          <label class="block text-xs uppercase font-bold text-on-surface-variant mb-1">Kurum / Yetkili Adı</label>
+          <input type="text" required class="tactical-input" placeholder="Örn: Savunma Sanayii A.Ş."/>
+        </div>
+        <div>
+          <label class="block text-xs uppercase font-bold text-on-surface-variant mb-1">E-Posta Adresi</label>
+          <input type="email" required class="tactical-input" placeholder="yetkili@sirket.com"/>
+        </div>
+        <div>
+          <label class="block text-xs uppercase font-bold text-on-surface-variant mb-1">Destek Türü</label>
+          <select class="tactical-input bg-surface-container-low">
+            <option>Ana Sponsorluk (Platin)</option>
+            <option>Altın Sponsorluk</option>
+            <option>Gümüş Sponsorluk</option>
+            <option>Teknik / Donanım Sponsorluğu</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-primary-container text-on-primary-container font-bold py-3.5 rounded-lg uppercase tracking-wider text-xs hover:bg-primary transition-all duration-200 mt-2">
+          Sponsorluk Dosyası Talep Et
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
