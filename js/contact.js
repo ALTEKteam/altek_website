@@ -17,11 +17,11 @@ function initContactForm() {
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
 
-    // Tactical loading state
+    // Loading state
     submitBtn.disabled = true;
     submitBtn.innerHTML = `
       <span class="inline-block animate-spin material-symbols-outlined text-sm mr-2">sync</span>
-      <span>ŞİFRELENİYOR & İLETİLİYOR...</span>
+      <span>GÖNDERİLİYOR...</span>
     `;
 
     setTimeout(() => {
@@ -30,7 +30,7 @@ function initContactForm() {
       form.reset();
 
       if (window.showTacticalToast) {
-        window.showTacticalToast('İletişim Protokolü Başarılı! Mesajınız Merkez Komutaya İletildi.', 'success');
+        window.showTacticalToast('Mesajınız başarıyla iletildi. En kısa sürede geri dönüş yapacağız.', 'success');
       } else {
         alert('Mesajınız başarıyla iletildi.');
       }
