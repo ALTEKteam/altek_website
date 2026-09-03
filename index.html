@@ -374,44 +374,44 @@
       </div>
     </section>
 
-    <!-- Destekçilerimiz Section -->
-    <section class="py-16 bg-surface-container-lowest/30 overflow-hidden border-b border-outline-variant/30 tactical-reveal">
-      <div class="max-w-[1280px] mx-auto px-4 md:px-8 text-center">
-        <div class="inline-flex items-center gap-2 text-primary text-xs uppercase font-bold tracking-widest mb-3 font-mono">
+    <!-- Destekçilerimiz Marquee Section -->
+    <section class="py-12 sm:py-14 bg-surface-container-lowest/30 overflow-hidden border-b border-outline-variant/30 tactical-reveal relative">
+      <!-- Gradient Fade on Edges for Premium Look -->
+      <div class="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
+
+      <div class="max-w-[1280px] mx-auto px-4 md:px-8 mb-6 text-center">
+        <div class="inline-flex items-center gap-2 text-primary text-xs uppercase font-bold tracking-widest font-mono">
           <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
           DESTEKÇİLERİMİZ
         </div>
-        <h3 class="text-2xl sm:text-3xl font-bold text-on-surface mb-10 tracking-tight">
-          Milli Teknoloji Yolculuğumuzda <span class="text-primary">Destekçilerimiz</span>
-        </h3>
+      </div>
+      <div class="relative w-full overflow-hidden">
+        <div class="animate-marquee flex items-center">
+          <!-- Marquee Track 1 -->
+          <div class="flex items-center gap-16 sm:gap-24 px-8 shrink-0">
+            <div class="flex items-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all font-black text-2xl sm:text-3xl text-on-surface hover:text-primary tracking-wider font-brand">ODTÜ</div>
+            <div class="flex items-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all font-black text-2xl sm:text-3xl text-on-surface hover:text-primary tracking-wider font-brand">ROMER</div>
+            <div class="flex items-center opacity-95 hover:opacity-100 hover:scale-105 transition-all font-black text-4xl sm:text-5xl md:text-6xl text-primary tracking-widest font-brand drop-shadow-md">ZERK</div>
+            <div class="flex items-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all font-black text-2xl sm:text-3xl text-on-surface hover:text-primary tracking-wider font-brand">T3 VAKFI</div>
 
-        <!-- Centered Supporter Badges (ZERK Large in Center) -->
-        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-10">
-          <!-- ODTÜ -->
-          <div class="flex flex-col items-center justify-center px-6 sm:px-8 py-5 rounded-xl border border-outline-variant/30 bg-surface-container-low hover:border-primary/50 transition-all duration-300 group min-w-[160px] sm:min-w-[190px] shadow-sm">
-            <span class="font-black text-2xl sm:text-3xl tracking-wider text-on-surface group-hover:text-primary transition-colors font-brand">ODTÜ</span>
-            <span class="text-[10px] sm:text-[11px] font-mono text-on-surface-variant uppercase tracking-widest mt-1 font-medium">Orta Doğu Teknik Üniversitesi</span>
+            <div class="flex items-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all font-black text-2xl sm:text-3xl text-on-surface hover:text-primary tracking-wider font-brand">ODTÜ</div>
+            <div class="flex items-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all font-black text-2xl sm:text-3xl text-on-surface hover:text-primary tracking-wider font-brand">ROMER</div>
+            <div class="flex items-center opacity-95 hover:opacity-100 hover:scale-105 transition-all font-black text-4xl sm:text-5xl md:text-6xl text-primary tracking-widest font-brand drop-shadow-md">ZERK</div>
+            <div class="flex items-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all font-black text-2xl sm:text-3xl text-on-surface hover:text-primary tracking-wider font-brand">T3 VAKFI</div>
           </div>
 
-          <!-- ROMER -->
-          <div class="flex flex-col items-center justify-center px-6 sm:px-8 py-5 rounded-xl border border-outline-variant/30 bg-surface-container-low hover:border-primary/50 transition-all duration-300 group min-w-[160px] sm:min-w-[190px] shadow-sm">
-            <span class="font-black text-2xl sm:text-3xl tracking-wider text-on-surface group-hover:text-primary transition-colors font-brand">ROMER</span>
-            <span class="text-[10px] sm:text-[11px] font-mono text-on-surface-variant uppercase tracking-widest mt-1 font-medium">ODTÜ Robotik Merkezi</span>
-          </div>
+          <!-- Marquee Track 2 (Identical for seamless infinite scroll) -->
+          <div class="flex items-center gap-16 sm:gap-24 px-8 shrink-0">
+            <div class="flex items-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all font-black text-2xl sm:text-3xl text-on-surface hover:text-primary tracking-wider font-brand">ODTÜ</div>
+            <div class="flex items-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all font-black text-2xl sm:text-3xl text-on-surface hover:text-primary tracking-wider font-brand">ROMER</div>
+            <div class="flex items-center opacity-95 hover:opacity-100 hover:scale-105 transition-all font-black text-4xl sm:text-5xl md:text-6xl text-primary tracking-widest font-brand drop-shadow-md">ZERK</div>
+            <div class="flex items-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all font-black text-2xl sm:text-3xl text-on-surface hover:text-primary tracking-wider font-brand">T3 VAKFI</div>
 
-          <!-- ZERK (Ortada, Büyük ve Vurgulu) -->
-          <div class="flex flex-col items-center justify-center px-8 sm:px-12 py-7 sm:py-8 rounded-2xl border-2 border-primary bg-surface-container shadow-xl shadow-primary/15 hover:shadow-primary/30 hover:scale-105 transition-all duration-300 group min-w-[210px] sm:min-w-[260px] relative overflow-hidden">
-            <div class="absolute top-0 right-0 bg-primary-container text-on-primary-container text-[9px] sm:text-[10px] font-mono font-bold px-3 py-0.5 rounded-bl uppercase tracking-wider">
-              STRATEJİK DESTEKÇİ
-            </div>
-            <span class="font-black text-4xl sm:text-5xl md:text-6xl tracking-widest text-primary font-brand drop-shadow-sm">ZERK</span>
-            <span class="text-[11px] sm:text-xs font-mono text-on-surface uppercase tracking-widest mt-1.5 font-bold">Havacılık & Savunma</span>
-          </div>
-
-          <!-- T3 VAKFI -->
-          <div class="flex flex-col items-center justify-center px-6 sm:px-8 py-5 rounded-xl border border-outline-variant/30 bg-surface-container-low hover:border-primary/50 transition-all duration-300 group min-w-[160px] sm:min-w-[190px] shadow-sm">
-            <span class="font-black text-2xl sm:text-3xl tracking-wider text-on-surface group-hover:text-primary transition-colors font-brand">T3 VAKFI</span>
-            <span class="text-[10px] sm:text-[11px] font-mono text-on-surface-variant uppercase tracking-widest mt-1 font-medium">Türkiye Teknoloji Takımı</span>
+            <div class="flex items-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all font-black text-2xl sm:text-3xl text-on-surface hover:text-primary tracking-wider font-brand">ODTÜ</div>
+            <div class="flex items-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all font-black text-2xl sm:text-3xl text-on-surface hover:text-primary tracking-wider font-brand">ROMER</div>
+            <div class="flex items-center opacity-95 hover:opacity-100 hover:scale-105 transition-all font-black text-4xl sm:text-5xl md:text-6xl text-primary tracking-widest font-brand drop-shadow-md">ZERK</div>
+            <div class="flex items-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all font-black text-2xl sm:text-3xl text-on-surface hover:text-primary tracking-wider font-brand">T3 VAKFI</div>
           </div>
         </div>
       </div>
