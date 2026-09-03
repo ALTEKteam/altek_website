@@ -30,8 +30,8 @@ html[data-theme="dark"] {
   --color-primary: 247 152 15;          /* #F7980F - ALTEK Tactical Orange */
   --color-primary-container: 247 152 15;/* #F7980F - ALTEK Orange */
   --color-primary-orange: 247 152 15;
-  --color-on-primary: 255 255 255;      /* Crisp White on Orange */
-  --color-on-primary-container: 255 255 255;
+  --color-on-primary: 18 20 20;          /* Koyu metin - turuncu üzerinde yüksek kontrast */
+  --color-on-primary-container: 18 20 20;
   --color-primary-fixed: 255 237 213;
   --color-primary-fixed-dim: 247 152 15;
 
@@ -83,8 +83,8 @@ html[data-theme="light"] {
   --color-primary: 247 152 15;          /* #F7980F - Tactical Orange */
   --color-primary-container: 247 152 15;/* #F7980F - Orange */
   --color-primary-orange: 247 152 15;
-  --color-on-primary: 255 255 255;
-  --color-on-primary-container: 255 255 255;
+  --color-on-primary: 18 20 20;          /* Koyu metin - turuncu üzerinde yüksek kontrast */
+  --color-on-primary-container: 18 20 20;
   --color-primary-fixed: 255 237 213;
   --color-primary-fixed-dim: 247 152 15;
 
