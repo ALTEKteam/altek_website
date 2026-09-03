@@ -8,33 +8,56 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initGalleryFilter() {
-  const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+  const categoryBtns = document.querySelectorAll('.gallery-filter-btn[data-filter]');
+  const yearBtns = document.querySelectorAll('.gallery-year-btn[data-year-filter]');
   const galleryItems = document.querySelectorAll('.gallery-item');
 
-  if (!filterBtns.length || !galleryItems.length) return;
+  if (!categoryBtns.length || !galleryItems.length) return;
 
-  filterBtns.forEach(btn => {
+  let activeCategory = 'all';
+  let activeYear = 'all';
+
+  const applyFilters = () => {
+    galleryItems.forEach(item => {
+      const itemCategory = item.getAttribute('data-category');
+      const itemYear = item.getAttribute('data-year');
+      const categoryMatch = activeCategory === 'all' || itemCategory === activeCategory;
+      const yearMatch = activeYear === 'all' || itemYear === activeYear;
+      if (categoryMatch && yearMatch) {
+        item.style.display = '';
+        item.classList.add('revealed');
+        item.style.animation = 'pageEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  };
+
+  categoryBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Update active filter style
-      filterBtns.forEach(b => {
+      categoryBtns.forEach(b => {
         b.classList.remove('bg-primary-container', 'text-on-primary-container', 'border-primary-container');
         b.classList.add('bg-surface-container', 'text-on-surface-variant', 'border-outline-variant/30');
       });
       btn.classList.add('bg-primary-container', 'text-on-primary-container', 'border-primary-container');
       btn.classList.remove('bg-surface-container', 'text-on-surface-variant', 'border-outline-variant/30');
 
-      const filterCategory = btn.getAttribute('data-filter');
+      activeCategory = btn.getAttribute('data-filter');
+      applyFilters();
+    });
+  });
 
-      galleryItems.forEach(item => {
-        const itemCategory = item.getAttribute('data-category');
-        if (filterCategory === 'all' || itemCategory === filterCategory) {
-          item.style.display = '';
-          item.classList.add('revealed');
-          item.style.animation = 'pageEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards';
-        } else {
-          item.style.display = 'none';
-        }
+  yearBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      yearBtns.forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'border-primary');
+        b.classList.add('bg-surface-container', 'text-on-surface-variant', 'border-outline-variant/30');
       });
+      btn.classList.add('bg-primary', 'text-on-primary', 'border-primary');
+      btn.classList.remove('bg-surface-container', 'text-on-surface-variant', 'border-outline-variant/30');
+
+      activeYear = btn.getAttribute('data-year-filter');
+      applyFilters();
     });
   });
 }

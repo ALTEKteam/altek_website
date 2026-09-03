@@ -209,11 +209,27 @@
       </button>
     </div>
 
+    <!-- Year Filter Buttons -->
+    <div class="flex overflow-x-auto no-scrollbar flex-nowrap sm:flex-wrap gap-2.5 sm:gap-3 mb-8 pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 tactical-reveal delay-100">
+      <button class="gallery-year-btn flex-shrink-0 px-4 py-2 bg-primary text-on-primary font-mono text-[11px] font-bold uppercase tracking-wider rounded-lg border border-primary transition-all" data-year-filter="all">
+        Tüm Yıllar
+      </button>
+      <button class="gallery-year-btn flex-shrink-0 px-4 py-2 bg-surface-container text-on-surface-variant font-mono text-[11px] font-bold uppercase tracking-wider rounded-lg border border-outline-variant/30 hover:border-primary hover:text-primary transition-all" data-year-filter="2025">
+        2025 // TALON
+      </button>
+      <button class="gallery-year-btn flex-shrink-0 px-4 py-2 bg-surface-container text-on-surface-variant font-mono text-[11px] font-bold uppercase tracking-wider rounded-lg border border-outline-variant/30 hover:border-primary hover:text-primary transition-all" data-year-filter="2026-on-eleme">
+        2026 // Ön Eleme
+      </button>
+      <button class="gallery-year-btn flex-shrink-0 px-4 py-2 bg-surface-container text-on-surface-variant font-mono text-[11px] font-bold uppercase tracking-wider rounded-lg border border-outline-variant/30 hover:border-primary hover:text-primary transition-all" data-year-filter="2026-final">
+        2026 // Final
+      </button>
+    </div>
+
     <!-- Gallery Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       
       <!-- Video 1: Target Lock -->
-      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-100" data-category="video" data-type="video" data-src="assets/video/basarili_kilitlenme.mp4" data-title="YOLOv8 Hedef Kilitlenme & Telemetri Kaydı" data-category-name="Test Videoları">
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-100" data-category="video" data-type="video" data-src="assets/video/basarili_kilitlenme.mp4" data-year="2026-on-eleme" data-title="YOLOv8 Hedef Kilitlenme & Telemetri Kaydı" data-category-name="Test Videoları">
         <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Kilitlenme Testi" src="assets/img/gallery/gallery_uav_detail.jpeg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
         <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
@@ -236,7 +252,7 @@
       </div>
 
       <!-- Video 2: Kamikaze Dive 1 -->
-      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-150" data-category="video" data-type="video" data-src="assets/video/kamikaze_dalis_1.mp4" data-title="Otonom Kamikaze Dalış & QR Çözümleme Testi 1" data-category-name="Test Videoları">
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-150" data-category="video" data-type="video" data-src="assets/video/kamikaze_dalis_1.mp4" data-year="2026-on-eleme" data-title="Otonom Kamikaze Dalış & QR Çözümleme Testi 1" data-category-name="Test Videoları">
         <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Kamikaze Dalış Testi" src="assets/img/gallery/gallery_field_2.jpeg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
         <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
@@ -259,7 +275,7 @@
       </div>
 
       <!-- Video 3: Kamikaze Dive 2 -->
-      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-200" data-category="video" data-type="video" data-src="assets/video/kamikaze_dalis_2.mp4" data-title="Kamikaze Dalış Testi 2 (Açı ve Hız Analizi)" data-category-name="Test Videoları">
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-200" data-category="video" data-type="video" data-src="assets/video/kamikaze_dalis_2.mp4" data-year="2026-on-eleme" data-title="Kamikaze Dalış Testi 2 (Açı ve Hız Analizi)" data-category-name="Test Videoları">
         <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Kamikaze Dalış 2" src="assets/img/gallery/gallery_field_1.jpeg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
         <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
@@ -282,7 +298,7 @@
       </div>
 
       <!-- Video 4: ALTEK Official Project Promo Video -->
-      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-250" data-category="video" data-type="video" data-src="assets/video/altek_tanitim_2026.mp4" data-title="ALTEK Teknoloji Takımı 2026 Tanıtım Videosu" data-category-name="Tanıtım Videosu">
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-250" data-category="video" data-type="video" data-src="assets/video/altek_tanitim_2026.mp4" data-year="2026-final" data-title="ALTEK Teknoloji Takımı 2026 Tanıtım Videosu" data-category-name="Tanıtım Videosu">
         <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Tanıtım Videosu" src="assets/img/gallery/video_thumb_project.jpeg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
         <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
@@ -305,7 +321,7 @@
       </div>
 
       <!-- Video 5: 2026 Sunset Flight Test -->
-      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-300" data-category="video" data-type="video" data-src="assets/video/VID-20260829-WA0031.mp4" data-title="2026 Savaşan İHA Gün Batımı Pist Uçuş Testi" data-category-name="Test Videoları">
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-300" data-category="video" data-type="video" data-src="assets/video/VID-20260829-WA0031.mp4" data-year="2026-final" data-title="2026 Savaşan İHA Gün Batımı Pist Uçuş Testi" data-category-name="Test Videoları">
         <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Pist Uçuş Testi" src="assets/img/projects/wa031_poster.jpg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
         <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
@@ -328,7 +344,7 @@
       </div>
 
       <!-- Photo 1: TALON Field -->
-      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-100" data-category="flight" data-type="image" data-src="assets/img/projects/talon_field.jpg" data-title="TALON İHA Saha Uçuş Testi Öncesi" data-category-name="Uçuş & Saha">
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-100" data-category="flight" data-type="image" data-src="assets/img/projects/talon_field.jpg" data-year="2025" data-title="TALON İHA Saha Uçuş Testi Öncesi" data-category-name="Uçuş & Saha">
         <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="TALON Uçuş Testi" src="assets/img/projects/talon_field.jpg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
         <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -345,7 +361,7 @@
       </div>
 
       <!-- Photo 2: Gallery Field 1 -->
-      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-150" data-category="flight" data-type="image" data-src="assets/img/gallery/gallery_field_1.jpeg" data-title="İHA Platformu Saha Hazırlık ve Telemetri Kontrolü" data-category-name="Uçuş & Saha">
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-150" data-category="flight" data-type="image" data-src="assets/img/gallery/gallery_field_1.jpeg" data-year="2026-final" data-title="İHA Platformu Saha Hazırlık ve Telemetri Kontrolü" data-category-name="Uçuş & Saha">
         <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Saha Hazırlık" src="assets/img/gallery/gallery_field_1.jpeg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
         <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -362,7 +378,7 @@
       </div>
 
       <!-- Photo 3: Gallery Field 2 -->
-      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-200" data-category="flight" data-type="image" data-src="assets/img/gallery/gallery_field_2.jpeg" data-title="Pist Uçuş Hattı ve İtki Sistemi Testi" data-category-name="Uçuş & Saha">
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-200" data-category="flight" data-type="image" data-src="assets/img/gallery/gallery_field_2.jpeg" data-year="2026-final" data-title="Pist Uçuş Hattı ve İtki Sistemi Testi" data-category-name="Uçuş & Saha">
         <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Uçuş Hattı" src="assets/img/gallery/gallery_field_2.jpeg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
         <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -379,7 +395,7 @@
       </div>
 
       <!-- Photo 4: UAV Detail -->
-      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-250" data-category="workshop" data-type="image" data-src="assets/img/gallery/gallery_uav_detail.jpeg" data-title="Gövde, Kamera ve Aviyonik Entegrasyonu" data-category-name="Üretim & Atölye">
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-250" data-category="workshop" data-type="image" data-src="assets/img/gallery/gallery_uav_detail.jpeg" data-year="2026-final" data-title="Gövde, Kamera ve Aviyonik Entegrasyonu" data-category-name="Üretim & Atölye">
         <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Aviyonik Entegrasyon" src="assets/img/gallery/gallery_uav_detail.jpeg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
         <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -396,7 +412,7 @@
       </div>
 
       <!-- Photo 5: Workshop 1 -->
-      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-300" data-category="workshop" data-type="image" data-src="assets/img/gallery/gallery_workshop_1.jpeg" data-title="Atölye Mekanik İmalat ve Montaj Süreci" data-category-name="Üretim & Atölye">
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-300" data-category="workshop" data-type="image" data-src="assets/img/gallery/gallery_workshop_1.jpeg" data-year="2026-final" data-title="Atölye Mekanik İmalat ve Montaj Süreci" data-category-name="Üretim & Atölye">
         <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Atölye Montaj" src="assets/img/gallery/gallery_workshop_1.jpeg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
         <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -413,7 +429,7 @@
       </div>
 
       <!-- Photo 6: UAV Top / Wing Structure -->
-      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-350" data-category="workshop" data-type="image" data-src="assets/img/gallery/gallery_uav_top.jpeg" data-title="Üst Gövde ve Kanat Aerodinamik İncelemesi" data-category-name="Üretim & Atölye">
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-350" data-category="workshop" data-type="image" data-src="assets/img/gallery/gallery_uav_top.jpeg" data-year="2026-final" data-title="Üst Gövde ve Kanat Aerodinamik İncelemesi" data-category-name="Üretim & Atölye">
         <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Üst Gövde İnceleme" src="assets/img/gallery/gallery_uav_top.jpeg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
         <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -430,7 +446,7 @@
       </div>
 
       <!-- Photo 7: Night Field -->
-      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-400" data-category="flight" data-type="image" data-src="assets/img/gallery/gallery_night_field.jpeg" data-title="Gece Uçuş ve Karanlık Ortam Telemetri Testi" data-category-name="Uçuş & Saha">
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-400" data-category="flight" data-type="image" data-src="assets/img/gallery/gallery_night_field.jpeg" data-year="2026-final" data-title="Gece Uçuş ve Karanlık Ortam Telemetri Testi" data-category-name="Uçuş & Saha">
         <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Gece Uçuş Testi" src="assets/img/gallery/gallery_night_field.jpeg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
         <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -447,7 +463,7 @@
       </div>
 
       <!-- Photo 8: Team Group -->
-      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-450" data-category="workshop" data-type="image" data-src="assets/img/team/team_group.png" data-title="ALTEK Teknoloji Takımı Mühendislik Ekibi" data-category-name="Takım">
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-450" data-category="workshop" data-type="image" data-src="assets/img/team/team_group.png" data-year="2026-final" data-title="ALTEK Teknoloji Takımı Mühendislik Ekibi" data-category-name="Takım">
         <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="ALTEK Ekip" src="assets/img/team/team_group.png"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
         <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -459,6 +475,366 @@
           <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
             <span>KONSORSİYUM</span>
             <span>2026 // ODTÜ</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Başarılı Kamikaze Dalış Görevi 2 -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-550" data-category="video" data-type="video" data-src="assets/video/gorev_kamikaze_2.mp4" data-year="2026-final" data-title="Başarılı Kamikaze Dalış Görevi 2" data-category-name="Test & Görev Videoları">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Başarılı Kamikaze Dalış Görevi 2" src="assets/img/gallery/thumb_gorev_kamikaze_2.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
+          <span class="material-symbols-outlined text-xs">play_arrow</span>
+          <span>VİDEO</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="p-3.5 bg-primary-container/90 text-on-primary-container rounded-full shadow-2xl group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-2xl">play_arrow</span>
+          </div>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">GÖREV VİDEOSU // KAMİKAZE</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Başarılı Kamikaze Dalış Görevi 2</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>SAHA KAYDI</span>
+            <span>2026-FINAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kamikaze Dalış Denemesi 1 -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-600" data-category="video" data-type="video" data-src="assets/video/kamikaze_denemesi_1.mp4" data-year="2026-final" data-title="Kamikaze Dalış Denemesi 1" data-category-name="Test & Görev Videoları">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Kamikaze Dalış Denemesi 1" src="assets/img/gallery/thumb_kamikaze_denemesi_1.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
+          <span class="material-symbols-outlined text-xs">play_arrow</span>
+          <span>VİDEO</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="p-3.5 bg-primary-container/90 text-on-primary-container rounded-full shadow-2xl group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-2xl">play_arrow</span>
+          </div>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">DENEME VİDEOSU // KAMİKAZE</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Kamikaze Dalış Denemesi 1</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>SAHA KAYDI</span>
+            <span>2026-FINAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kamikaze Dalış Denemesi 2 -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-650" data-category="video" data-type="video" data-src="assets/video/kamikaze_denemesi_2.mp4" data-year="2026-final" data-title="Kamikaze Dalış Denemesi 2" data-category-name="Test & Görev Videoları">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Kamikaze Dalış Denemesi 2" src="assets/img/gallery/thumb_kamikaze_denemesi_2.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
+          <span class="material-symbols-outlined text-xs">play_arrow</span>
+          <span>VİDEO</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="p-3.5 bg-primary-container/90 text-on-primary-container rounded-full shadow-2xl group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-2xl">play_arrow</span>
+          </div>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">DENEME VİDEOSU // KAMİKAZE</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Kamikaze Dalış Denemesi 2</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>SAHA KAYDI</span>
+            <span>2026-FINAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kamikaze Dalış Denemesi 3 -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-700" data-category="video" data-type="video" data-src="assets/video/kamikaze_denemesi_3.mp4" data-year="2026-final" data-title="Kamikaze Dalış Denemesi 3" data-category-name="Test & Görev Videoları">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Kamikaze Dalış Denemesi 3" src="assets/img/gallery/thumb_kamikaze_denemesi_3.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
+          <span class="material-symbols-outlined text-xs">play_arrow</span>
+          <span>VİDEO</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="p-3.5 bg-primary-container/90 text-on-primary-container rounded-full shadow-2xl group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-2xl">play_arrow</span>
+          </div>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">DENEME VİDEOSU // KAMİKAZE</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Kamikaze Dalış Denemesi 3</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>SAHA KAYDI</span>
+            <span>2026-FINAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kamikaze Dalış Denemesi 4 -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-750" data-category="video" data-type="video" data-src="assets/video/kamikaze_denemesi_4.mp4" data-year="2026-final" data-title="Kamikaze Dalış Denemesi 4" data-category-name="Test & Görev Videoları">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Kamikaze Dalış Denemesi 4" src="assets/img/gallery/thumb_kamikaze_denemesi_4.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
+          <span class="material-symbols-outlined text-xs">play_arrow</span>
+          <span>VİDEO</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="p-3.5 bg-primary-container/90 text-on-primary-container rounded-full shadow-2xl group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-2xl">play_arrow</span>
+          </div>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">DENEME VİDEOSU // KAMİKAZE</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Kamikaze Dalış Denemesi 4</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>SAHA KAYDI</span>
+            <span>2026-FINAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kamikaze Dalış Denemesi 5 -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-800" data-category="video" data-type="video" data-src="assets/video/kamikaze_denemesi_5.mp4" data-year="2026-final" data-title="Kamikaze Dalış Denemesi 5" data-category-name="Test & Görev Videoları">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Kamikaze Dalış Denemesi 5" src="assets/img/gallery/thumb_kamikaze_denemesi_5.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
+          <span class="material-symbols-outlined text-xs">play_arrow</span>
+          <span>VİDEO</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="p-3.5 bg-primary-container/90 text-on-primary-container rounded-full shadow-2xl group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-2xl">play_arrow</span>
+          </div>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">DENEME VİDEOSU // KAMİKAZE</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Kamikaze Dalış Denemesi 5</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>SAHA KAYDI</span>
+            <span>2026-FINAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hedef Kilitlenme Denemesi 1 -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-850" data-category="video" data-type="video" data-src="assets/video/kilitlenme_denemesi_1.mp4" data-year="2026-final" data-title="Hedef Kilitlenme Denemesi 1" data-category-name="Test & Görev Videoları">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Hedef Kilitlenme Denemesi 1" src="assets/img/gallery/thumb_kilitlenme_denemesi_1.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
+          <span class="material-symbols-outlined text-xs">play_arrow</span>
+          <span>VİDEO</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="p-3.5 bg-primary-container/90 text-on-primary-container rounded-full shadow-2xl group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-2xl">play_arrow</span>
+          </div>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">DENEME VİDEOSU // KİLİTLENME</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Hedef Kilitlenme Denemesi 1</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>SAHA KAYDI</span>
+            <span>2026-FINAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hedef Kilitlenme Denemesi 2 -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-900" data-category="video" data-type="video" data-src="assets/video/kilitlenme_denemesi_2.mp4" data-year="2026-final" data-title="Hedef Kilitlenme Denemesi 2" data-category-name="Test & Görev Videoları">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Hedef Kilitlenme Denemesi 2" src="assets/img/gallery/thumb_kilitlenme_denemesi_2.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
+          <span class="material-symbols-outlined text-xs">play_arrow</span>
+          <span>VİDEO</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="p-3.5 bg-primary-container/90 text-on-primary-container rounded-full shadow-2xl group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-2xl">play_arrow</span>
+          </div>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">DENEME VİDEOSU // KİLİTLENME</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Hedef Kilitlenme Denemesi 2</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>SAHA KAYDI</span>
+            <span>2026-FINAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hedef Kilitlenme Denemesi 3 -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-primary/40 hover:border-primary transition-all duration-300 shadow-lg tactical-reveal-scale delay-950" data-category="video" data-type="video" data-src="assets/video/kilitlenme_denemesi_3.mp4" data-year="2026-final" data-title="Hedef Kilitlenme Denemesi 3" data-category-name="Test & Görev Videoları">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Hedef Kilitlenme Denemesi 3" src="assets/img/gallery/thumb_kilitlenme_denemesi_3.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        <div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase flex items-center gap-1 shadow">
+          <span class="material-symbols-outlined text-xs">play_arrow</span>
+          <span>VİDEO</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="p-3.5 bg-primary-container/90 text-on-primary-container rounded-full shadow-2xl group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-2xl">play_arrow</span>
+          </div>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">DENEME VİDEOSU // KİLİTLENME</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Hedef Kilitlenme Denemesi 3</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>SAHA KAYDI</span>
+            <span>2026-FINAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Pisti Uçuş Hazırlığı -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-1000" data-category="flight" data-type="image" data-src="assets/img/gallery/final2026_pist_hazirlik.jpg" data-year="2026-final" data-title="Final Pisti Uçuş Hazırlığı" data-category-name="Uçuş & Saha">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Final Pisti Uçuş Hazırlığı" src="assets/img/gallery/final2026_pist_hazirlik.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
+          <span class="material-symbols-outlined text-primary bg-black/60 p-1.5 rounded-lg text-lg">fullscreen</span>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">PİST HAZIRLIK</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Final Pisti Uçuş Hazırlığı</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>UÇUŞ & SAHA</span>
+            <span>FİNAL // ŞANLIURFA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Takımı - Yarışma Pankartı Önünde -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-1050" data-category="workshop" data-type="image" data-src="assets/img/gallery/final2026_takim_pankart.jpg" data-year="2026-final" data-title="Final Takımı - Yarışma Pankartı Önünde" data-category-name="Takım">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Final Takımı - Yarışma Pankartı Önünde" src="assets/img/gallery/final2026_takim_pankart.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
+          <span class="material-symbols-outlined text-primary bg-black/60 p-1.5 rounded-lg text-lg">fullscreen</span>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">TAKIM // FİNAL</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Final Takımı - Yarışma Pankartı Önünde</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>TAKIM</span>
+            <span>2026 // FİNAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Takımı - Saha Poz Karesi -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-1100" data-category="workshop" data-type="image" data-src="assets/img/gallery/final2026_takim_kollar.jpg" data-year="2026-final" data-title="Final Takımı - Saha Poz Karesi" data-category-name="Takım">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Final Takımı - Saha Poz Karesi" src="assets/img/gallery/final2026_takim_kollar.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
+          <span class="material-symbols-outlined text-primary bg-black/60 p-1.5 rounded-lg text-lg">fullscreen</span>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">TAKIM // FİNAL</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Final Takımı - Saha Poz Karesi</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>TAKIM</span>
+            <span>2026 // FİNAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- İHA Kontrol ve Teslim (Final Hangarı) -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-1150" data-category="workshop" data-type="image" data-src="assets/img/gallery/final2026_ucak_teslim.jpg" data-year="2026-final" data-title="İHA Kontrol ve Teslim (Final Hangarı)" data-category-name="Üretim & Atölye">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="İHA Kontrol ve Teslim (Final Hangarı)" src="assets/img/gallery/final2026_ucak_teslim.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
+          <span class="material-symbols-outlined text-primary bg-black/60 p-1.5 rounded-lg text-lg">fullscreen</span>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">HANGAR KONTROLÜ</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">İHA Kontrol ve Teslim (Final Hangarı)</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>ÜRETIM & ATÖLYE</span>
+            <span>2026 // FİNAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ön Eleme Atölye Ekibi -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-1200" data-category="workshop" data-type="image" data-src="assets/img/gallery/atolye_ekip_2026.jpeg" data-year="2026-on-eleme" data-title="Ön Eleme Atölye Ekibi" data-category-name="Üretim & Atölye">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Ön Eleme Atölye Ekibi" src="assets/img/gallery/atolye_ekip_2026.jpeg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
+          <span class="material-symbols-outlined text-primary bg-black/60 p-1.5 rounded-lg text-lg">fullscreen</span>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">ATÖLYE EKİBİ</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Ön Eleme Atölye Ekibi</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>ÜRETIM & ATÖLYE</span>
+            <span>2026 // ÖN ELEME</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ön Eleme Gece Ekip Fotoğrafı -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-1250" data-category="flight" data-type="image" data-src="assets/img/gallery/ekip_gece_2026.jpeg" data-year="2026-on-eleme" data-title="Ön Eleme Gece Ekip Fotoğrafı" data-category-name="Uçuş & Saha">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Ön Eleme Gece Ekip Fotoğrafı" src="assets/img/gallery/ekip_gece_2026.jpeg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
+          <span class="material-symbols-outlined text-primary bg-black/60 p-1.5 rounded-lg text-lg">fullscreen</span>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">SAHA // GECE</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Ön Eleme Gece Ekip Fotoğrafı</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>UÇUŞ & SAHA</span>
+            <span>2026 // ÖN ELEME</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Finale Yükseliş Duyurusu -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-1300" data-category="workshop" data-type="image" data-src="assets/img/gallery/finaldeyiz_2026.jpeg" data-year="2026-on-eleme" data-title="Finale Yükseliş Duyurusu" data-category-name="Üretim & Atölye">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Finale Yükseliş Duyurusu" src="assets/img/gallery/finaldeyiz_2026.jpeg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
+          <span class="material-symbols-outlined text-primary bg-black/60 p-1.5 rounded-lg text-lg">fullscreen</span>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">DUYURU // BAŞARI</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Finale Yükseliş Duyurusu</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>ÜRETIM & ATÖLYE</span>
+            <span>2026 // ÖN ELEME</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ön Eleme Gövde Montaj Çalışması -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-1350" data-category="workshop" data-type="image" data-src="assets/img/gallery/atolye_montaj_2026.jpeg" data-year="2026-on-eleme" data-title="Ön Eleme Gövde Montaj Çalışması" data-category-name="Üretim & Atölye">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Ön Eleme Gövde Montaj Çalışması" src="assets/img/gallery/atolye_montaj_2026.jpeg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
+          <span class="material-symbols-outlined text-primary bg-black/60 p-1.5 rounded-lg text-lg">fullscreen</span>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">GÖVDE MONTAJI</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">Ön Eleme Gövde Montaj Çalışması</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>ÜRETIM & ATÖLYE</span>
+            <span>2026 // ÖN ELEME</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ALTEK ZERK Teknik Çizim (CAD) -->
+      <div class="gallery-item relative group bg-surface-container-low rounded-xl overflow-hidden cursor-pointer aspect-video border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 shadow-lg tactical-reveal-scale delay-1400" data-category="workshop" data-type="image" data-src="assets/img/projects/altek_zerk_teknik_cizim.jpeg" data-year="2026-on-eleme" data-title="ALTEK ZERK Teknik Çizim (CAD)" data-category-name="Üretim & Atölye">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="ALTEK ZERK Teknik Çizim (CAD)" src="assets/img/projects/altek_zerk_teknik_cizim.jpeg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
+        <div class="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity">
+          <span class="material-symbols-outlined text-primary bg-black/60 p-1.5 rounded-lg text-lg">fullscreen</span>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">CAD TASARIM</div>
+          <h3 class="text-base font-bold text-on-surface truncate mb-1">ALTEK ZERK Teknik Çizim (CAD)</h3>
+          <div class="font-mono text-[11px] text-on-surface-variant flex justify-between">
+            <span>ÜRETIM & ATÖLYE</span>
+            <span>2026 // TASARIM</span>
           </div>
         </div>
       </div>
