@@ -69,7 +69,7 @@
   </script>
   
   <!-- Global Stylesheet -->
-  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/main.css?v=2"/>
   <link rel="stylesheet" href="css/animations.css"/>
 </head>
 <body class="bg-background text-on-surface flex flex-col min-h-screen">
@@ -155,15 +155,15 @@
   <main class="flex-grow pt-24 sm:pt-28 animate-tactical-fade-in">
     
     <!-- Hero Section -->
-    <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section id="hero" class="hero-interactive relative min-h-[90vh] flex items-center overflow-hidden cursor-pointer select-none">
       <!-- Background Hero Image with Tactical Gradient -->
       <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent z-10"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
-        <div class="w-full h-full bg-cover bg-center" style="background-image: url('assets/img/hero/IMG-20260828-WA0000.jpg');"></div>
+        <div class="hero-overlay absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent z-10"></div>
+        <div class="hero-overlay absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
+        <div class="w-full h-full bg-cover" style="background-image: url('assets/img/hero/IMG-20260901-WA0050.jpg'); background-position: center 40%;"></div>
       </div>
 
-      <div class="relative z-20 max-w-[1280px] mx-auto px-4 md:px-8 w-full py-16">
+      <div class="hero-content relative z-20 max-w-[1280px] mx-auto px-4 md:px-8 w-full py-16">
         <div class="max-w-2xl">
           <!-- Mission Tag -->
           <div class="inline-flex items-center gap-2 bg-primary-container/20 border border-primary-container/40 text-primary px-3.5 py-1.5 rounded-lg text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md font-mono">
@@ -492,7 +492,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2"></script>
   <script src="js/contact.js"></script>
 </body>
 </html>

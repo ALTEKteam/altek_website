@@ -369,3 +369,16 @@ html.dark img[data-logo] {
   opacity: 1;
   visibility: visible;
 }
+
+/* Hero Photo Reveal — tıklayınca foto öne çıkar, yazı & karartma soluklaşır */
+.hero-interactive .hero-overlay,
+.hero-interactive .hero-content {
+  transition: opacity 0.5s ease;
+}
+.hero-interactive.hero-revealed .hero-overlay {
+  opacity: 0.08;
+}
+.hero-interactive.hero-revealed .hero-content {
+  opacity: 0.12;
+  pointer-events: none;
+}

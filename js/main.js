@@ -28,7 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScrollEffect();
   initScrollReveal();
   initPageTransitions();
+  initHeroReveal();
 });
+
+/**
+ * Hero Photo Reveal — tıklayınca fotoğraf öne çıkar, yazı & karartma soluklaşır
+ */
+function initHeroReveal() {
+  const hero = document.getElementById('hero');
+  if (!hero) return;
+
+  hero.addEventListener('click', (e) => {
+    // Buton / bağlantılara tıklanınca normal davran, toggle etme
+    if (e.target.closest('a, button')) return;
+    hero.classList.toggle('hero-revealed');
+  });
+}
 
 /**
  * Theme Switcher (Dark / Light Mode)
