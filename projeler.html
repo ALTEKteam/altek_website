@@ -223,39 +223,67 @@
             </div>
           </div>
 
-          <!-- Video 1: 2026 UAV Flight Test Footage -->
+          <!-- Platform Photo -->
           <div class="lg:col-span-6 space-y-3">
             <div class="flex items-center justify-between text-xs font-mono text-primary">
-              <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span> UÇUŞ TESTİ: 2026 SAVAŞAN İHA</span>
-              <span class="text-on-surface-variant font-normal">Saha Uçuş Hattı</span>
+              <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span> ALTEK ZERK</span>
+              <span class="text-on-surface-variant font-normal">Saha Platformu</span>
             </div>
             <div class="relative rounded-xl overflow-hidden border border-primary/40 shadow-xl bg-black aspect-video flex items-center justify-center">
-              <video controls preload="metadata" class="w-full h-full object-contain bg-black" poster="assets/img/projects/wa031_poster.jpg">
-                <source src="assets/video/VID-20260829-WA0031.mp4" type="video/mp4">
-                Tarayıcınız video etiketini desteklemiyor.
-              </video>
+              <img src="assets/img/projects/altek_zerk_plane_wa0010.jpg" alt="ALTEK ZERK Savaşan İHA" class="w-full h-full object-cover"/>
             </div>
             <p class="text-[11px] text-on-surface-variant font-mono">
-              * Gün batımı pist uçuş testi ve motor/itki sistemi telemetrisi.
+              * ALTEK ZERK savaşan İHA platformu, saha hazırlıkları esnasında.
             </p>
           </div>
         </div>
 
-        <!-- Video 2 & Kamikaze Mission -->
+        <!-- Kilitlenme Mission -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-6 border-t border-outline-variant/20">
-          <div class="lg:col-span-6 space-y-3 order-2 lg:order-1">
+          <div class="lg:col-span-6 space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono text-primary">
+              <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span> GÖREV TESTİ: HEDEFE KİLİTLENME</span>
+              <span class="text-on-surface-variant font-normal">Başarılı Görev Denemesi</span>
+            </div>
+            <div class="relative rounded-xl overflow-hidden border border-outline-variant/40 shadow-xl bg-black aspect-video">
+              <video controls preload="metadata" class="w-full h-full object-contain bg-black">
+                <source src="assets/video/gorev_kilitlenme_1.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+              </video>
+            </div>
+          </div>
+          <div class="lg:col-span-6 space-y-4">
+            <h3 class="text-xl font-bold text-on-surface flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary">center_focus_strong</span>
+              <span>Otonom Hedefe Kilitlenme</span>
+            </h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              Görev bilgisayarındaki gerçek zamanlı YOLO tabanlı görüntü işleme hattı, hedef İHA'yı kare içinde tespit ederek optik eksende sabitler; roll ve pitch eksenlerinde canlı ayarlanabilen PID kazançlarıyla kilitlenmeyi sürdürür.
+            </p>
+            <div class="p-4 rounded-xl bg-surface-container-high/60 border border-outline-variant/30 space-y-2 text-xs font-mono">
+              <div class="text-primary font-bold">GÖREV AKIŞ PARAMETRELERİ:</div>
+              <div class="text-on-surface-variant">• Tespit Yöntemi: YOLO & AVTrack</div>
+              <div class="text-on-surface-variant">• Kilitlenme Ekseni: Çift Eksenli Canlı PID</div>
+              <div class="text-on-surface-variant">• Vision Pipeline: 30 FPS / &lt;0.01 ms IPC</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kamikaze Mission -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-6 border-t border-outline-variant/20">
+          <div class="lg:col-span-6 space-y-3 order-2">
             <div class="flex items-center justify-between text-xs font-mono text-primary">
               <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span> GÖREV TESTİ: KAMİKAZE DALIŞ</span>
               <span class="text-on-surface-variant font-normal">Otonom Dalış</span>
             </div>
             <div class="relative rounded-xl overflow-hidden border border-outline-variant/40 shadow-xl bg-black aspect-video">
-              <video controls class="w-full h-full object-cover" poster="assets/img/gallery/gallery_field_2.jpeg">
-                <source src="assets/video/kamikaze_dalis_1.mp4" type="video/mp4">
+              <video controls preload="metadata" class="w-full h-full object-contain bg-black">
+                <source src="assets/video/gorev_kamikaze_1.mp4" type="video/mp4">
                 Tarayıcınız video etiketini desteklemiyor.
               </video>
             </div>
           </div>
-          <div class="lg:col-span-6 space-y-4 order-1 lg:order-2">
+          <div class="lg:col-span-6 space-y-4 order-1">
             <h3 class="text-xl font-bold text-on-surface flex items-center gap-2">
               <span class="material-symbols-outlined text-primary">rocket</span>
               <span>Otonom Kamikaze & QR Kod Tanıma</span>
@@ -286,7 +314,7 @@
             <!-- Card 1: Uçuş Kontrol Kartı -->
             <div class="hud-card p-6 rounded-xl border border-outline-variant/40 space-y-4 text-center">
               <div class="w-24 h-24 mx-auto p-3 bg-surface-container-high rounded-xl border border-outline-variant/30 flex items-center justify-center">
-                <img src="assets/img/projects/system_fcu.png" alt="Uçuş Kontrol Kartı" class="max-w-full max-h-full object-contain"/>
+                <img src="assets/img/projects/system_gcs.png" alt="Uçuş Kontrol Kartı" class="max-w-full max-h-full object-contain"/>
               </div>
               <div>
                 <h4 class="font-bold text-lg text-on-surface">Uçuş Kontrol Kartı</h4>
@@ -314,7 +342,7 @@
             <!-- Card 3: Yer Kontrol İstasyonu -->
             <div class="hud-card p-6 rounded-xl border border-outline-variant/40 space-y-4 text-center">
               <div class="w-24 h-24 mx-auto p-3 bg-surface-container-high rounded-xl border border-outline-variant/30 flex items-center justify-center">
-                <img src="assets/img/projects/system_gcs.png" alt="Yer Kontrol Bilgisayarı" class="max-w-full max-h-full object-contain"/>
+                <img src="assets/img/projects/system_fcu.png" alt="Yer Kontrol Bilgisayarı" class="max-w-full max-h-full object-contain"/>
               </div>
               <div>
                 <h4 class="font-bold text-lg text-on-surface">Yer Kontrol İstasyonu</h4>
@@ -325,6 +353,26 @@
               </p>
             </div>
           </div>
+        </div>
+
+        <!-- Full Introduction Video -->
+        <div class="pt-8 border-t border-outline-variant/20 space-y-3">
+          <div class="flex items-center justify-between text-xs font-mono text-primary">
+            <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">smart_display</span> ALTEK 2026 TANITIM VİDEOSU</span>
+            <span class="text-on-surface-variant font-normal">YouTube</span>
+          </div>
+          <a href="https://youtu.be/4DmyawBmpjw" target="_blank" rel="noopener noreferrer" class="group relative rounded-xl overflow-hidden border border-primary/40 shadow-xl bg-black aspect-video block">
+            <img src="https://img.youtube.com/vi/4DmyawBmpjw/maxresdefault.jpg" alt="ALTEK 2026 Savaşan İHA Platformu Tanıtımı" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"/>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary-container/90 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-on-primary-container text-4xl">play_arrow</span>
+              </div>
+            </div>
+            <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-md font-semibold font-mono flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm">open_in_new</span>
+              YouTube'da İzle
+            </div>
+          </a>
         </div>
 
       </div>
