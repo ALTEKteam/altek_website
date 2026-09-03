@@ -106,9 +106,9 @@
           <span class="material-symbols-outlined text-xl dark-icon">dark_mode</span>
         </button>
 
-        <button class="btn-sponsor-modal bg-primary-container text-on-primary-container font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all duration-200 active:scale-95 shadow-md shadow-primary-container/20 hidden sm:block">
-          Sponsorluk Dosyası
-        </button>
+        <a href="iletisim.html" class="bg-primary-container text-on-primary-container font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all duration-200 active:scale-95 shadow-md shadow-primary-container/20 hidden sm:block">
+          Sponsor Ol
+        </a>
 
         <button id="mobile-menu-toggle" class="lg:hidden p-2 text-on-surface hover:text-primary transition-colors" aria-label="Menüyü Aç">
           <span class="material-symbols-outlined text-3xl">menu</span>
@@ -144,9 +144,9 @@
         <span class="material-symbols-outlined text-lg dark-icon">dark_mode</span>
         <span class="theme-label">Aydınlık Mod</span>
       </button>
-      <button class="btn-sponsor-modal w-full bg-primary-container text-on-primary-container font-bold py-3 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all">
-        Sponsorluk Dosyası
-      </button>
+      <a href="iletisim.html" class="w-full block text-center bg-primary-container text-on-primary-container font-bold py-3 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all">
+        Sponsor Ol
+      </a>
     </div>
   </aside>
 
@@ -316,46 +316,6 @@
   </footer>
 
   <!-- Global Sponsor Modal -->
-  <div id="sponsor-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
-    <div class="modal-backdrop fixed inset-0 bg-black/80 backdrop-blur-md"></div>
-    <div class="modal-card relative z-10 bg-surface-container border border-primary-container/40 p-6 sm:p-8 rounded-2xl max-w-lg w-full shadow-2xl scale-95 transition-transform duration-300">
-      <div class="flex justify-between items-center mb-6 pb-3 border-b border-outline-variant/30">
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-primary">handshake</span>
-          <h3 class="text-xl font-bold text-on-surface">Sponsorluk Başvuru Formu</h3>
-        </div>
-        <button id="close-sponsor-modal" class="text-on-surface-variant hover:text-primary p-1">
-          <span class="material-symbols-outlined">close</span>
-        </button>
-      </div>
-      <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
-        ALTEK Teknoloji Takımımıza maddi veya ayni (kompozit malzeme, aviyonik donanım, test ekipmanı) destek sağlayarak geleceğin mühendislerine güç verin.
-      </p>
-      <form id="sponsor-modal-form" class="space-y-4 text-sm">
-        <div>
-          <label class="block text-xs uppercase font-bold text-on-surface-variant mb-1">Kurum / Yetkili Adı</label>
-          <input type="text" required class="tactical-input" placeholder="Örn: Savunma Sanayii A.Ş."/>
-        </div>
-        <div>
-          <label class="block text-xs uppercase font-bold text-on-surface-variant mb-1">E-Posta Adresi</label>
-          <input type="email" required class="tactical-input" placeholder="yetkili@sirket.com"/>
-        </div>
-        <div>
-          <label class="block text-xs uppercase font-bold text-on-surface-variant mb-1">Destek Türü</label>
-          <select class="tactical-input bg-surface-container-low">
-            <option>Ana Sponsorluk (Platin)</option>
-            <option>Altın Sponsorluk</option>
-            <option>Gümüş Sponsorluk</option>
-            <option>Teknik / Donanım Sponsorluğu</option>
-          </select>
-        </div>
-        <button type="submit" class="w-full bg-primary-container text-on-primary-container font-bold py-3.5 rounded-lg uppercase tracking-wider text-xs hover:bg-primary transition-all duration-200 mt-2">
-          Sponsorluk Dosyası Talep Et
-        </button>
-      </form>
-    </div>
-  </div>
-
   <!-- Scripts -->
   <script src="js/main.js"></script>
   <script src="js/contact.js"></script>

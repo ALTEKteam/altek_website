@@ -4,7 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
-  initSponsorForm();
 });
 
 const CONTACT_EMAIL = 'altektakimi@gmail.com';
@@ -37,40 +36,5 @@ function initContactForm() {
     if (window.showTacticalToast) {
       window.showTacticalToast('E-posta uygulamanız açılıyor, göndermek için orada onaylayın.', 'success');
     }
-  });
-}
-
-function initSponsorForm() {
-  const sponsorForm = document.getElementById('sponsor-modal-form');
-  if (!sponsorForm) return;
-
-  sponsorForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const submitBtn = sponsorForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = `
-      <span class="inline-block animate-spin material-symbols-outlined text-sm mr-2">sync</span>
-      <span>SPONSORLUK DOSYASI OLUŞTURULUYOR...</span>
-    `;
-
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
-      sponsorForm.reset();
-
-      // Close modal if open
-      const modal = document.getElementById('sponsor-modal');
-      if (modal) {
-        modal.classList.add('opacity-0');
-        setTimeout(() => modal.classList.add('hidden'), 200);
-      }
-
-      if (window.showTacticalToast) {
-        window.showTacticalToast('Sponsorluk Başvurunuz Alındı. Detaylı Sponsorluk Dosyası Gönderilecektir.', 'success');
-      }
-    }, 1200);
   });
 }

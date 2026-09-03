@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initActiveNavLink();
   initStatsCounters();
-  initSponsorModal();
   initNavbarScrollEffect();
   initScrollReveal();
   initPageTransitions();
@@ -279,47 +278,6 @@ function initStatsCounters() {
   }, { threshold: 0.3 });
 
   counters.forEach(counter => observer.observe(counter));
-}
-
-/**
- * Sponsor Modal Trigger
- */
-function initSponsorModal() {
-  const sponsorButtons = document.querySelectorAll('.btn-sponsor-modal');
-  const modal = document.getElementById('sponsor-modal');
-  if (!modal) return;
-
-  const closeBtn = document.getElementById('close-sponsor-modal');
-  const backdrop = modal.querySelector('.modal-backdrop');
-
-  const openModal = () => {
-    modal.classList.remove('hidden');
-    setTimeout(() => {
-      modal.classList.remove('opacity-0');
-      modal.querySelector('.modal-card')?.classList.remove('scale-95');
-    }, 10);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeModal = () => {
-    modal.classList.add('opacity-0');
-    modal.querySelector('.modal-card')?.classList.add('scale-95');
-    setTimeout(() => {
-      modal.classList.add('hidden');
-      document.body.style.overflow = '';
-    }, 200);
-  };
-
-  sponsorButtons.forEach(btn => btn.addEventListener('click', openModal));
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  if (backdrop) backdrop.addEventListener('click', closeModal);
-
-  // Close on Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-      closeModal();
-    }
-  });
 }
 
 /**
