@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initPageTransitions();
   initHeroReveal();
+  initHashScrollAndHighlight();
 });
 
 /**
@@ -354,3 +355,66 @@ window.showTacticalToast = function(message, type = 'success') {
     setTimeout(() => toast.remove(), 300);
   }, 3500);
 };
+
+/**
+ * Deep Linking, Target Section Scrolling & Tactical Highlight Effect
+ * Handles direct anchors like #talon or #altek-2026 across pages and in-page
+ */
+function initHashScrollAndHighlight() {
+  function handleHashScroll() {
+    const hash = window.location.hash;
+    if (!hash || hash.length < 2) return;
+
+    try {
+      const targetEl = document.querySelector(hash);
+      if (!targetEl) return;
+
+      // Ensure smooth scroll accounting for fixed navbar height
+      setTimeout(() => {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Trigger tactical highlight glow
+        targetEl.classList.remove('target-highlight-pulse');
+        // Force reflow
+        void targetEl.offsetWidth;
+        targetEl.classList.add('target-highlight-pulse');
+
+        setTimeout(() => {
+          targetEl.classList.remove('target-highlight-pulse');
+        }, 2600);
+      }, 150);
+    } catch (err) {
+      console.warn('Hash scroll error:', err);
+    }
+  }
+
+  // Handle on page load (with small delay for entrance animations)
+  if (window.location.hash) {
+    setTimeout(handleHashScroll, 200);
+  }
+
+  // Handle hash changes (e.g. browser forward/back or URL changes)
+  window.addEventListener('hashchange', handleHashScroll);
+
+  // Intercept in-page anchor clicks for smooth scrolling and glow
+  document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const href = anchor.getAttribute('href');
+      if (!href) return;
+
+      const [path, hash] = href.split('#');
+      if (!hash) return;
+
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      // If the link is on current page
+      if (!path || path === currentPath || path === '') {
+        const targetEl = document.getElementById(hash);
+        if (targetEl) {
+          e.preventDefault();
+          history.pushState(null, '', '#' + hash);
+          handleHashScroll();
+        }
+      }
+    });
+  });
+}

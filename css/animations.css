@@ -191,3 +191,26 @@
 .hover-float:hover {
   transform: translateY(-4px);
 }
+
+/* Target Section Focus & Glow Pulse (for direct anchors like #talon, #altek-2026) */
+@keyframes targetHighlightGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(247, 152, 15, 0.7);
+    border-color: rgb(247, 152, 15);
+  }
+  35% {
+    box-shadow: 0 0 40px 8px rgba(247, 152, 15, 0.5);
+    border-color: rgb(247, 152, 15);
+  }
+  70% {
+    box-shadow: 0 0 20px 4px rgba(247, 152, 15, 0.25);
+    border-color: rgb(247, 152, 15);
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+.target-highlight-pulse {
+  animation: targetHighlightGlow 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
