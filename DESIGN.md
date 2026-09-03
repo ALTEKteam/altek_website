@@ -1,5 +1,5 @@
 ---
-name: Tactical Command
+name: Tactical Command (ALTEK Brand Identity)
 colors:
   surface: '#121414'
   surface-dim: '#121414'
@@ -15,12 +15,13 @@ colors:
   inverse-on-surface: '#2f3131'
   outline: '#a58c7b'
   outline-variant: '#564334'
-  surface-tint: '#ffb77f'
-  primary: '#ffb77f'
-  on-primary: '#4e2600'
-  primary-container: '#ff8a00'
-  on-primary-container: '#613100'
-  inverse-primary: '#914c00'
+  surface-tint: '#f7980f'
+  primary: '#f7980f'
+  primary-orange: '#f7980f'
+  on-primary: '#ffffff'
+  primary-container: '#f7980f'
+  on-primary-container: '#ffffff'
+  inverse-primary: '#f7980f'
   secondary: '#c9c6c5'
   on-secondary: '#313030'
   secondary-container: '#484646'
@@ -33,26 +34,16 @@ colors:
   on-error: '#690005'
   error-container: '#93000a'
   on-error-container: '#ffdad6'
-  primary-fixed: '#ffdcc4'
-  primary-fixed-dim: '#ffb77f'
-  on-primary-fixed: '#2f1500'
-  on-primary-fixed-variant: '#6f3900'
-  secondary-fixed: '#e6e1e1'
-  secondary-fixed-dim: '#c9c6c5'
-  on-secondary-fixed: '#1c1b1b'
-  on-secondary-fixed-variant: '#484646'
-  tertiary-fixed: '#c8e6ff'
-  tertiary-fixed-dim: '#88ceff'
-  on-tertiary-fixed: '#001e2e'
-  on-tertiary-fixed-variant: '#004c6d'
   background: '#121414'
   on-background: '#e3e2e2'
   surface-variant: '#343535'
 typography:
+  font-brand: Montserrat
+  font-mono: Space Mono / Space Grotesk
   headline-xl:
-    fontFamily: Space Grotesk
+    fontFamily: Montserrat
     fontSize: 40px
-    fontWeight: '700'
+    fontWeight: '800'
     lineHeight: 48px
     letterSpacing: -0.02em
   headline-lg:

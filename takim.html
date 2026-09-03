@@ -24,7 +24,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet"/>
   
   <!-- Tailwind CSS CDN -->
@@ -49,6 +49,7 @@
             'background': 'rgb(var(--color-background) / <alpha-value>)',
             'on-background': 'rgb(var(--color-on-background) / <alpha-value>)',
             'primary': 'rgb(var(--color-primary) / <alpha-value>)',
+                        'primary-orange': '#f7980f',
             'primary-container': 'rgb(var(--color-primary-container) / <alpha-value>)',
             'on-primary': 'rgb(var(--color-on-primary) / <alpha-value>)',
             'on-primary-container': 'rgb(var(--color-on-primary-container) / <alpha-value>)',
@@ -75,16 +76,16 @@
 
   <!-- Tactical Top Navigation Bar -->
   <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
-    <div class="flex justify-between items-center h-24 sm:h-28 px-4 md:px-8 max-w-[1280px] mx-auto">
+    <div class="flex justify-between items-center h-20 sm:h-24 px-4 md:px-8 max-w-[1280px] mx-auto">
       <!-- Brand Logo & Name -->
-      <a class="flex items-center gap-4 group" href="index.html">
-        <img alt="ALTEK Teknoloji Takımı Logo" class="h-16 sm:h-20 md:h-24 w-auto max-h-[88px] object-contain group-hover:scale-105 transition-transform drop-shadow-md logo-white" src="assets/img/logo-white.png"/>
-        <img alt="ALTEK Teknoloji Takımı Logo" class="h-16 sm:h-20 md:h-24 w-auto max-h-[88px] object-contain group-hover:scale-105 transition-transform drop-shadow-md logo-dark" src="assets/img/logo-dark.png"/>
+      <a class="flex items-center gap-3.5 group" href="index.html">
+        <img alt="ALTEK Teknoloji Takımı Logo" class="h-12 sm:h-14 md:h-16 w-auto max-h-[64px] object-contain group-hover:scale-105 transition-transform drop-shadow-md logo-white" src="assets/img/logo-white.png"/>
+        <img alt="ALTEK Teknoloji Takımı Logo" class="h-12 sm:h-14 md:h-16 w-auto max-h-[64px] object-contain group-hover:scale-105 transition-transform drop-shadow-md logo-dark" src="assets/img/logo-dark.png"/>
         <div class="flex flex-col">
-          <span class="font-bold text-xl sm:text-2xl md:text-3xl tracking-tight text-on-surface uppercase leading-tight">
+          <span class="font-bold text-base sm:text-lg md:text-xl tracking-tight text-on-surface uppercase leading-snug">
             ALTEK <span class="text-primary font-bold">Teknoloji Takımı</span>
           </span>
-          <span class="text-[11px] sm:text-xs text-on-surface-variant font-mono tracking-widest uppercase font-semibold">TEKNOFEST İHA EKİBİ</span>
+          <span class="text-[10px] sm:text-[11px] text-on-surface-variant font-mono tracking-widest uppercase font-semibold">TEKNOFEST İHA EKİBİ</span>
         </div>
       </a>
 
