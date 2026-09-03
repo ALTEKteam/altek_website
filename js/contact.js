@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initSponsorForm();
 });
 
+const CONTACT_EMAIL = 'altektakimi@gmail.com';
+
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
@@ -14,27 +16,27 @@ function initContactForm() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
+    const name = form.querySelector('[name="name"]').value.trim();
+    const email = form.querySelector('[name="email"]').value.trim();
+    const phone = form.querySelector('[name="phone"]').value.trim();
+    const subject = form.querySelector('[name="subject"]').value;
+    const message = form.querySelector('[name="message"]').value.trim();
 
-    // Loading state
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = `
-      <span class="inline-block animate-spin material-symbols-outlined text-sm mr-2">sync</span>
-      <span>GÖNDERİLİYOR...</span>
-    `;
+    const bodyLines = [
+      `Ad Soyad: ${name}`,
+      `E-Posta: ${email}`,
+      phone ? `Telefon: ${phone}` : null,
+      '',
+      message
+    ].filter(line => line !== null);
 
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
-      form.reset();
+    const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`[ALTEK İletişim] ${subject}`)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
 
-      if (window.showTacticalToast) {
-        window.showTacticalToast('Mesajınız başarıyla iletildi. En kısa sürede geri dönüş yapacağız.', 'success');
-      } else {
-        alert('Mesajınız başarıyla iletildi.');
-      }
-    }, 1200);
+    window.location.href = mailtoUrl;
+
+    if (window.showTacticalToast) {
+      window.showTacticalToast('E-posta uygulamanız açılıyor, göndermek için orada onaylayın.', 'success');
+    }
   });
 }
 
