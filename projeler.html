@@ -22,6 +22,7 @@
   </script>
 
   <!-- Fonts -->
+  <link rel="preload" href="assets/fonts/kJEPBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzBwG-RpA6RzaxHMPdY40KH8nGzv3fzfVJO1Q.woff2" as="font" type="font/woff2" crossorigin/>
   <link rel="stylesheet" href="css/fonts.css"/>
   
   <!-- Tailwind CSS CDN -->
@@ -242,7 +243,7 @@
               <span class="text-on-surface-variant font-normal">Başarılı Görev Denemesi</span>
             </div>
             <div class="relative rounded-xl overflow-hidden border border-outline-variant/40 shadow-xl bg-black aspect-video">
-              <video controls preload="metadata" class="w-full h-full object-contain bg-black">
+              <video controls preload="none" poster="assets/img/projeler/gorev-kilitlenme-poster.jpg" class="w-full h-full object-contain bg-black">
                 <source src="assets/video/gorev_kilitlenme_1.mp4" type="video/mp4">
                 Tarayıcınız video etiketini desteklemiyor.
               </video>
@@ -273,7 +274,7 @@
               <span class="text-on-surface-variant font-normal">Otonom Dalış</span>
             </div>
             <div class="relative rounded-xl overflow-hidden border border-outline-variant/40 shadow-xl bg-black aspect-video">
-              <video controls preload="metadata" class="w-full h-full object-contain bg-black">
+              <video controls preload="none" poster="assets/img/projeler/gorev-kamikaze-poster.jpg" class="w-full h-full object-contain bg-black">
                 <source src="assets/video/gorev_kamikaze_1.mp4" type="video/mp4">
                 Tarayıcınız video etiketini desteklemiyor.
               </video>
@@ -297,28 +298,30 @@
         </div>
 
         <!-- System Architecture Hardware Blocks -->
-        <a href="mimari.html" class="group block pt-8 border-t border-outline-variant/30 space-y-6 -mx-2 px-2 rounded-xl transition-colors hover:bg-surface-container-high/40">
-          <div class="inline-flex items-center gap-2 bg-primary text-on-primary rounded-full pl-3 pr-5 py-1.5 text-xs sm:text-sm font-mono font-bold uppercase tracking-wider shadow-md shadow-primary/20">
-            <span class="material-symbols-outlined text-base sm:text-lg">military_tech</span>
-            En Özgün Yazılım Ödülü'nü Kazandıran Mimari
-          </div>
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <h3 class="text-2xl font-bold text-on-surface flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary">schema</span>
-              <span>Sistem Mimarisi & Donanım Blokları</span>
-            </h3>
-            <span class="text-xs font-mono text-primary flex items-center gap-2">
-              3 KATMANLI ENTEGRE MİMARİ
-              <span class="inline-flex items-center gap-1 bg-primary-container/15 border border-primary/30 rounded-full px-3 py-1 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-                İnteraktif Haritayı İncele
-                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        <div class="pt-8 border-t border-outline-variant/30 space-y-6 -mx-2 px-2">
+          <a href="mimari.html" class="group block rounded-xl transition-colors hover:bg-surface-container-high/40 -mx-2 px-2 py-2">
+            <div class="inline-flex items-center gap-2 bg-primary text-on-primary rounded-full pl-3 pr-5 py-1.5 text-xs sm:text-sm font-mono font-bold uppercase tracking-wider shadow-md shadow-primary/20">
+              <span class="material-symbols-outlined text-base sm:text-lg">military_tech</span>
+              En Özgün Yazılım Ödülü'nü Kazandıran Mimari
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-3">
+              <h3 class="text-2xl font-bold text-on-surface flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">schema</span>
+                <span>Sistem Mimarisi & Donanım Blokları</span>
+              </h3>
+              <span class="text-xs font-mono text-primary flex items-center gap-2">
+                3 KATMANLI ENTEGRE MİMARİ
+                <span class="inline-flex items-center gap-1 bg-primary-container/15 border border-primary/30 rounded-full px-3 py-1 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                  İnteraktif Haritayı İncele
+                  <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </span>
               </span>
-            </span>
-          </div>
+            </div>
+          </a>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Card 1: Uçuş Kontrol Kartı -->
-            <div class="hud-card p-6 rounded-xl border border-outline-variant/40 space-y-4 text-center">
+            <a href="mimari.html" class="hud-card block p-6 rounded-xl border border-outline-variant/40 space-y-4 text-center">
               <div class="w-24 h-24 mx-auto p-3 bg-surface-container-high rounded-xl border border-outline-variant/30 flex items-center justify-center">
                 <img loading="lazy" src="assets/img/projects/system_gcs.png" alt="Uçuş Kontrol Kartı" class="max-w-full max-h-full object-contain"/>
               </div>
@@ -329,10 +332,10 @@
               <p class="text-xs text-on-surface-variant leading-relaxed">
                 IMU, barometre, GPS ve manyetometre verilerini füzyonlayarak yüksek frekansta kontrol yüzeylerini ve itkiyi yönetir.
               </p>
-            </div>
+            </a>
 
             <!-- Card 2: Görev Bilgisayarı -->
-            <div class="hud-card p-6 rounded-xl border border-outline-variant/40 space-y-4 text-center">
+            <a href="mimari.html" class="hud-card block p-6 rounded-xl border border-outline-variant/40 space-y-4 text-center">
               <div class="w-24 h-24 mx-auto p-3 bg-surface-container-high rounded-xl border border-outline-variant/30 flex items-center justify-center">
                 <img loading="lazy" src="assets/img/projects/system_companion.png" alt="Görev Bilgisayarı" class="max-w-full max-h-full object-contain"/>
               </div>
@@ -343,10 +346,10 @@
               <p class="text-xs text-on-surface-variant leading-relaxed">
                 Kamera akışından gerçek zamanlı YOLO nesne tespiti, otonom kilitlenme koordinatı hesaplama ve MAVLink telemetri köprüsü.
               </p>
-            </div>
+            </a>
 
             <!-- Card 3: Yer Kontrol İstasyonu -->
-            <div class="hud-card p-6 rounded-xl border border-outline-variant/40 space-y-4 text-center">
+            <a href="ayki.html" class="hud-card block p-6 rounded-xl border border-primary/40 space-y-4 text-center">
               <div class="w-24 h-24 mx-auto p-3 bg-surface-container-high rounded-xl border border-outline-variant/30 flex items-center justify-center">
                 <img loading="lazy" src="assets/img/projects/system_fcu.png" alt="Yer Kontrol Bilgisayarı" class="max-w-full max-h-full object-contain"/>
               </div>
@@ -357,9 +360,13 @@
               <p class="text-xs text-on-surface-variant leading-relaxed">
                 Özel yazılım arayüzü ile batarya, irtifa, kilitlenme durumu, harita takibi ve yarışma sunucusu entegrasyonu.
               </p>
-            </div>
+              <div class="text-[11px] font-mono text-primary flex items-center justify-center gap-1 pt-1">
+                AYKİ Sayfasını Gör
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </div>
+            </a>
           </div>
-        </a>
+        </div>
 
         <!-- Full Introduction Video -->
         <div class="pt-8 border-t border-outline-variant/20 space-y-3">
