@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>ALTEK Teknoloji Takımı | AYKİ Yer Kontrol İstasyonu</title>
+  <meta name="description" content="AYKİ — ALTEK Yer Kontrol İstasyonu. Görev planlama haritası, rakip İHA analiz motoru, Mini AYKİ web ekranı ve canlı telemetri/operasyon araçları."/>
+
+  <script>
+    (function() {
+      try {
+        var match = document.cookie.match(new RegExp('(^| )altek_theme=([^;]+)'));
+        var theme = (match && match[2]) || localStorage.getItem('altek_theme') || 'dark';
+        document.documentElement.classList.remove('light', 'dark');
+        document.documentElement.classList.add(theme);
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch(e) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="css/fonts.css"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'surface': 'rgb(var(--color-surface) / <alpha-value>)',
+            'surface-dim': 'rgb(var(--color-surface-dim) / <alpha-value>)',
+            'surface-bright': 'rgb(var(--color-surface-bright) / <alpha-value>)',
+            'surface-container-lowest': 'rgb(var(--color-surface-container-lowest) / <alpha-value>)',
+            'surface-container-low': 'rgb(var(--color-surface-container-low) / <alpha-value>)',
+            'surface-container': 'rgb(var(--color-surface-container) / <alpha-value>)',
+            'surface-container-high': 'rgb(var(--color-surface-container-high) / <alpha-value>)',
+            'surface-container-highest': 'rgb(var(--color-surface-container-highest) / <alpha-value>)',
+            'surface-variant': 'rgb(var(--color-surface-variant) / <alpha-value>)',
+            'on-surface': 'rgb(var(--color-on-surface) / <alpha-value>)',
+            'on-surface-variant': 'rgb(var(--color-on-surface-variant) / <alpha-value>)',
+            'background': 'rgb(var(--color-background) / <alpha-value>)',
+            'on-background': 'rgb(var(--color-on-background) / <alpha-value>)',
+            'primary': 'rgb(var(--color-primary) / <alpha-value>)',
+            'primary-orange': '#f7980f',
+            'primary-container': 'rgb(var(--color-primary-container) / <alpha-value>)',
+            'on-primary': 'rgb(var(--color-on-primary) / <alpha-value>)',
+            'on-primary-container': 'rgb(var(--color-on-primary-container) / <alpha-value>)',
+            'secondary': 'rgb(var(--color-secondary) / <alpha-value>)',
+            'on-secondary': 'rgb(var(--color-on-secondary) / <alpha-value>)',
+            'secondary-container': 'rgb(var(--color-secondary-container) / <alpha-value>)',
+            'outline': 'rgb(var(--color-outline) / <alpha-value>)',
+            'outline-variant': 'rgb(var(--color-outline-variant) / <alpha-value>)'
+          },
+          fontFamily: {
+            sans: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+
+  <!-- AYKİ Accordion — sayfaya özel, tek kullanımlık -->
+  <style>
+    .ayki-panel {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .ayki-panel > div { overflow: hidden; min-height: 0; }
+    .ayki-section.open .ayki-panel { grid-template-rows: 1fr; }
+    .ayki-section.open .ayki-chevron { transform: rotate(180deg); }
+    .ayki-chevron { transition: transform 0.3s ease; }
+  </style>
+</head>
+<body class="bg-background text-on-surface flex flex-col min-h-screen">
+
+  <!-- Tactical Top Navigation Bar -->
+  <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
+    <div class="flex justify-between items-center h-20 sm:h-24 px-4 md:px-8 max-w-[1280px] mx-auto">
+      <!-- Brand Logo & Name -->
+      <a class="flex items-center gap-3.5 group" href="index.html">
+        <img loading="lazy" alt="ALTEK Teknoloji Takımı Logo" class="h-12 sm:h-14 md:h-16 w-auto max-h-[64px] object-contain group-hover:scale-105 transition-transform drop-shadow-md logo-white" src="assets/img/logo-white.png"/>
+        <img loading="lazy" alt="ALTEK Teknoloji Takımı Logo" class="h-12 sm:h-14 md:h-16 w-auto max-h-[64px] object-contain group-hover:scale-105 transition-transform drop-shadow-md logo-dark" src="assets/img/logo-dark.png"/>
+        <div class="flex flex-col">
+          <span class="font-bold text-base sm:text-lg md:text-xl tracking-tight text-on-surface uppercase leading-snug">
+            ALTEK <span class="text-primary font-bold">Teknoloji Takımı</span>
+          </span>
+          <span class="text-[10px] sm:text-[11px] text-on-surface-variant font-mono tracking-widest uppercase font-semibold">TEKNOFEST İHA EKİBİ</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden lg:flex items-center gap-8 font-bold text-xs uppercase tracking-widest">
+        <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="index.html">Ana Sayfa</a>
+        <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="projeler.html">Projeler</a>
+        <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="takim.html">Takım</a>
+        <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="galeri.html">Medya</a>
+        <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="iletisim.html">İletişim</a>
+      </div>
+
+      <!-- Action Buttons & Theme Switcher -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="p-2.5 rounded-xl border border-outline-variant/60 text-on-surface hover:text-primary hover:border-primary/50 transition-all flex items-center justify-center bg-surface-container/60 backdrop-blur-md shadow-sm active:scale-95" title="Temayı Değiştir" aria-label="Aydınlık / Karanlık Mod Değiştir">
+          <span class="material-symbols-outlined text-xl light-icon hidden">light_mode</span>
+          <span class="material-symbols-outlined text-xl dark-icon">dark_mode</span>
+        </button>
+
+        <a href="iletisim.html" class="bg-primary-container text-on-primary-container font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all duration-200 active:scale-95 shadow-md shadow-primary-container/20 hidden sm:block">
+          Sponsor Ol
+        </a>
+
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 text-on-surface hover:text-primary transition-colors" aria-label="Menüyü Aç">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+  <aside id="mobile-menu" class="fixed top-0 right-0 h-full w-72 bg-surface-container border-l border-outline-variant/40 z-50 transform translate-x-full transition-transform duration-300 flex flex-col p-6 lg:hidden">
+    <div class="flex items-center justify-between pb-6 border-b border-outline-variant/30 mb-6">
+      <div class="flex items-center gap-3">
+        <img loading="lazy" alt="ALTEK Logo" class="h-12 w-auto object-contain logo-white" src="assets/img/logo-white.png"/>
+        <img loading="lazy" alt="ALTEK Logo" class="h-12 w-auto object-contain logo-dark" src="assets/img/logo-dark.png"/>
+        <span class="font-bold text-base text-on-surface">ALTEK <span class="text-primary">Takımı</span></span>
+      </div>
+      <button id="mobile-menu-close" class="p-1 text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+    </div>
+    <div class="flex flex-col gap-4 text-sm font-bold uppercase tracking-wider flex-grow">
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="index.html">Ana Sayfa</a>
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="projeler.html">Projeler</a>
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="takim.html">Takım</a>
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="galeri.html">Medya</a>
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="iletisim.html">İletişim</a>
+    </div>
+    <div class="pt-6 border-t border-outline-variant/30 space-y-3">
+      <button class="btn-theme-toggle w-full flex items-center justify-center gap-2 border border-outline-variant/60 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-on-surface hover:text-primary transition-all">
+        <span class="material-symbols-outlined text-lg light-icon hidden">light_mode</span>
+        <span class="material-symbols-outlined text-lg dark-icon">dark_mode</span>
+        <span class="theme-label">Aydınlık Mod</span>
+      </button>
+      <a href="iletisim.html" class="w-full block text-center bg-primary-container text-on-primary-container font-bold py-3 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all">
+        Sponsor Ol
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main AYKİ Content -->
+  <main class="flex-grow pt-32 pb-20 px-4 md:px-8 max-w-[1280px] mx-auto w-full animate-tactical-fade-in">
+
+    <!-- Breadcrumb -->
+    <div class="mb-6 flex items-center gap-2 text-xs font-mono text-on-surface-variant tactical-reveal">
+      <a href="projeler.html" class="hover:text-primary transition-colors">Projeler</a>
+      <span class="material-symbols-outlined text-sm">chevron_right</span>
+      <span class="text-primary">AYKİ Yer Kontrol İstasyonu</span>
+    </div>
+
+    <!-- Hero -->
+    <header class="mb-16 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center tactical-reveal">
+      <div class="lg:col-span-6 space-y-5">
+        <div class="inline-flex items-center gap-2 text-primary text-xs uppercase font-bold tracking-widest font-mono">
+          <span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+          PLANLAMA KATMANI // OPERATÖR KONSOLU
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-bold text-on-surface tracking-tight">
+          AYKİ <span class="text-primary">Yer Kontrol İstasyonu</span>
+        </h1>
+        <p class="text-base sm:text-lg text-on-surface-variant leading-relaxed">
+          Operatörün İHA'yı yönettiği, rakibi analiz ettiği ve göreve karar verdiği masaüstü konsol. Görev planlama haritasından rakip avlanabilirlik analizine, pilot ekranından canlı PID ayarına kadar tüm yer tarafı buradan yürütülür.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="status-badge status-badge-active">PySide6 // MASAÜSTÜ GUI</span>
+          <span class="status-badge status-badge-cyan">TCP 5005 / 5011 KOMUT-TELEMETRİ</span>
+          <span class="status-badge status-badge-success">SITL & GERÇEK UÇUŞ ORTAK KOD</span>
+        </div>
+      </div>
+
+      <!-- Ana pencere fotoğrafı -->
+      <div class="lg:col-span-6 space-y-3">
+        <div class="flex items-center justify-between text-xs font-mono text-primary">
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span> AYKİ ANA PENCERE</span>
+          <span class="text-on-surface-variant font-normal">Operatör Konsolu</span>
+        </div>
+        <div class="relative rounded-xl overflow-hidden shadow-xl aspect-video bg-surface-container-highest">
+          <video class="w-full h-full object-cover" src="assets/video/ayki/ana-pencere.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+        </div>
+        <p class="text-[11px] text-on-surface-variant font-mono">
+          * AYKİ ana penceresi — kamikaze dalışı, kilitlenme denemesi, HSS çekme ve HSS+kalkan aktifken uçuş tek ekranda.
+        </p>
+      </div>
+    </header>
+
+    <!-- Accordion Sections -->
+    <div class="space-y-5">
+
+      <!-- 01 — Mission Control / Harita -->
+      <div class="ayki-section hud-card rounded-2xl overflow-hidden tactical-reveal" data-ayki-section>
+        <button type="button" class="ayki-toggle w-full flex items-center justify-between gap-4 p-5 sm:p-7 text-left" aria-expanded="false">
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl bg-primary-container/15 border border-primary/30 flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-primary text-xl">map</span>
+            </div>
+            <div>
+              <div class="text-[11px] font-mono text-primary uppercase tracking-widest mb-1">01 // Görev Planlama</div>
+              <h2 class="text-lg sm:text-xl font-bold text-on-surface">Mission Control & Harita</h2>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-2xl text-on-surface-variant ayki-chevron flex-shrink-0">expand_more</span>
+        </button>
+        <div class="ayki-panel">
+          <div>
+            <div class="px-5 sm:px-7 pb-7 pt-0 border-t border-outline-variant/20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-6 space-y-4 pt-6">
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Leaflet tabanlı büyük harita üzerinde waypoint çizimi, rota düzenleme ve tek-tık "Buraya Git" komutu ile İHA operatörün elinde. Uçuş kontrol beynindeki Dubins kavisleri de gerçek zamanlı olarak aynı haritada canlı çizilir.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">route</span>
+                    <span>Tıkla-Çiz WP / Rota Editörü</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">near_me</span>
+                    <span>"Buraya Git" — Tek Nokta GOTO</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">route</span>
+                    <span>Canlı Dubins Rota Görselleştirme</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">qr_code_2</span>
+                    <span>QR Hedef Seçimi & Ofset Ayarı</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-6 space-y-3 pt-6">
+                <div class="relative rounded-xl overflow-hidden shadow-lg aspect-video bg-surface-container-highest">
+                  <video class="w-full h-full object-cover" src="assets/video/ayki/gorev-planlama-buyuk-harita.mp4" controls preload="metadata"></video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 — Hedef Seçim & Rakip Analizi -->
+      <div class="ayki-section hud-card rounded-2xl overflow-hidden tactical-reveal" data-ayki-section>
+        <button type="button" class="ayki-toggle w-full flex items-center justify-between gap-4 p-5 sm:p-7 text-left" aria-expanded="false">
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl bg-primary-container/15 border border-primary/30 flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-primary text-xl">track_changes</span>
+            </div>
+            <div>
+              <div class="text-[11px] font-mono text-primary uppercase tracking-widest mb-1">02 // Karar Motoru</div>
+              <h2 class="text-lg sm:text-xl font-bold text-on-surface">Hedef Seçim & Rakip Analizi</h2>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-2xl text-on-surface-variant ayki-chevron flex-shrink-0">expand_more</span>
+        </button>
+        <div class="ayki-panel">
+          <div>
+            <div class="px-5 sm:px-7 pb-7 pt-0 border-t border-outline-variant/20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-6 space-y-4 pt-6">
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Havadaki tüm rakip İHA'lar için "kuyruğuna oturmam kaç saniye sürer?" sorusuna gerçek zamanlı cevap üreten analiz motoru. Sıralamayı motor üretir, son kararı operatör verir — tek tıkla hedef atanır.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">timer</span>
+                    <span>Kuyruğa Oturma Süresi Tahmini</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">leaderboard</span>
+                    <span>Canlı Sıralı Rakip Listesi</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">touch_app</span>
+                    <span>Tek Tık Hedef Atama (CHOOSE_ENEMY)</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">desktop_windows</span>
+                    <span>Ayrı Bilgisayarda Bağımsız Analiz Ekranı</span>
+                  </div>
+                </div>
+                <p class="text-xs text-on-surface-variant/80 font-mono pt-1">
+                  Motorun karar mantığı ve kilit zarfı hesaplamasının teknik detayı için: <a href="mimari.html" class="text-primary hover:underline">Sistem Mimarisi →</a>
+                </p>
+              </div>
+              <div class="lg:col-span-6 space-y-3 pt-6">
+                <div class="relative rounded-xl overflow-hidden shadow-lg aspect-video bg-surface-container-highest">
+                  <video class="w-full h-full object-cover" src="assets/video/ayki/hedef-secim-rakip-analiz.mp4" controls preload="metadata"></video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 — Mini AYKİ + İkinci Arayüz -->
+      <div class="ayki-section hud-card rounded-2xl overflow-hidden tactical-reveal" data-ayki-section>
+        <button type="button" class="ayki-toggle w-full flex items-center justify-between gap-4 p-5 sm:p-7 text-left" aria-expanded="false">
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl bg-primary-container/15 border border-primary/30 flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-primary text-xl">smartphone</span>
+            </div>
+            <div>
+              <div class="text-[11px] font-mono text-primary uppercase tracking-widest mb-1">03 // Saha İzleme</div>
+              <h2 class="text-lg sm:text-xl font-bold text-on-surface">Mini AYKİ & İkinci Arayüz</h2>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-2xl text-on-surface-variant ayki-chevron flex-shrink-0">expand_more</span>
+        </button>
+        <div class="ayki-panel">
+          <div>
+            <div class="px-5 sm:px-7 pb-7 pt-0 border-t border-outline-variant/20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-6 space-y-4 pt-6">
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Pilot ve saha ekibi, aynı WiFi ağından telefon/tablet üzerinden açtığı hafif bir web ekranı olan Mini AYKİ ile uçuşu izler — güneş altında okunabilir açık tema, kamera + harita görünümleri arasında tek dokunuşla geçiş. Planlama katmanında ise ana konsoldan bağımsız çalışan İkinci Arayüz devreye girer: Büyük Harita, Rakip Analiz, Kamera, Anten Tracker ve Testler sekmeleriyle görev planlamasına aktif olarak katılan ayrı bir GCS penceresi.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">wb_sunny</span>
+                    <span>Güneş Işığı Modu (Açık Tema)</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">view_column_2</span>
+                    <span>Kamera / Harita Görünüm Modları</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">speed</span>
+                    <span>Canlı FSM Durumu, İrtifa, Hız, HSS</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">desktop_windows</span>
+                    <span>İkinci Arayüz — Planlama Katmanında Aktif Rol</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-6 space-y-3 pt-6">
+                <div class="relative rounded-xl overflow-hidden shadow-lg aspect-video bg-surface-container-highest">
+                  <video class="w-full h-full object-contain" src="assets/video/ayki/pilot-web-ikinci-arayuz.mp4" controls preload="metadata"></video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 — Operasyonel: PID tuning + Jetson süreç yönetimi -->
+      <div class="ayki-section hud-card rounded-2xl overflow-hidden tactical-reveal" data-ayki-section>
+        <button type="button" class="ayki-toggle w-full flex items-center justify-between gap-4 p-5 sm:p-7 text-left" aria-expanded="false">
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl bg-primary-container/15 border border-primary/30 flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-primary text-xl">terminal</span>
+            </div>
+            <div>
+              <div class="text-[11px] font-mono text-primary uppercase tracking-widest mb-1">04 // Operasyon</div>
+              <h2 class="text-lg sm:text-xl font-bold text-on-surface">Canlı PID Tuning & Jetson Süreç Yönetimi</h2>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-2xl text-on-surface-variant ayki-chevron flex-shrink-0">expand_more</span>
+        </button>
+        <div class="ayki-panel">
+          <div>
+            <div class="px-5 sm:px-7 pb-7 pt-0 border-t border-outline-variant/20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-6 space-y-4 pt-6">
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Mission Control paneli, Jetson üzerindeki uçuş yazılımını SSH+tmux ile kalıcı olarak yönetir — yer istasyonu kapansa bile İHA'daki süreç çalışmaya devam eder. Aynı panelden uçarken PID kazançları canlı ayarlanır ve sahte sunucu ile FSM entegrasyonu tek ekrandan çalıştırılan bir Simülasyon Kontrol Merkezi ile SITL üzerinde önceden doğrulanır.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">tune</span>
+                    <span>Uçuş İçi Canlı PID Ayarı</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">dns</span>
+                    <span>Jetson Süreçlerini Kalıcı tmux Yönetimi</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">satellite_alt</span>
+                    <span>Anten Tracker & Radyo Sağlığı İzleme</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">science</span>
+                    <span>Simülasyon Kontrol Merkezi (SITL Doğrulama)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-6 space-y-3 pt-6">
+                <div class="relative rounded-xl overflow-hidden shadow-lg aspect-video bg-surface-container-highest">
+                  <video class="w-full h-full object-cover" src="assets/video/ayki/operasyon-pid-jetson.mp4" controls preload="metadata"></video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Deep-dive CTA -->
+    <div class="mt-12 p-6 sm:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/40 flex flex-col sm:flex-row items-center justify-between gap-4 tactical-reveal">
+      <div>
+        <h3 class="text-lg font-bold text-on-surface mb-1">İç mimariye mi bakmak istiyorsun?</h3>
+        <p class="text-sm text-on-surface-variant">GcsPublisher, AykiConnector ve FSM entegrasyonunun teknik akışı için interaktif sistem mimarisini incele.</p>
+      </div>
+      <a href="mimari.html" class="flex-shrink-0 inline-flex items-center gap-2 bg-primary-container text-on-primary-container font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all">
+        Sistem Mimarisi
+        <span class="material-symbols-outlined text-base">arrow_forward</span>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Tactical Footer -->
+  <footer class="bg-surface-container-lowest border-t border-outline-variant/30 py-12 text-on-surface-variant mt-auto">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <img loading="lazy" alt="ALTEK Logo" class="h-14 sm:h-16 w-auto object-contain logo-white" src="assets/img/logo-white.png"/>
+          <img loading="lazy" alt="ALTEK Logo" class="h-14 sm:h-16 w-auto object-contain logo-dark" src="assets/img/logo-dark.png"/>
+          <span class="font-bold text-lg text-on-surface">ALTEK <span class="text-primary">Teknoloji Takımı</span></span>
+        </div>
+        <p class="text-sm text-on-surface-variant/80 max-w-sm mb-4">
+          Havacılık tutkusu, otonomi ve ileri mühendislik ile TEKNOFEST yarışmalarında üniversitemizi ve ülkemizi temsil ediyoruz.
+        </p>
+        <div class="flex items-center gap-2 text-xs font-mono text-on-surface-variant">
+          <span class="w-2 h-2 rounded-full bg-primary"></span>
+          <span>ODTÜ // ANKARA, TÜRKİYE</span>
+        </div>
+      </div>
+      <div>
+        <div class="text-xs font-bold uppercase tracking-widest text-on-surface mb-4">Sayfalar</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-primary transition-colors">Ana Sayfa</a></li>
+          <li><a href="projeler.html" class="hover:text-primary transition-colors">İHA Projeleri</a></li>
+          <li><a href="takim.html" class="hover:text-primary transition-colors">Mühendislik Ekibi</a></li>
+          <li><a href="galeri.html" class="hover:text-primary transition-colors">Medya & Galeri</a></li>
+          <li><a href="iletisim.html" class="hover:text-primary transition-colors">İletişim & Konum</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-xs font-bold uppercase tracking-widest text-on-surface mb-4">İletişim & Konum</div>
+        <p class="text-sm mb-2">ODTÜ EE - E Blok,<br/>Çankaya / Ankara</p>
+        <p class="text-sm font-mono text-primary">altektakimi@gmail.com</p>
+      </div>
+    </div>
+    <div class="max-w-[1280px] mx-auto px-4 md:px-8 pt-6 border-t border-outline-variant/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+      <div>&copy; 2026 ALTEK Teknoloji Takımı. Tüm hakları saklıdır.</div>
+      <div class="text-on-surface-variant/60 font-mono">ODTÜ TEKNOKENT // ANKARA</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('[data-ayki-section]').forEach(function(section, i) {
+        var toggle = section.querySelector('.ayki-toggle');
+        if (i === 0) {
+          section.classList.add('open');
+          toggle.setAttribute('aria-expanded', 'true');
+        }
+        toggle.addEventListener('click', function() {
+          var isOpen = section.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
