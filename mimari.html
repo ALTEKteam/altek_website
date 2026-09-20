@@ -103,7 +103,7 @@
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--font-body); line-height:1.55; font-size:16px; -webkit-font-smoothing:antialiased}
+body{margin:0; background:var(--bg); background-image: radial-gradient(color-mix(in srgb, var(--border) 50%, transparent) 1.2px, transparent 1.2px); background-size: 24px 24px; color:var(--ink); font-family:var(--font-body); line-height:1.55; font-size:16px; -webkit-font-smoothing:antialiased}
 .wrap{max-width:1180px; margin:0 auto; padding:128px 20px 0}
 
 @media (max-width:560px){ .ver{display:none} }
@@ -320,7 +320,7 @@ footer.foot .path{color:var(--accent)}
     </a>
 
     <!-- Desktop Navigation Links -->
-    <div class="hidden lg:flex items-center gap-8 font-bold text-xs uppercase tracking-widest">
+    <div class="hidden lg:flex items-center gap-5 xl:gap-8 font-bold text-xs uppercase tracking-widest">
       <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="index.html">Ana Sayfa</a>
       <a class="nav-link text-primary transition-colors py-1" href="projeler.html">Projeler</a>
       <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="takim.html">Takım</a>
@@ -329,7 +329,11 @@ footer.foot .path{color:var(--accent)}
     </div>
 
     <!-- Action Buttons & Theme Switcher -->
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-2.5 sm:gap-3">
+      <a href="iletisim.html?konu=katilim" class="border border-primary/50 text-primary hover:bg-primary/10 font-bold px-3.5 py-2 rounded-xl text-xs uppercase tracking-wider transition-all duration-200 active:scale-95 hidden md:inline-flex items-center gap-1">
+        <span class="material-symbols-outlined text-sm">person_add</span>
+        <span>Takıma Katıl</span>
+      </a>
       <a href="projeler.html#altek-2026" class="hidden sm:flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-on-surface hover:text-primary transition-colors px-3 py-2 rounded-xl border border-outline-variant/60 bg-surface-container/60 backdrop-blur-md">
         <span class="material-symbols-outlined text-lg">arrow_back</span>
         Projelere Dön
@@ -368,6 +372,9 @@ footer.foot .path{color:var(--accent)}
     <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="iletisim.html">İletişim</a>
   </div>
   <div class="pt-6 border-t border-outline-variant/30 space-y-3">
+    <a href="iletisim.html?konu=katilim" class="w-full block text-center border border-primary/50 text-primary font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider hover:bg-primary/10 transition-all">
+      Takıma Katıl
+    </a>
     <button class="btn-theme-toggle w-full flex items-center justify-center gap-2 border border-outline-variant/60 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-on-surface hover:text-primary transition-all">
       <span class="material-symbols-outlined text-lg light-icon hidden">light_mode</span>
       <span class="material-symbols-outlined text-lg dark-icon">dark_mode</span>
@@ -381,7 +388,7 @@ footer.foot .path{color:var(--accent)}
   <section class="hero">
     <p class="eyebrow">ÜÇ KATMANLI UÇUŞ KONTROL MİMARİSİ</p>
     <h1>Teknofest Savaşan İHA yarışması için özel tasarlandı: hedef tam otonomi.</h1>
-    <p class="lead">ALTEK savaşan İHA / otonom hava muharebesi literatüründen ilham alan, rakip İHA'yı tespit edip takip eden, kilitlenen ve yer hedeflerine kamikaze dalışı yapan otonom bir dogfight sistemidir. Algı → değerlendirme → karar → icra zincirini uçtan uca kurar; mimari bu zinciri üç kontrol katmanına ayırır — <b>Planlama</b> yerde, <b>Yürütme</b> ve <b>Davranış Kontrol</b> havada — ve algı, ortak veri, iletişim ve parametre eksenleri bu katmanları birleştirir. Haritayı sürükleyin, tekerlekle yakınlaşın; bir katmana dokunun, kamera içine odaklansın.</p>
+    <p class="lead">ALTEK savaşan İHA / otonom hava muharebesi literatüründen ilham alan, rakip İHA'yı tespit edip takip eden, kilitlenen ve yer hedeflerine kamikaze dalışı yapan otonom bir dogfight sistemidir. Algı → değerlendirme → karar → görev döngüsünü uçtan uca kurar; mimari bu döngüyü üç kontrol katmanına ayırır — <b>Planlama</b> yerde, <b>Yürütme</b> ve <b>Davranış Kontrol</b> havada — ve algı, ortak veri, iletişim ve parametre eksenleri bu katmanları birleştirir.</p>
     <div class="facts">
       <span class="fact"><b>10&nbsp;Hz</b> uçuş döngüsü</span>
       <span class="fact"><b>3</b> kontrol katmanı</span>
@@ -557,8 +564,51 @@ footer.foot .path{color:var(--accent)}
     </aside>
   </section>
 
-  <footer class="foot">
-    <b>L0 — Kuş bakışı.</b> Sonraki adım: her katmanın derinine inmek (L1 modüller → L2 algoritmalar/akışlar → seçili düğümlerde L3 detay). Kaynak: <span class="path">docs/showcase/index.html</span> · içerik <b>docs/architecture.md</b> ile hizalı.
+  <!-- Tactical Footer -->
+  <footer class="bg-surface-container-lowest border-t border-outline-variant/30 py-12 text-on-surface-variant mt-16 -mx-5 px-5">
+    <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      <!-- Col 1: Brand Info -->
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <img loading="lazy" alt="ALTEK Logo" class="h-14 sm:h-16 w-auto object-contain logo-white" src="assets/img/logo-white.png"/>
+          <img loading="lazy" alt="ALTEK Logo" class="h-14 sm:h-16 w-auto object-contain logo-dark" src="assets/img/logo-dark.png"/>
+          <span class="font-bold text-lg text-on-surface">ALTEK <span class="text-primary">Teknoloji Takımı</span></span>
+        </div>
+        <p class="text-sm text-on-surface-variant/80 max-w-sm mb-4">
+          Havacılık tutkusu, otonomi ve ileri mühendislik ile TEKNOFEST yarışmalarında üniversitemizi ve ülkemizi temsil ediyoruz.
+        </p>
+        <div class="flex items-center gap-2 text-xs font-mono text-on-surface-variant">
+          <span class="w-2 h-2 rounded-full bg-primary"></span>
+          <span>ODTÜ // ANKARA, TÜRKİYE</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-widest text-on-surface mb-4">Sayfalar</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-primary transition-colors">Ana Sayfa</a></li>
+          <li><a href="projeler.html" class="hover:text-primary transition-colors">İHA Projeleri</a></li>
+          <li><a href="takim.html" class="hover:text-primary transition-colors">Mühendislik Ekibi</a></li>
+          <li><a href="galeri.html" class="hover:text-primary transition-colors">Medya & Galeri</a></li>
+          <li><a href="iletisim.html" class="hover:text-primary transition-colors">İletişim & Konum</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Coordinates & Contact -->
+      <div>
+        <div class="text-xs font-bold uppercase tracking-widest text-on-surface mb-4">İletişim & Konum</div>
+        <p class="text-sm mb-2">ODTÜ EE - E Blok,<br/>Çankaya / Ankara</p>
+        <p class="text-sm font-mono text-primary">altektakimi@gmail.com</p>
+        <p class="text-sm font-mono text-primary">altek@metu.edu.tr</p>
+      </div>
+    </div>
+
+    <!-- Bottom copyright -->
+    <div class="max-w-[1280px] mx-auto pt-6 border-t border-outline-variant/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+      <div>&copy; 2026 ALTEK Teknoloji Takımı. Tüm hakları saklıdır.</div>
+      <div class="text-on-surface-variant/60 font-mono">ODTÜ // ANKARA</div>
+    </div>
   </footer>
 </main>
 
