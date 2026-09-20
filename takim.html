@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="tr">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>ALTEK Teknoloji Takımı | Mühendislik Ekibimiz ve Kadromuz</title>
-  <meta name="description" content="ALTEK Teknoloji Takımı lider kadrosu, aviyonik, otonom yazılım, mekanik imalat ve telemetri ekiplerimiz."/>
-  
+  <meta name="description"
+    content="ALTEK Teknoloji Takımı lider kadrosu, aviyonik, otonom yazılım, mekanik imalat ve telemetri ekiplerimiz." />
+
   <script>
-    (function() {
+    (function () {
       try {
         var match = document.cookie.match(new RegExp('(^| )altek_theme=([^;]+)'));
         var theme = (match && match[2]) || localStorage.getItem('altek_theme') || 'dark';
         document.documentElement.classList.remove('light', 'dark');
         document.documentElement.classList.add(theme);
         document.documentElement.setAttribute('data-theme', theme);
-      } catch(e) {
+      } catch (e) {
         document.documentElement.classList.add('dark');
         document.documentElement.setAttribute('data-theme', 'dark');
       }
     })();
   </script>
-  
+
   <!-- Fonts -->
-  <link rel="preload" href="assets/fonts/kJEPBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzBwG-RpA6RzaxHMPdY40KH8nGzv3fzfVJO1Q.woff2" as="font" type="font/woff2" crossorigin/>
-  <link rel="stylesheet" href="css/fonts.css"/>
-  
+  <link rel="preload"
+    href="assets/fonts/kJEPBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzBwG-RpA6RzaxHMPdY40KH8nGzv3fzfVJO1Q.woff2" as="font"
+    type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/fonts.css" />
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script>
@@ -47,7 +51,7 @@
             'background': 'rgb(var(--color-background) / <alpha-value>)',
             'on-background': 'rgb(var(--color-on-background) / <alpha-value>)',
             'primary': 'rgb(var(--color-primary) / <alpha-value>)',
-                        'primary-orange': '#f7980f',
+            'primary-orange': '#f7980f',
             'primary-container': 'rgb(var(--color-primary-container) / <alpha-value>)',
             'on-primary': 'rgb(var(--color-on-primary) / <alpha-value>)',
             'on-primary-container': 'rgb(var(--color-on-primary-container) / <alpha-value>)',
@@ -65,11 +69,12 @@
       }
     }
   </script>
-  
+
   <!-- Global Stylesheet -->
-  <link rel="stylesheet" href="css/main.css"/>
-  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
 </head>
+
 <body class="bg-background text-on-surface flex flex-col min-h-screen">
 
   <!-- Tactical Top Navigation Bar -->
@@ -77,13 +82,19 @@
     <div class="flex justify-between items-center h-20 sm:h-24 px-4 md:px-8 max-w-[1280px] mx-auto">
       <!-- Brand Logo & Name -->
       <a class="flex items-center gap-3.5 group" href="index.html">
-        <img loading="lazy" alt="ALTEK Teknoloji Takımı Logo" class="h-12 sm:h-14 md:h-16 w-auto max-h-[64px] object-contain group-hover:scale-105 transition-transform drop-shadow-md logo-white" src="assets/img/logo-white.png"/>
-        <img loading="lazy" alt="ALTEK Teknoloji Takımı Logo" class="h-12 sm:h-14 md:h-16 w-auto max-h-[64px] object-contain group-hover:scale-105 transition-transform drop-shadow-md logo-dark" src="assets/img/logo-dark.png"/>
+        <img loading="lazy" alt="ALTEK Teknoloji Takımı Logo"
+          class="h-12 sm:h-14 md:h-16 w-auto max-h-[64px] object-contain group-hover:scale-105 transition-transform drop-shadow-md logo-white"
+          src="assets/img/logo-white.png" />
+        <img loading="lazy" alt="ALTEK Teknoloji Takımı Logo"
+          class="h-12 sm:h-14 md:h-16 w-auto max-h-[64px] object-contain group-hover:scale-105 transition-transform drop-shadow-md logo-dark"
+          src="assets/img/logo-dark.png" />
         <div class="flex flex-col">
           <span class="font-bold text-base sm:text-lg md:text-xl tracking-tight text-on-surface uppercase leading-snug">
             ALTEK <span class="text-primary font-bold">Teknoloji Takımı</span>
           </span>
-          <span class="text-[10px] sm:text-[11px] text-on-surface-variant font-mono tracking-widest uppercase font-semibold">TEKNOFEST İHA EKİBİ</span>
+          <span
+            class="text-[10px] sm:text-[11px] text-on-surface-variant font-mono tracking-widest uppercase font-semibold">TEKNOFEST
+            İHA EKİBİ</span>
         </div>
       </a>
 
@@ -99,21 +110,26 @@
       <!-- Action Buttons & Theme Switcher -->
       <div class="flex items-center gap-2.5 sm:gap-3">
         <!-- Theme Toggle Button -->
-        <button id="theme-toggle-btn" class="p-2.5 rounded-xl border border-outline-variant/60 text-on-surface hover:text-primary hover:border-primary/50 transition-all flex items-center justify-center bg-surface-container/60 backdrop-blur-md shadow-sm active:scale-95" title="Temayı Değiştir" aria-label="Aydınlık / Karanlık Mod Değiştir">
+        <button id="theme-toggle-btn"
+          class="p-2.5 rounded-xl border border-outline-variant/60 text-on-surface hover:text-primary hover:border-primary/50 transition-all flex items-center justify-center bg-surface-container/60 backdrop-blur-md shadow-sm active:scale-95"
+          title="Temayı Değiştir" aria-label="Aydınlık / Karanlık Mod Değiştir">
           <span class="material-symbols-outlined text-xl light-icon hidden">light_mode</span>
           <span class="material-symbols-outlined text-xl dark-icon">dark_mode</span>
         </button>
 
-        <a href="iletisim.html?konu=katilim" class="border border-primary/50 text-primary hover:bg-primary/10 font-bold px-3.5 py-2 rounded-xl text-xs uppercase tracking-wider transition-all duration-200 active:scale-95 hidden md:inline-flex items-center gap-1">
+        <a href="iletisim.html?konu=katilim"
+          class="border border-primary/50 text-primary hover:bg-primary/10 font-bold px-3.5 py-2 rounded-xl text-xs uppercase tracking-wider transition-all duration-200 active:scale-95 hidden md:inline-flex items-center gap-1">
           <span class="material-symbols-outlined text-sm">person_add</span>
           <span>Takıma Katıl</span>
         </a>
 
-        <a href="iletisim.html" class="bg-primary-container text-on-primary-container font-bold px-4 py-2 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all duration-200 active:scale-95 shadow-md shadow-primary-container/20 hidden sm:inline-flex items-center">
+        <a href="iletisim.html"
+          class="bg-primary-container text-on-primary-container font-bold px-4 py-2 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all duration-200 active:scale-95 shadow-md shadow-primary-container/20 hidden sm:inline-flex items-center">
           Sponsor Ol
         </a>
 
-        <button id="mobile-menu-toggle" class="lg:hidden p-2 text-on-surface hover:text-primary transition-colors" aria-label="Menüyü Aç">
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 text-on-surface hover:text-primary transition-colors"
+          aria-label="Menüyü Aç">
           <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
       </div>
@@ -121,12 +137,17 @@
   </nav>
 
   <!-- Mobile Drawer Menu -->
-  <div id="mobile-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
-  <aside id="mobile-menu" class="fixed top-0 right-0 h-full w-72 bg-surface-container border-l border-outline-variant/40 z-50 transform translate-x-full transition-transform duration-300 flex flex-col p-6 md:hidden">
+  <div id="mobile-backdrop"
+    class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
+  </div>
+  <aside id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-72 bg-surface-container border-l border-outline-variant/40 z-50 transform translate-x-full transition-transform duration-300 flex flex-col p-6 md:hidden">
     <div class="flex items-center justify-between pb-6 border-b border-outline-variant/30 mb-6">
       <div class="flex items-center gap-3">
-        <img loading="lazy" alt="ALTEK Logo" class="h-12 w-auto object-contain logo-white" src="assets/img/logo-white.png"/>
-        <img loading="lazy" alt="ALTEK Logo" class="h-12 w-auto object-contain logo-dark" src="assets/img/logo-dark.png"/>
+        <img loading="lazy" alt="ALTEK Logo" class="h-12 w-auto object-contain logo-white"
+          src="assets/img/logo-white.png" />
+        <img loading="lazy" alt="ALTEK Logo" class="h-12 w-auto object-contain logo-dark"
+          src="assets/img/logo-dark.png" />
         <span class="font-bold text-base text-on-surface">ALTEK <span class="text-primary">Takımı</span></span>
       </div>
       <button id="mobile-menu-close" class="p-1 text-on-surface-variant hover:text-primary">
@@ -134,23 +155,31 @@
       </button>
     </div>
     <div class="flex flex-col gap-4 text-sm font-bold uppercase tracking-wider flex-grow">
-      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="index.html">Ana Sayfa</a>
-      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="projeler.html">Projeler</a>
-      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="takim.html">Takım</a>
-      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="galeri.html">Medya</a>
-      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest" href="iletisim.html">İletişim</a>
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest"
+        href="index.html">Ana Sayfa</a>
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest"
+        href="projeler.html">Projeler</a>
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest"
+        href="takim.html">Takım</a>
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest"
+        href="galeri.html">Medya</a>
+      <a class="nav-link py-2 text-on-surface hover:text-primary transition-colors border-b border-surface-container-highest"
+        href="iletisim.html">İletişim</a>
     </div>
     <div class="pt-6 border-t border-outline-variant/30 space-y-3">
       <!-- Mobile Theme Toggle -->
-      <button class="btn-theme-toggle w-full flex items-center justify-center gap-2 border border-outline-variant/60 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-on-surface hover:text-primary transition-all">
+      <button
+        class="btn-theme-toggle w-full flex items-center justify-center gap-2 border border-outline-variant/60 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-on-surface hover:text-primary transition-all">
         <span class="material-symbols-outlined text-lg light-icon hidden">light_mode</span>
         <span class="material-symbols-outlined text-lg dark-icon">dark_mode</span>
         <span class="theme-label">Aydınlık Mod</span>
       </button>
-      <a href="iletisim.html?konu=katilim" class="w-full block text-center border border-primary/50 text-primary font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider hover:bg-primary/10 transition-all">
+      <a href="iletisim.html?konu=katilim"
+        class="w-full block text-center border border-primary/50 text-primary font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider hover:bg-primary/10 transition-all">
         Takıma Katıl
       </a>
-      <a href="iletisim.html" class="w-full block text-center bg-primary-container text-on-primary-container font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all">
+      <a href="iletisim.html"
+        class="w-full block text-center bg-primary-container text-on-primary-container font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all">
         Sponsor Ol
       </a>
     </div>
@@ -158,10 +187,11 @@
 
   <!-- Main Team Content -->
   <main class="flex-grow pt-32 pb-20 px-4 md:px-8 max-w-[1280px] mx-auto w-full animate-tactical-fade-in">
-    
+
     <!-- Header -->
     <header class="mb-16 text-center relative tactical-reveal">
-      <div class="inline-flex items-center gap-2 text-primary text-xs uppercase font-bold tracking-widest mb-3 font-mono">
+      <div
+        class="inline-flex items-center gap-2 text-primary text-xs uppercase font-bold tracking-widest mb-3 font-mono">
         <span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
         TEKNOFEST 2026 // MÜHENDİSLİK KADROSU
       </div>
@@ -169,21 +199,27 @@
         Gökyüzüne <span class="text-primary">İmza Atanlar</span>
       </h1>
       <p class="text-base sm:text-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
-        ALTEK Teknoloji Takımı; 2024 yılında <strong>ODTÜ, Bilkent, Hacettepe ve TOBB ETÜ</strong> mühendislik öğrencileri tarafından kurulmuştur. Otonom sistemler, yapay zeka, gömülü yazılım ve aerodinamik alanlarında disiplinler arası bir güç birliğiyle çalışıyoruz.
+        ALTEK Teknoloji Takımı; 2024 yılında <strong>ODTÜ, Bilkent, Hacettepe ve TOBB ETÜ</strong> mühendislik
+        öğrencileri tarafından kurulmuştur. Otonom sistemler, yapay zeka, gömülü yazılım ve aerodinamik alanlarında
+        disiplinler arası bir güç birliğiyle çalışıyoruz.
       </p>
     </header>
 
     <!-- Team Overview Card with Group Photo -->
-    <section class="mb-20 glass-card p-6 sm:p-10 rounded-2xl border border-outline-variant/40 relative overflow-hidden shadow-2xl tactical-reveal">
+    <section
+      class="mb-20 glass-card p-6 sm:p-10 rounded-2xl border border-outline-variant/40 relative overflow-hidden shadow-2xl tactical-reveal">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div class="lg:col-span-7 space-y-4">
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/20 border border-primary-container/40 text-primary rounded-md text-xs font-bold uppercase tracking-wider">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/20 border border-primary-container/40 text-primary rounded-md text-xs font-bold uppercase tracking-wider">
             <span class="material-symbols-outlined text-sm">hub</span>
             Üniversiteler Arası Mühendislik Kadrosu
           </div>
           <h2 class="text-2xl sm:text-3xl font-bold text-on-surface">Milli Teknoloji Hamlesi İçin Bir Aradayız</h2>
           <p class="text-sm sm:text-base text-on-surface-variant leading-relaxed">
-            ODTÜ bünyesinde faaliyetlerini sürdüren takımımız, Türkiye'nin önde gelen mühendislik okullarından 11 yetenekli genci tek bir hedef altında birleştiriyor: <strong>TEKNOFEST Savaşan İHA</strong> yarışmasında tam otonom kabiliyetlerle zirvede yer almak.
+            ODTÜ bünyesinde faaliyetlerini sürdüren takımımız, Türkiye'nin önde gelen mühendislik okullarından 11
+            yetenekli genci tek bir hedef altında birleştiriyor: <strong>TEKNOFEST Savaşan İHA</strong> yarışmasında tam
+            otonom kabiliyetlerle zirvede yer almak.
           </p>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
             <div class="p-3 bg-surface-container-high rounded-lg border border-outline-variant/30 text-center">
@@ -205,8 +241,10 @@
           </div>
         </div>
         <div class="lg:col-span-5 relative">
-          <div class="rounded-xl overflow-hidden border border-outline-variant/50 shadow-lg bg-surface-container-highest group">
-            <img loading="lazy" src="assets/img/team/team_group.png" alt="ALTEK Takım Görseli" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"/>
+          <div
+            class="rounded-xl overflow-hidden border border-outline-variant/50 shadow-lg bg-surface-container-highest group">
+            <img loading="lazy" src="assets/img/team/team_group.png" alt="ALTEK Takım Görseli"
+              class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
         </div>
       </div>
@@ -218,27 +256,38 @@
         <span class="w-8 h-[2px] bg-primary"></span>
         AKADEMİK DANIŞMANLIK
       </div>
-      <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer" class="hud-card tactical-corners p-6 sm:p-8 rounded-2xl border border-primary/50 relative overflow-hidden group block hover:border-primary transition-all duration-300 shadow-xl bg-surface-container-low cursor-pointer">
+      <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer"
+        class="hud-card tactical-corners p-6 sm:p-8 rounded-2xl border border-primary/50 relative overflow-hidden group block hover:border-primary transition-all duration-300 shadow-xl bg-surface-container-low cursor-pointer">
         <div class="scan-line"></div>
         <div class="flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
-          <div class="relative w-36 h-36 sm:w-40 sm:h-40 flex-shrink-0 rounded-2xl overflow-hidden border-2 border-primary shadow-xl bg-surface-container-high">
-            <img loading="lazy" src="assets/img/team/mustafa_mert_ankarali.jpg" alt="Doç. Dr. Mustafa Mert Ankaralı" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+          <div
+            class="relative w-36 h-36 sm:w-40 sm:h-40 flex-shrink-0 rounded-2xl overflow-hidden border-2 border-primary shadow-xl bg-surface-container-high">
+            <img loading="lazy" src="assets/img/team/mustafa_mert_ankarali.jpg" alt="Doç. Dr. Mustafa Mert Ankaralı"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="space-y-3 text-center md:text-left flex-grow">
             <div class="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
-              <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-primary text-on-primary rounded-md text-xs font-bold uppercase tracking-wider shadow-sm">
+              <div
+                class="inline-flex items-center gap-1.5 px-3 py-1 bg-primary text-on-primary rounded-md text-xs font-bold uppercase tracking-wider shadow-sm">
                 <span class="material-symbols-outlined text-sm">school</span>
                 <span>Takım Akademik Danışmanı</span>
               </div>
               <span class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+                </svg>
                 LinkedIn Profili
               </span>
             </div>
-            <h3 class="text-2xl sm:text-3xl font-bold text-on-surface group-hover:text-primary transition-colors">Doç. Dr. Mustafa Mert ANKARALI</h3>
-            <div class="text-sm font-mono text-primary font-semibold">ODTÜ // Elektrik-Elektronik Mühendisliği Bölümü</div>
+            <h3 class="text-2xl sm:text-3xl font-bold text-on-surface group-hover:text-primary transition-colors">Doç.
+              Dr. Mustafa Mert ANKARALI</h3>
+            <div class="text-sm font-mono text-primary font-semibold">ODTÜ // Elektrik-Elektronik Mühendisliği Bölümü
+            </div>
             <p class="text-sm text-on-surface-variant leading-relaxed max-w-3xl">
-              Robotik, dinamik modelleme ve kontrol sistemleri alanındaki akademik uzmanlığı ile ALTEK Teknoloji Takımı'nın uçuş kontrol algoritmalarına, otonom sistem mimarisine ve mühendislik süreçlerine akademik danışmanlık sağlamaktadır.
+              Robotik, dinamik modelleme ve kontrol sistemleri alanındaki akademik uzmanlığı ile ALTEK Teknoloji
+              Takımı'nın uçuş kontrol algoritmalarına, otonom sistem mimarisine ve mühendislik süreçlerine akademik
+              danışmanlık sağlamaktadır.
             </p>
           </div>
         </div>
@@ -247,77 +296,104 @@
 
     <!-- 4 Main Units Showcase -->
     <div class="space-y-20">
-      
+
       <!-- Unit 1: Görüntü İşleme ve Yapay Zeka Birimi -->
       <section class="tactical-reveal">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-4 border-b border-outline-variant/40">
+        <div
+          class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-4 border-b border-outline-variant/40">
           <div class="flex items-center gap-3">
             <div class="p-3 rounded-xl bg-primary-container/20 border border-primary-container/40 text-primary">
               <span class="material-symbols-outlined text-2xl">visibility</span>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-on-surface">Görüntü İşleme & Yapay Zeka Birimi</h3>
-              <p class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">HAVA HEDEF TESPİTİ // OTONOM KİLİTLENME // DERİN ÖĞRENME</p>
+              <p class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">HAVA HEDEF TESPİTİ // OTONOM
+                KİLİTLENME // DERİN ÖĞRENME</p>
             </div>
           </div>
-          <div class="text-xs text-on-surface-variant bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant/30">
-            <strong>Görevler:</strong> Kamera donanımları, YOLO model eğitimi, gerçek zamanlı hedef takip & yapay zeka algoritmaları
+          <div
+            class="text-xs text-on-surface-variant bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant/30">
+            <strong>Görevler:</strong> Kamera donanımları, YOLO model eğitimi, gerçek zamanlı hedef takip & yapay zeka
+            algoritmaları
           </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Member 1: Hüseyin Şevket AKAR (Kaptan) -->
-          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer" class="hud-card tactical-corners p-6 sm:p-8 rounded-xl border border-primary/50 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
+          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer"
+            class="hud-card tactical-corners p-6 sm:p-8 rounded-xl border border-primary/50 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
             <div class="scan-line"></div>
             <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-              <div class="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border-2 border-primary shadow-md bg-surface-container-high">
-                <img loading="lazy" src="assets/img/team/huseyin_sevket_akar.jpeg" alt="Hüseyin Şevket Akar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+              <div
+                class="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border-2 border-primary shadow-md bg-surface-container-high">
+                <img loading="lazy" src="assets/img/team/huseyin_sevket_akar.jpeg" alt="Hüseyin Şevket Akar"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div class="space-y-2 text-center sm:text-left flex-grow">
                 <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                  <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary-container text-on-primary-container rounded-md text-[11px] font-bold uppercase tracking-wider shadow-sm">
+                  <div
+                    class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary-container text-on-primary-container rounded-md text-[11px] font-bold uppercase tracking-wider shadow-sm">
                     <span class="material-symbols-outlined text-sm">stars</span>
                     <span>Takım Kaptanı</span>
                   </div>
                   <span class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline">
-                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+                    </svg>
                     LinkedIn
                   </span>
                 </div>
-                <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Hüseyin Şevket AKAR</h4>
-                <div class="text-xs font-mono text-primary font-semibold">ODTÜ // Elektrik-Elektronik Mühendisliği (2. Sınıf)</div>
+                <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Hüseyin Şevket
+                  AKAR</h4>
+                <div class="text-xs font-mono text-primary font-semibold">ODTÜ // Elektrik-Elektronik Mühendisliği (2.
+                  Sınıf)</div>
                 <p class="text-xs text-on-surface-variant leading-relaxed pt-1">
-                  YOLO tabanlı derin öğrenme modellerinin eğitimi, gerçek zamanlı hava hedef tespiti, otonom hava-hava kilitlenme algoritmaları ve takım liderliği.
+                  YOLO tabanlı derin öğrenme modellerinin eğitimi, gerçek zamanlı hava hedef tespiti, otonom hava-hava
+                  kilitlenme algoritmaları ve takım liderliği.
                 </p>
-                <div class="flex items-center justify-center sm:justify-start gap-3 pt-2 text-xs font-mono text-on-surface-variant">
-                  <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-primary">mail</span> huseyinsevketakar@gmail.com</span>
+                <div
+                  class="flex items-center justify-center sm:justify-start gap-3 pt-2 text-xs font-mono text-on-surface-variant">
+                  <span class="flex items-center gap-1"><span
+                      class="material-symbols-outlined text-sm text-primary">mail</span>
+                    huseyinsevketakar@gmail.com</span>
                 </div>
               </div>
             </div>
           </a>
 
           <!-- Member 2: Furkan MUTLU -->
-          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer" class="hud-card tactical-corners p-6 sm:p-8 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
+          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer"
+            class="hud-card tactical-corners p-6 sm:p-8 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
             <div class="scan-line"></div>
             <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-              <div class="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
-                <img loading="lazy" src="assets/img/team/furkan_mutlu.jpeg" alt="Furkan Mutlu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+              <div
+                class="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+                <img loading="lazy" src="assets/img/team/furkan_mutlu.jpeg" alt="Furkan Mutlu"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div class="space-y-2 text-center sm:text-left flex-grow">
                 <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                  <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high border border-outline-variant/40 text-on-surface rounded-md text-[11px] font-bold uppercase tracking-wider">
+                  <div
+                    class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high border border-outline-variant/40 text-on-surface rounded-md text-[11px] font-bold uppercase tracking-wider">
                     <span class="material-symbols-outlined text-sm">psychology</span>
                     <span>Görüntü İşleme & AI Uzmanı</span>
                   </div>
                   <span class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline">
-                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+                    </svg>
                     LinkedIn
                   </span>
                 </div>
-                <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Furkan MUTLU</h4>
-                <div class="text-xs font-mono text-primary font-semibold">ODTÜ // Bilgisayar Mühendisliği (2. Sınıf)</div>
+                <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Furkan MUTLU
+                </h4>
+                <div class="text-xs font-mono text-primary font-semibold">ODTÜ // Bilgisayar Mühendisliği (2. Sınıf)
+                </div>
                 <p class="text-xs text-on-surface-variant leading-relaxed pt-1">
-                  Gömülü yapay zeka model çıkarımı hızlandırma (TensorRT/CUDA), görüntü donanımlarının seçimi ve hedef takip algoritmaları.
+                  Gömülü yapay zeka model çıkarımı hızlandırma (TensorRT/CUDA), görüntü donanımlarının seçimi ve hedef
+                  takip algoritmaları.
                 </p>
               </div>
             </div>
@@ -327,77 +403,106 @@
 
       <!-- Unit 2: Yazılım Birimi -->
       <section class="tactical-reveal">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-4 border-b border-outline-variant/40">
+        <div
+          class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-4 border-b border-outline-variant/40">
           <div class="flex items-center gap-3">
             <div class="p-3 rounded-xl bg-primary-container/20 border border-primary-container/40 text-primary">
               <span class="material-symbols-outlined text-2xl">terminal</span>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-on-surface">Yazılım Birimi</h3>
-              <p class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">GÖREV KONTROL // YER KONTROL İSTASYONU (GCS) // OTOPİLOT ENTEGRASYONU</p>
+              <p class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">GÖREV KONTROL // YER KONTROL
+                İSTASYONU (GCS) // OTOPİLOT ENTEGRASYONU</p>
             </div>
           </div>
-          <div class="text-xs text-on-surface-variant bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant/30">
+          <div
+            class="text-xs text-on-surface-variant bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant/30">
             <strong>Görevler:</strong> Görev kontrol yazılımları, YKİ arayüzü geliştirme, otopilot telemetri sağlığı
           </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Member 3: Mesut Ensar YAZAR -->
-          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer" class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
-            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
-              <img loading="lazy" src="assets/img/team/mesut_ensar_yazar.jpeg" alt="Mesut Ensar Yazar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer"
+            class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
+            <div
+              class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img loading="lazy" src="assets/img/team/mesut_ensar_yazar.jpeg" alt="Mesut Ensar Yazar"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <div class="text-center space-y-2">
-              <h4 class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors flex items-center justify-center gap-1.5">
+              <h4
+                class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors flex items-center justify-center gap-1.5">
                 <span>Mesut Ensar YAZAR</span>
               </h4>
               <div class="text-xs font-mono text-primary font-semibold">ODTÜ // EE (2. Sınıf)</div>
               <p class="text-xs text-on-surface-variant leading-relaxed">
-                Görev kontrol yazılımları, uçuş bilgisayarı haberleşme mimarisi ve görev durum makineleri (State Machine).
+                Görev kontrol yazılımları, uçuş bilgisayarı haberleşme mimarisi ve görev durum makineleri (State
+                Machine).
               </p>
-              <span class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+              <span
+                class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+                </svg>
                 LinkedIn Profili
               </span>
             </div>
           </a>
 
           <!-- Member 4: Muzaffer Emre BAŞKAN -->
-          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer" class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
-            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
-              <img loading="lazy" src="assets/img/team/muzaffer_emre_baskan.jpeg" alt="Muzaffer Emre Başkan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer"
+            class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
+            <div
+              class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img loading="lazy" src="assets/img/team/muzaffer_emre_baskan.jpeg" alt="Muzaffer Emre Başkan"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <div class="text-center space-y-2">
-              <h4 class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors flex items-center justify-center gap-1.5">
+              <h4
+                class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors flex items-center justify-center gap-1.5">
                 <span>Muzaffer Emre BAŞKAN</span>
               </h4>
               <div class="text-xs font-mono text-primary font-semibold">BİLKENT // CTIS (2. Sınıf)</div>
               <p class="text-xs text-on-surface-variant leading-relaxed">
-                Yer Kontrol İstasyonu (GCS) arayüz tasarımı, telemetri dashboard, gerçek zamanlı harita ve veri görselleştirme.
+                Görev kontrol yazılımları, üç katmanlı mimari ve hiyerarşik sonlu durum makinesi, Altek Yer Kontrol
+                İstasyonu (AYKİ) önyüz ve arkayüz tasarımı.
               </p>
-              <span class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+              <span
+                class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+                </svg>
                 LinkedIn Profili
               </span>
             </div>
           </a>
 
           <!-- Member 5: Mehmet Salih TAŞTAN -->
-          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer" class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
-            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
-              <img loading="lazy" src="assets/img/team/mehmet_salih_tastan.jpeg" alt="Mehmet Salih Taştan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer"
+            class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
+            <div
+              class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img loading="lazy" src="assets/img/team/mehmet_salih_tastan.jpeg" alt="Mehmet Salih Taştan"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <div class="text-center space-y-2">
-              <h4 class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors flex items-center justify-center gap-1.5">
+              <h4
+                class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors flex items-center justify-center gap-1.5">
                 <span>Mehmet Salih TAŞTAN</span>
               </h4>
               <div class="text-xs font-mono text-primary font-semibold">TOBB ETÜ // EE (2. Sınıf)</div>
               <p class="text-xs text-on-surface-variant leading-relaxed">
                 Otopilot haberleşme protokolleri (MAVLink), acil durum senaryoları ve otonom rota planlama yazılımı.
               </p>
-              <span class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+              <span
+                class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+                </svg>
                 LinkedIn Profili
               </span>
             </div>
@@ -407,71 +512,95 @@
 
       <!-- Unit 3: Elektronik & Aviyonik Birimi -->
       <section class="tactical-reveal">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-4 border-b border-outline-variant/40">
+        <div
+          class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-4 border-b border-outline-variant/40">
           <div class="flex items-center gap-3">
             <div class="p-3 rounded-xl bg-tertiary/20 border border-tertiary/40 text-tertiary">
               <span class="material-symbols-outlined text-2xl">memory</span>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-on-surface">Elektronik & Aviyonik Birimi</h3>
-              <p class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">UÇUŞ KONTROLCÜ // GÜÇ DAĞITIMI // TELEMETRİ // RF HABERLEŞME</p>
+              <p class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">UÇUŞ KONTROLCÜ // GÜÇ
+                DAĞITIMI // TELEMETRİ // RF HABERLEŞME</p>
             </div>
           </div>
-          <div class="text-xs text-on-surface-variant bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant/30">
-            <strong>Görevler:</strong> Aviyonik seçimi, kablolama & bağlantılar, güç dağıtımı, Wi-Fi & RF telemetri sistemleri
+          <div
+            class="text-xs text-on-surface-variant bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant/30">
+            <strong>Görevler:</strong> Aviyonik seçimi, kablolama & bağlantılar, güç dağıtımı, Wi-Fi & RF telemetri
+            sistemleri
           </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Member 6: Emir YILMAZ -->
-          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer" class="hud-card tactical-corners p-6 sm:p-8 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
+          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer"
+            class="hud-card tactical-corners p-6 sm:p-8 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
             <div class="scan-line"></div>
             <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-              <div class="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
-                <img loading="lazy" src="assets/img/team/emir_yilmaz.jpeg" alt="Emir Yılmaz" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+              <div
+                class="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+                <img loading="lazy" src="assets/img/team/emir_yilmaz.jpeg" alt="Emir Yılmaz"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div class="space-y-2 text-center sm:text-left flex-grow">
                 <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                  <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-tertiary/15 border border-tertiary/30 text-tertiary rounded-md text-[11px] font-bold uppercase tracking-wider">
+                  <div
+                    class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-tertiary/15 border border-tertiary/30 text-tertiary rounded-md text-[11px] font-bold uppercase tracking-wider">
                     <span class="material-symbols-outlined text-sm">cable</span>
                     <span>Aviyonik & Güç Sistemleri</span>
                   </div>
                   <span class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline">
-                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+                    </svg>
                     LinkedIn
                   </span>
                 </div>
-                <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Emir YILMAZ</h4>
-                <div class="text-xs font-mono text-primary font-semibold">ODTÜ // Elektrik-Elektronik Mühendisliği (2. Sınıf)</div>
+                <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Emir YILMAZ
+                </h4>
+                <div class="text-xs font-mono text-primary font-semibold">ODTÜ // Elektrik-Elektronik Mühendisliği (2.
+                  Sınıf)</div>
                 <p class="text-xs text-on-surface-variant leading-relaxed pt-1">
-                  Uçuş kontrol kartı entegrasyonu, güç dağıtım mimarisi (PDB), sensör kalibrasyonu ve donanım arıza teşhisi.
+                  Uçuş kontrol kartı entegrasyonu, güç dağıtım mimarisi (PDB), sensör kalibrasyonu ve donanım arıza
+                  teşhisi.
                 </p>
               </div>
             </div>
           </a>
 
           <!-- Member 7: Yahya AYDEMİR -->
-          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer" class="hud-card tactical-corners p-6 sm:p-8 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
+          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer"
+            class="hud-card tactical-corners p-6 sm:p-8 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer hover:border-primary transition-all duration-300">
             <div class="scan-line"></div>
             <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-              <div class="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
-                <img loading="lazy" src="assets/img/team/yahya_aydemir.jpeg" alt="Yahya Aydemir" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+              <div
+                class="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+                <img loading="lazy" src="assets/img/team/yahya_aydemir.jpeg" alt="Yahya Aydemir"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div class="space-y-2 text-center sm:text-left flex-grow">
                 <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                  <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-tertiary/15 border border-tertiary/30 text-tertiary rounded-md text-[11px] font-bold uppercase tracking-wider">
+                  <div
+                    class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-tertiary/15 border border-tertiary/30 text-tertiary rounded-md text-[11px] font-bold uppercase tracking-wider">
                     <span class="material-symbols-outlined text-sm">sensors</span>
                     <span>RF & Telemetri Haberleşme</span>
                   </div>
                   <span class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline">
-                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+                    </svg>
                     LinkedIn
                   </span>
                 </div>
-                <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Yahya AYDEMİR</h4>
-                <div class="text-xs font-mono text-primary font-semibold">BİLKENT // Elektrik-Elektronik Mühendisliği (2. Sınıf)</div>
+                <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Yahya AYDEMİR
+                </h4>
+                <div class="text-xs font-mono text-primary font-semibold">BİLKENT // Elektrik-Elektronik Mühendisliği
+                  (2. Sınıf)</div>
                 <p class="text-xs text-on-surface-variant leading-relaxed pt-1">
-                  Uzun menzilli RF telemetri bağlantıları, Wi-Fi link stabilitesi, video aktarım hatları ve EMI/EMC gürültü izolasyonu.
+                  Uzun menzilli RF telemetri bağlantıları, Wi-Fi link stabilitesi, video aktarım hatları ve EMI/EMC
+                  gürültü izolasyonu.
                 </p>
               </div>
             </div>
@@ -481,44 +610,58 @@
 
       <!-- Unit 4: Mekanik Birimi -->
       <section class="tactical-reveal">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-4 border-b border-outline-variant/40">
+        <div
+          class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-4 border-b border-outline-variant/40">
           <div class="flex items-center gap-3">
             <div class="p-3 rounded-xl bg-secondary-container text-on-secondary-container">
               <span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
             </div>
             <div>
               <h3 class="text-2xl font-bold text-on-surface">Mekanik Birimi</h3>
-              <p class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">AERODİNAMİK CFD // GÖVDE TASARIMI // İTKİ SİSTEMLERİ // İMALAT</p>
+              <p class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">AERODİNAMİK CFD // GÖVDE
+                TASARIMI // İTKİ SİSTEMLERİ // İMALAT</p>
             </div>
           </div>
-          <div class="text-xs text-on-surface-variant bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant/30">
+          <div
+            class="text-xs text-on-surface-variant bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant/30">
             <strong>Görevler:</strong> Uçak gövdesi tasarımı, CFD analizleri, itki & motor seçimi, kompozit/balsa üretim
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Member 8: Ahmet Enes YAZAR -->
-          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer" class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer text-center hover:border-primary transition-all duration-300">
-            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
-              <img loading="lazy" src="assets/img/team/ahmet_enes_yazar.jpeg" alt="Ahmet Enes Yazar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer"
+            class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer text-center hover:border-primary transition-all duration-300">
+            <div
+              class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img loading="lazy" src="assets/img/team/ahmet_enes_yazar.jpeg" alt="Ahmet Enes Yazar"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <div class="space-y-1.5">
-              <h4 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Ahmet Enes YAZAR</h4>
+              <h4 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Ahmet Enes YAZAR
+              </h4>
               <div class="text-xs font-mono text-primary font-semibold">BİLKENT // Makine (1. Sınıf)</div>
               <p class="text-[11px] text-on-surface-variant leading-relaxed">
                 3D CAD gövde modelleme, mekanik montaj ve kontrol yüzeyleri kinematik tasarımı.
               </p>
-              <span class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+              <span
+                class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+                </svg>
                 LinkedIn Profili
               </span>
             </div>
           </a>
 
           <!-- Member 9: Sefa GÖKÇE -->
-          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer" class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer text-center hover:border-primary transition-all duration-300">
-            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
-              <img loading="lazy" src="assets/img/team/sefa_gokce.jpeg" alt="Sefa Gökçe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer"
+            class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer text-center hover:border-primary transition-all duration-300">
+            <div
+              class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img loading="lazy" src="assets/img/team/sefa_gokce.jpeg" alt="Sefa Gökçe"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <div class="space-y-1.5">
               <h4 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Sefa GÖKÇE</h4>
@@ -526,44 +669,64 @@
               <p class="text-[11px] text-on-surface-variant leading-relaxed">
                 İtki sistemleri, motor & pervane eşleşme testleri ve dinamik yük testleri.
               </p>
-              <span class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+              <span
+                class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+                </svg>
                 LinkedIn Profili
               </span>
             </div>
           </a>
 
           <!-- Member 10: Hüseyin Emir MERT -->
-          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer" class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer text-center hover:border-primary transition-all duration-300">
-            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
-              <img loading="lazy" src="assets/img/team/huseyin_emir_mert.jpeg" alt="Hüseyin Emir Mert" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer"
+            class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer text-center hover:border-primary transition-all duration-300">
+            <div
+              class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img loading="lazy" src="assets/img/team/huseyin_emir_mert.jpeg" alt="Hüseyin Emir Mert"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <div class="space-y-1.5">
-              <h4 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Hüseyin Emir MERT</h4>
+              <h4 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Hüseyin Emir MERT
+              </h4>
               <div class="text-xs font-mono text-primary font-semibold">TOBB ETÜ // Makine (1. Sınıf)</div>
               <p class="text-[11px] text-on-surface-variant leading-relaxed">
                 Kompozit gövde laminasyonu, vakum infüzyon ve hafifletme optimizasyonları.
               </p>
-              <span class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+              <span
+                class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+                </svg>
                 LinkedIn Profili
               </span>
             </div>
           </a>
 
           <!-- Member 11: Ramazan BOZKURT -->
-          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer" class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer text-center hover:border-primary transition-all duration-300">
-            <div class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
-              <img loading="lazy" src="assets/img/team/ramazan_bozkurt.jpeg" alt="Ramazan Bozkurt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+          <a href="https://www.linkedin.com/company/altektakimi/" target="_blank" rel="noopener noreferrer"
+            class="hud-card tactical-corners p-6 rounded-xl border border-outline-variant/40 relative overflow-hidden group block cursor-pointer text-center hover:border-primary transition-all duration-300">
+            <div
+              class="relative w-28 h-28 mx-auto mb-4 rounded-xl overflow-hidden border-2 border-outline-variant/50 shadow-md bg-surface-container-high">
+              <img loading="lazy" src="assets/img/team/ramazan_bozkurt.jpeg" alt="Ramazan Bozkurt"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <div class="space-y-1.5">
-              <h4 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Ramazan BOZKURT</h4>
+              <h4 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Ramazan BOZKURT
+              </h4>
               <div class="text-xs font-mono text-primary font-semibold">ODTÜ // Makine (2. Sınıf)</div>
               <p class="text-[11px] text-on-surface-variant leading-relaxed">
                 Aerodinamik CFD simülasyonları, sürükleme katsayısı analizi ve hava kanalı tasarımı.
               </p>
-              <span class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+              <span
+                class="inline-flex items-center gap-1 text-[11px] font-mono text-primary group-hover:underline pt-1">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z" />
+                </svg>
                 LinkedIn Profili
               </span>
             </div>
@@ -580,12 +743,16 @@
     <div class="max-w-[1280px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
       <div class="md:col-span-2">
         <div class="flex items-center gap-3 mb-4">
-          <img loading="lazy" alt="ALTEK Logo" class="h-14 sm:h-16 w-auto object-contain logo-white" src="assets/img/logo-white.png"/>
-          <img loading="lazy" alt="ALTEK Logo" class="h-14 sm:h-16 w-auto object-contain logo-dark" src="assets/img/logo-dark.png"/>
-          <span class="font-bold text-lg text-on-surface">ALTEK <span class="text-primary">Teknoloji Takımı</span></span>
+          <img loading="lazy" alt="ALTEK Logo" class="h-14 sm:h-16 w-auto object-contain logo-white"
+            src="assets/img/logo-white.png" />
+          <img loading="lazy" alt="ALTEK Logo" class="h-14 sm:h-16 w-auto object-contain logo-dark"
+            src="assets/img/logo-dark.png" />
+          <span class="font-bold text-lg text-on-surface">ALTEK <span class="text-primary">Teknoloji
+              Takımı</span></span>
         </div>
         <p class="text-sm text-on-surface-variant/80 max-w-sm mb-4">
-          Havacılık tutkusu, otonomi ve ileri mühendislik ile TEKNOFEST yarışmalarında üniversitemizi ve ülkemizi temsil ediyoruz.
+          Havacılık tutkusu, otonomi ve ileri mühendislik ile TEKNOFEST yarışmalarında üniversitemizi ve ülkemizi temsil
+          ediyoruz.
         </p>
         <div class="flex items-center gap-2 text-xs font-mono text-on-surface-variant">
           <span class="w-2 h-2 rounded-full bg-primary"></span>
@@ -604,12 +771,13 @@
       </div>
       <div>
         <div class="text-xs font-bold uppercase tracking-widest text-on-surface mb-4">İletişim & Konum</div>
-        <p class="text-sm mb-2">ODTÜ EE - E Blok,<br/>Çankaya / Ankara</p>
+        <p class="text-sm mb-2">ODTÜ EE - E Blok,<br />Çankaya / Ankara</p>
         <p class="text-sm font-mono text-primary">altektakimi@gmail.com</p>
         <p class="text-sm font-mono text-primary">altek@metu.edu.tr</p>
       </div>
     </div>
-    <div class="max-w-[1280px] mx-auto px-4 md:px-8 pt-6 border-t border-outline-variant/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+    <div
+      class="max-w-[1280px] mx-auto px-4 md:px-8 pt-6 border-t border-outline-variant/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
       <div>&copy; 2026 ALTEK Teknoloji Takımı. Tüm hakları saklıdır.</div>
       <div class="text-on-surface-variant/60 font-mono">ODTÜ // ANKARA</div>
     </div>
@@ -620,4 +788,5 @@
   <script src="js/main.js"></script>
   <script src="js/contact.js"></script>
 </body>
+
 </html>
