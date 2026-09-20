@@ -88,7 +88,7 @@
       </a>
 
       <!-- Desktop Navigation Links -->
-      <div class="hidden lg:flex items-center gap-8 font-bold text-xs uppercase tracking-widest">
+      <div class="hidden lg:flex items-center gap-5 xl:gap-8 font-bold text-xs uppercase tracking-widest">
         <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="index.html">Ana Sayfa</a>
         <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="projeler.html">Projeler</a>
         <a class="nav-link text-on-surface hover:text-primary transition-colors py-1" href="takim.html">Takım</a>
@@ -97,14 +97,19 @@
       </div>
 
       <!-- Action Buttons & Theme Switcher -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2.5 sm:gap-3">
         <!-- Theme Toggle Button -->
         <button id="theme-toggle-btn" class="p-2.5 rounded-xl border border-outline-variant/60 text-on-surface hover:text-primary hover:border-primary/50 transition-all flex items-center justify-center bg-surface-container/60 backdrop-blur-md shadow-sm active:scale-95" title="Temayı Değiştir" aria-label="Aydınlık / Karanlık Mod Değiştir">
           <span class="material-symbols-outlined text-xl light-icon hidden">light_mode</span>
           <span class="material-symbols-outlined text-xl dark-icon">dark_mode</span>
         </button>
 
-        <a href="iletisim.html" class="bg-primary-container text-on-primary-container font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all duration-200 active:scale-95 shadow-md shadow-primary-container/20 hidden sm:block">
+        <a href="iletisim.html?konu=katilim" class="border border-primary/50 text-primary hover:bg-primary/10 font-bold px-3.5 py-2 rounded-xl text-xs uppercase tracking-wider transition-all duration-200 active:scale-95 hidden md:inline-flex items-center gap-1">
+          <span class="material-symbols-outlined text-sm">person_add</span>
+          <span>Takıma Katıl</span>
+        </a>
+
+        <a href="iletisim.html" class="bg-primary-container text-on-primary-container font-bold px-4 py-2 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all duration-200 active:scale-95 shadow-md shadow-primary-container/20 hidden sm:inline-flex items-center">
           Sponsor Ol
         </a>
 
@@ -142,7 +147,10 @@
         <span class="material-symbols-outlined text-lg dark-icon">dark_mode</span>
         <span class="theme-label">Aydınlık Mod</span>
       </button>
-      <a href="iletisim.html" class="w-full block text-center bg-primary-container text-on-primary-container font-bold py-3 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all">
+      <a href="iletisim.html?konu=katilim" class="w-full block text-center border border-primary/50 text-primary font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider hover:bg-primary/10 transition-all">
+        Takıma Katıl
+      </a>
+      <a href="iletisim.html" class="w-full block text-center bg-primary-container text-on-primary-container font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider hover:bg-primary transition-all">
         Sponsor Ol
       </a>
     </div>
@@ -486,11 +494,12 @@
         <div class="text-xs font-bold uppercase tracking-widest text-on-surface mb-4">İletişim & Konum</div>
         <p class="text-sm mb-2">ODTÜ EE - E Blok,<br/>Çankaya / Ankara</p>
         <p class="text-sm font-mono text-primary">altektakimi@gmail.com</p>
+        <p class="text-sm font-mono text-primary">altek@metu.edu.tr</p>
       </div>
     </div>
     <div class="max-w-[1280px] mx-auto px-4 md:px-8 pt-6 border-t border-outline-variant/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
       <div>&copy; 2026 ALTEK Teknoloji Takımı. Tüm hakları saklıdır.</div>
-      <div class="text-on-surface-variant/60 font-mono">ODTÜ TEKNOKENT // ANKARA</div>
+      <div class="text-on-surface-variant/60 font-mono">ODTÜ // ANKARA</div>
     </div>
   </footer>
 
