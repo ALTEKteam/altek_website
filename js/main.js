@@ -132,37 +132,69 @@ function initScrollReveal() {
 }
 
 /**
- * Smooth Page Transition Handler for Internal Links
+ * Smooth Page Transition Handler for Internal Links & Mobile Back-Forward Cache (bfcache)
  */
 function initPageTransitions() {
-  // Add page-enter to body / main
   const main = document.querySelector('main');
   if (main) {
+    main.classList.remove('page-exit');
     main.classList.add('page-enter');
   }
 
+  // Restore page visibility on browser back/forward navigation (bfcache)
+  window.addEventListener('pageshow', (e) => {
+    if (main) {
+      main.classList.remove('page-exit');
+      main.classList.add('page-enter');
+    }
+    document.body.style.overflow = '';
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileBackdrop = document.getElementById('mobile-backdrop');
+    if (mobileMenu) mobileMenu.classList.add('translate-x-full');
+    if (mobileBackdrop) {
+      mobileBackdrop.classList.add('opacity-0', 'pointer-events-none');
+      mobileBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+    }
+  });
+
+  window.addEventListener('popstate', () => {
+    if (main) {
+      main.classList.remove('page-exit');
+      main.classList.add('page-enter');
+    }
+    document.body.style.overflow = '';
+  });
+
   // Intercept internal page navigation links
-  const links = document.querySelectorAll('a[href$=".html"]');
+  const links = document.querySelectorAll('a[href$=".html"], a[href*=".html#"], a[href*=".html?"]');
   links.forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
-      // If same page or anchor or modal button, ignore
-      if (!href || href.startsWith('#') || href === window.location.pathname.split('/').pop() || link.target === '_blank') {
+      if (!href || href.startsWith('#') || link.target === '_blank') {
         return;
       }
 
-      e.preventDefault();
+      // Check if it is the current page without query/hash change
+      const targetBase = href.split('#')[0].split('?')[0];
+      const currentBase = window.location.pathname.split('/').pop() || 'index.html';
+      if (targetBase === currentBase && !href.includes('?') && href.includes('#')) {
+        // Just hash scroll on same page, do not trigger page exit
+        return;
+      }
+
       if (main) {
         main.classList.remove('page-enter');
         main.classList.add('page-exit');
       }
 
+      // Fallback timer in case page transition is delayed or cancelled
       setTimeout(() => {
         window.location.href = href;
-      }, 200);
+      }, 180);
     });
   });
 }
+
 
 /**
  * Mobile Navigation Menu Handler
