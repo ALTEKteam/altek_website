@@ -201,17 +201,16 @@
         </div>
       </div>
 
-      <!-- Ana pencere fotoğrafı -->
+      <!-- Tanıtım videosu -->
       <div class="lg:col-span-6 space-y-3">
         <div class="flex items-center justify-between text-xs font-mono text-primary">
-          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span> AYKİ ANA PENCERE</span>
-          <span class="text-on-surface-variant font-normal">Operatör Konsolu</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span> AYKİ TANITIM</span>
         </div>
         <div class="relative rounded-xl overflow-hidden shadow-xl aspect-video bg-surface-container-highest">
-          <video class="w-full h-full object-cover" src="assets/video/ayki/ana-pencere.mp4" poster="assets/img/ayki/ana-pencere-poster.jpg" controls preload="none"></video>
+          <video class="w-full h-full object-cover" src="assets/video/ayki/ayki-tanitim.mp4" poster="assets/img/ayki/ayki-tanitim-poster.jpg" controls playsinline preload="none"></video>
         </div>
         <p class="text-[11px] text-on-surface-variant font-mono">
-          * AYKİ ana penceresi — kamikaze dalışı, kilitlenme denemesi, HSS çekme ve HSS+kalkan aktifken uçuş tek ekranda.
+          * Hazırla, planla, izle, seç, kilitlen, dal, paylaş — AYKİ'nin görev akışı gerçek arayüz ve uçuş kayıtlarıyla.
         </p>
       </div>
     </header>
@@ -219,8 +218,58 @@
     <!-- Accordion Sections -->
     <div class="space-y-5">
 
-      <!-- 01 — Mission Control / Harita -->
+      <!-- 00 — Ana Pencere -->
       <div class="ayki-section hud-card rounded-2xl overflow-hidden tactical-reveal" data-ayki-section>
+        <button type="button" class="ayki-toggle w-full flex items-center justify-between gap-4 p-5 sm:p-7 text-left" aria-expanded="false">
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl bg-primary-container/15 border border-primary/30 flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-primary text-xl">desktop_windows</span>
+            </div>
+            <div>
+              <div class="text-[11px] font-mono text-primary uppercase tracking-widest mb-1">00 // Operatör Konsolu</div>
+              <h2 class="text-lg sm:text-xl font-bold text-on-surface">AYKİ Ana Pencere</h2>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-2xl text-on-surface-variant ayki-chevron flex-shrink-0">expand_more</span>
+        </button>
+        <div class="ayki-panel">
+          <div>
+            <div class="px-5 sm:px-7 pb-7 pt-0 border-t border-outline-variant/20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-6 space-y-4 pt-6">
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Kamikaze dalışı, kilitlenme denemesi, HSS çekme ve HSS+kalkan aktifken uçuş tek ekranda. Operatör kamerayı, telemetriyi, haritayı ve FSM durumunu aynı pencereden izler.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">videocam</span>
+                    <span>Canlı Kamera & Kilit Kadrajı</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">speed</span>
+                    <span>Anlık Telemetri</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">map</span>
+                    <span>Canlı Harita</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-sm font-semibold text-on-surface">
+                    <span class="material-symbols-outlined text-primary text-lg">account_tree</span>
+                    <span>FSM Durumu & Güvenlik Kalkanı</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-6 space-y-3 pt-6">
+                <div class="relative rounded-xl overflow-hidden shadow-lg aspect-video bg-surface-container-highest">
+                  <video class="w-full h-full object-cover" src="assets/video/ayki/ana-pencere.mp4" poster="assets/img/ayki/ana-pencere-poster.jpg" controls preload="none"></video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 01 — Mission Control / Harita -->
+      <div class="ayki-section hud-card rounded-2xl overflow-hidden tactical-reveal" data-ayki-section data-ayki-open>
         <button type="button" class="ayki-toggle w-full flex items-center justify-between gap-4 p-5 sm:p-7 text-left" aria-expanded="false">
           <div class="flex items-center gap-4">
             <div class="w-11 h-11 rounded-xl bg-primary-container/15 border border-primary/30 flex items-center justify-center flex-shrink-0">
@@ -485,7 +534,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('[data-ayki-section]').forEach(function(section, i) {
         var toggle = section.querySelector('.ayki-toggle');
-        if (i === 0) {
+        if (section.hasAttribute('data-ayki-open')) {
           section.classList.add('open');
           toggle.setAttribute('aria-expanded', 'true');
         }
